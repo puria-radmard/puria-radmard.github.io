@@ -1,6 +1,6 @@
 ---
 title: the group theory index
-feed: hide
+feed: show
 date: 16-04-2023
 format: list
 ---

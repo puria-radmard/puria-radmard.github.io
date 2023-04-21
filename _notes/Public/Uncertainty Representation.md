@@ -1,6 +1,6 @@
 ---
 title: Uncertainty Representation
-feed: hide
+feed: show
 date: 19-03-2023
 format: list
 ---

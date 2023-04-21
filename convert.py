@@ -11,10 +11,11 @@ from datetime import datetime
 
 src_dir="/Users/puriaradmard/Library/Mobile Documents/iCloud~md~obsidian/Documents/BACKUP PhD Knowledge"
 out_dir="_notes/Public"
+home_page_file="Homepage.md"
 header_template = """
 ---
 title: {title}
-feed: hide
+feed: {feed}
 date: {date}
 format: list
 ---
@@ -35,10 +36,9 @@ def write_to_file(string, output_path):
     with open(output_path, 'w') as f:
         f.write(string)
 
-def convert_file(relative_path, header_string):
-    input_path = os.path.join(src_dir, relative_path)
-    output_path = os.path.join(out_dir, relative_path)
-
+def convert_file(file_list, header_string):
+    input_path = build_path(file_list, base=src_dir)
+    output_path = build_path(file_list, base=out_dir)
     starting_string = get_string_from_path(input_path)
     resulting_string = prepend_file_string(starting_string, header_string)
     write_to_file(resulting_string, output_path)
@@ -70,35 +70,41 @@ def construct_directory_structure(list_files):
                 print(dir_path, 'already exists')
 
 
-def generate_header(file_name_as_list):
+def generate_header(file_name_as_list, show):
     original_file_name = build_path(file_name_as_list, base = src_dir)
     assert file_name_as_list[-1][-3:] == '.md'
     header = header_template.format(
         title = file_name_as_list[-1][:-3],
         date = datetime.fromtimestamp(os.stat(original_file_name).st_birthtime).strftime('%d-%m-%Y'),
         #permalink = "/" + build_path(file_name_as_list).replace(' ', '%20')
+        feed = 'show' if show else 'hide'
     )
     return header
 
-
-def copy_over_files(all_files_as_lists):
+def copy_over_files(all_files_as_lists, links_on_homepage):
     for file_list in tqdm(all_files_as_lists):
         original_file_name = build_path(file_list, base = src_dir)
         if os.path.isfile(original_file_name):
-            if file_list[-1].endswith("md"):
-                header_string = generate_header(file_list)
-                relative_path = build_path(file_list)
-                convert_file(relative_path=relative_path, header_string=header_string)
+            if file_list[-1].endswith(".md"):
+                is_on_homepage = file_list[-1][:-3] in links_on_homepage
+                header_string = generate_header(file_list, show = is_on_homepage)
+                convert_file(file_list=file_list, header_string=header_string)
             else:
                 shutil.copy(
                     build_path(file_list, src_dir),
                     build_path(file_list, out_dir)
                 )
-        
+
+
+def get_front_page_titles():
+    homepage_path = build_path([home_page_file], base=src_dir)
+    homepage_string = get_string_from_path(homepage_path)
+    return [link.split(']]')[0] for link in homepage_string.split('[[')]
 
 
 if __name__ == '__main__':
     all_src_files = get_all_src_files()
     construct_directory_structure(all_src_files)
-    copy_over_files(all_src_files)
+    front_page_titles = get_front_page_titles()
+    copy_over_files(all_src_files, front_page_titles)
 

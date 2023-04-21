@@ -1,6 +1,6 @@
 ---
 title: Generative Models
-feed: hide
+feed: show
 date: 24-03-2023
 format: list
 ---

@@ -1,6 +1,6 @@
 ---
 title: the linear algebra index
-feed: hide
+feed: show
 date: 16-04-2023
 format: list
 ---

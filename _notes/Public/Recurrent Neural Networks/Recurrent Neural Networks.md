@@ -1,6 +1,6 @@
 ---
 title: Recurrent Neural Networks
-feed: hide
+feed: show
 date: 17-03-2023
 format: list
 ---

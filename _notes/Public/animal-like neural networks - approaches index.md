@@ -1,6 +1,6 @@
 ---
 title: animal-like neural networks - approaches index
-feed: hide
+feed: show
 date: 18-04-2023
 format: list
 ---

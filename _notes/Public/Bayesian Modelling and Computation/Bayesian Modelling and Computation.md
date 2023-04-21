@@ -1,6 +1,6 @@
 ---
 title: Bayesian Modelling and Computation
-feed: hide
+feed: show
 date: 09-02-2023
 format: list
 ---

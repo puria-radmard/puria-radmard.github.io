@@ -1,6 +1,6 @@
 ---
 title: human uncertainty and suboptimality - experimental index
-feed: hide
+feed: show
 date: 15-04-2023
 format: list
 ---

@@ -1,6 +1,6 @@
 ---
 title: Human-like Systems
-feed: hide
+feed: show
 date: 25-03-2023
 format: list
 ---
