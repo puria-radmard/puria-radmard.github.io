@@ -71,6 +71,7 @@ collections:
       permalink: /note/:title
 
 markdown: kramdown
+mathjax: true
 
 kramdown:
   input: GFM
