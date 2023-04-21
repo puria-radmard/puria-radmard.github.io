@@ -1,5 +1,6 @@
 ---
 layout: Post
-permalink: /posts
-title: All Posts
+permalink: /projects
+feedformat: card
+title: All Projects
 ---
