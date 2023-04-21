@@ -10,7 +10,7 @@ from datetime import datetime
 ### Constants
 
 src_dir="/Users/puriaradmard/Library/Mobile Documents/iCloud~md~obsidian/Documents/BACKUP PhD Knowledge"
-out_dir="_notes"
+out_dir="_notes/Public"
 header_template = """
 ---
 title: {title}
