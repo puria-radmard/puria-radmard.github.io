@@ -2,7 +2,6 @@
 title: space of loops.md
 feed: hide
 date: 16-04-2023
-permalink: /space%20of%20loops.md
 format: list
 ---
 

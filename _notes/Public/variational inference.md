@@ -2,7 +2,6 @@
 title: variational inference.md
 feed: hide
 date: 31-03-2023
-permalink: /variational%20inference.md
 format: list
 ---
 

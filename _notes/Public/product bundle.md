@@ -2,7 +2,6 @@
 title: product bundle.md
 feed: hide
 date: 19-04-2023
-permalink: /product%20bundle.md
 format: list
 ---
 

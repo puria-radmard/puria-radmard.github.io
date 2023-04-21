@@ -2,7 +2,6 @@
 title: manifold-targted RNNs.md
 feed: hide
 date: 19-03-2023
-permalink: /manifold-targted%20RNNs.md
 format: list
 ---
 

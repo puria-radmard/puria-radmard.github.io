@@ -2,7 +2,6 @@
 title: cover.md
 feed: hide
 date: 16-04-2023
-permalink: /cover.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: Human-like Systems.md
 feed: hide
 date: 25-03-2023
-permalink: /Human-like%20Systems.md
 format: list
 ---
 

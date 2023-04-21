@@ -2,7 +2,6 @@
 title: quotient set.md
 feed: hide
 date: 16-04-2023
-permalink: /quotient%20set.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: diffeomorphic smooth mainfolds.md
 feed: hide
 date: 20-04-2023
-permalink: /diffeomorphic%20smooth%20mainfolds.md
 format: list
 ---
 

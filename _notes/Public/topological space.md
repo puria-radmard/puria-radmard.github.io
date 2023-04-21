@@ -2,7 +2,6 @@
 title: topological space.md
 feed: hide
 date: 16-04-2023
-permalink: /topological%20space.md
 format: list
 ---
 

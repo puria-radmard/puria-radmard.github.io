@@ -2,7 +2,6 @@
 title: Control Theory.md
 feed: hide
 date: 17-03-2023
-permalink: /Control%20Theory/Control%20Theory.md
 format: list
 ---
 

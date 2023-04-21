@@ -2,7 +2,6 @@
 title: subcover.md
 feed: hide
 date: 16-04-2023
-permalink: /subcover.md
 format: list
 ---
 

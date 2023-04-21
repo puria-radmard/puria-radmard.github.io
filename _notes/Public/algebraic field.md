@@ -2,7 +2,6 @@
 title: algebraic field.md
 feed: hide
 date: 20-04-2023
-permalink: /algebraic%20field.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: working memory.md
 feed: hide
 date: 18-04-2023
-permalink: /working%20memory.md
 format: list
 ---
 

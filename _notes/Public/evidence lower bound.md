@@ -2,7 +2,6 @@
 title: evidence lower bound.md
 feed: hide
 date: 31-03-2023
-permalink: /evidence%20lower%20bound.md
 format: list
 ---
 

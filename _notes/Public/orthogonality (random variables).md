@@ -2,7 +2,6 @@
 title: orthogonality (random variables).md
 feed: hide
 date: 28-03-2023
-permalink: /orthogonality%20(random%20variables).md
 format: list
 ---
 

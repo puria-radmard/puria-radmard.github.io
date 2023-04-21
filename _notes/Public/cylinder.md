@@ -2,7 +2,6 @@
 title: cylinder.md
 feed: hide
 date: 16-04-2023
-permalink: /cylinder.md
 format: list
 ---
 

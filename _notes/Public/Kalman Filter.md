@@ -2,7 +2,6 @@
 title: Kalman Filter.md
 feed: hide
 date: 28-03-2023
-permalink: /Kalman%20Filter.md
 format: list
 ---
 

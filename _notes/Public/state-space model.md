@@ -2,7 +2,6 @@
 title: state-space model.md
 feed: hide
 date: 28-03-2023
-permalink: /state-space%20model.md
 format: list
 ---
 

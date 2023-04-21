@@ -2,7 +2,6 @@
 title: maximal atlas.md
 feed: hide
 date: 20-04-2023
-permalink: /maximal%20atlas.md
 format: list
 ---
 

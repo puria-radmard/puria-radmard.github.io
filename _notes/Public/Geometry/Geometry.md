@@ -2,7 +2,6 @@
 title: Geometry.md
 feed: hide
 date: 17-03-2023
-permalink: /Geometry/Geometry.md
 format: list
 ---
 

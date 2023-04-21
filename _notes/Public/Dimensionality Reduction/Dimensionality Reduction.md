@@ -2,7 +2,6 @@
 title: Dimensionality Reduction.md
 feed: hide
 date: 17-03-2023
-permalink: /Dimensionality%20Reduction/Dimensionality%20Reduction.md
 format: list
 ---
 

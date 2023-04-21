@@ -2,7 +2,6 @@
 title: Whitney's Theorem (on maximal smooth atlases).md
 feed: hide
 date: 20-04-2023
-permalink: /Whitney's%20Theorem%20(on%20maximal%20smooth%20atlases).md
 format: list
 ---
 

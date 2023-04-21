@@ -2,7 +2,6 @@
 title: Drugowitsch et al., 2016 - Computational Precision.md
 feed: hide
 date: 15-04-2023
-permalink: /Drugowitsch%20et%20al.,%202016%20-%20Computational%20Precision.md
 format: list
 ---
 

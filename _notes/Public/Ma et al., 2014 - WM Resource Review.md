@@ -2,7 +2,6 @@
 title: Ma et al., 2014 - WM Resource Review.md
 feed: hide
 date: 15-04-2023
-permalink: /Ma%20et%20al.,%202014%20-%20WM%20Resource%20Review.md
 format: list
 ---
 

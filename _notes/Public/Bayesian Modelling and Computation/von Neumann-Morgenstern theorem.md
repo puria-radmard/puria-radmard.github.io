@@ -2,7 +2,6 @@
 title: von Neumann-Morgenstern theorem.md
 feed: hide
 date: 10-02-2023
-permalink: /Bayesian%20Modelling%20and%20Computation/von%20Neumann-Morgenstern%20theorem.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: fibre.md
 feed: hide
 date: 19-04-2023
-permalink: /fibre.md
 format: list
 ---
 

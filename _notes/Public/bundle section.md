@@ -2,7 +2,6 @@
 title: bundle section.md
 feed: hide
 date: 19-04-2023
-permalink: /bundle%20section.md
 format: list
 ---
 

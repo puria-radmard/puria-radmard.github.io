@@ -2,7 +2,6 @@
 title: unital ring.md
 feed: hide
 date: 20-04-2023
-permalink: /unital%20ring.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: axiomatic systems and theory of proofs.md
 feed: hide
 date: 15-04-2023
-permalink: /axiomatic%20systems%20and%20theory%20of%20proofs.md
 format: list
 ---
 

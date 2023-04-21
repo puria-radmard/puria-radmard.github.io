@@ -2,7 +2,6 @@
 title: Synaptic Plasticity.md
 feed: hide
 date: 17-03-2023
-permalink: /Synaptic%20Plasticity/Synaptic%20Plasticity.md
 format: list
 ---
 

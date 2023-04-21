@@ -2,7 +2,6 @@
 title: Objective Bayesian.md
 feed: hide
 date: 20-04-2023
-permalink: /Objective%20Bayesian.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: Geometric Anatomy of Theoretical Physics.md
 feed: hide
 date: 15-04-2023
-permalink: /Geometric%20Anatomy%20of%20Theoretical%20Physics.md
 format: list
 ---
 

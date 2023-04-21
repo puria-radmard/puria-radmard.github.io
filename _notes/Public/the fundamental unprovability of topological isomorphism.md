@@ -2,7 +2,6 @@
 title: the fundamental unprovability of topological isomorphism.md
 feed: hide
 date: 16-04-2023
-permalink: /the%20fundamental%20unprovability%20of%20topological%20isomorphism.md
 format: list
 ---
 

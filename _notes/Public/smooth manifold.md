@@ -2,7 +2,6 @@
 title: smooth manifold.md
 feed: hide
 date: 20-04-2023
-permalink: /smooth%20manifold.md
 format: list
 ---
 

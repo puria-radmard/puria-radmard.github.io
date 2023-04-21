@@ -2,7 +2,6 @@
 title: equivalence relation.md
 feed: hide
 date: 15-04-2023
-permalink: /equivalence%20relation.md
 format: list
 ---
 

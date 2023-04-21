@@ -2,7 +2,6 @@
 title: Bayesian Modelling and Computation.md
 feed: hide
 date: 09-02-2023
-permalink: /Bayesian%20Modelling%20and%20Computation/Bayesian%20Modelling%20and%20Computation.md
 format: list
 ---
 

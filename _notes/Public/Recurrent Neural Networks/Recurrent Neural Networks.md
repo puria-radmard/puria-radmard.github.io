@@ -2,7 +2,6 @@
 title: Recurrent Neural Networks.md
 feed: hide
 date: 17-03-2023
-permalink: /Recurrent%20Neural%20Networks/Recurrent%20Neural%20Networks.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: local bundle isomorphism.md
 feed: hide
 date: 20-04-2023
-permalink: /local%20bundle%20isomorphism.md
 format: list
 ---
 

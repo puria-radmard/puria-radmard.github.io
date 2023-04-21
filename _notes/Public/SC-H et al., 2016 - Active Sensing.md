@@ -2,7 +2,6 @@
 title: SC-H et al., 2016 - Active Sensing.md
 feed: hide
 date: 15-04-2023
-permalink: /SC-H%20et%20al.,%202016%20-%20Active%20Sensing.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: Reinforcement Learning.md
 feed: hide
 date: 25-03-2023
-permalink: /Reinforcement%20Learning.md
 format: list
 ---
 

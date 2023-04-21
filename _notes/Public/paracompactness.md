@@ -2,7 +2,6 @@
 title: paracompactness.md
 feed: hide
 date: 16-04-2023
-permalink: /paracompactness.md
 format: list
 ---
 

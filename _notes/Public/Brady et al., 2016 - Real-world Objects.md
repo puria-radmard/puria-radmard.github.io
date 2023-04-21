@@ -2,7 +2,6 @@
 title: Brady et al., 2016 - Real-world Objects.md
 feed: hide
 date: 18-04-2023
-permalink: /Brady%20et%20al.,%202016%20-%20Real-world%20Objects.md
 format: list
 ---
 

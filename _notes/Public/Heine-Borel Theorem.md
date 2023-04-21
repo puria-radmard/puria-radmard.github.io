@@ -2,7 +2,6 @@
 title: Heine-Borel Theorem.md
 feed: hide
 date: 16-04-2023
-permalink: /Heine-Borel%20Theorem.md
 format: list
 ---
 

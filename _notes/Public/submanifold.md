@@ -2,7 +2,6 @@
 title: submanifold.md
 feed: hide
 date: 19-04-2023
-permalink: /submanifold.md
 format: list
 ---
 

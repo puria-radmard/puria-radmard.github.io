@@ -2,7 +2,6 @@
 title: ZFC axioms of set theory.md
 feed: hide
 date: 15-04-2023
-permalink: /ZFC%20axioms%20of%20set%20theory.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: wake-sleep algorithm.md
 feed: hide
 date: 24-03-2023
-permalink: /wake-sleep%20algorithm.md
 format: list
 ---
 

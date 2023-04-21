@@ -2,7 +2,6 @@
 title: subbundle.md
 feed: hide
 date: 19-04-2023
-permalink: /subbundle.md
 format: list
 ---
 

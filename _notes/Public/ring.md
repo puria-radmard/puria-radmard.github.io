@@ -2,7 +2,6 @@
 title: ring.md
 feed: hide
 date: 20-04-2023
-permalink: /ring.md
 format: list
 ---
 

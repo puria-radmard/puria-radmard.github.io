@@ -2,7 +2,6 @@
 title: compactness.md
 feed: hide
 date: 16-04-2023
-permalink: /compactness.md
 format: list
 ---
 

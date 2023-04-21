@@ -2,7 +2,6 @@
 title: Signal Analysis.md
 feed: hide
 date: 17-03-2023
-permalink: /Signal%20Analysis/Signal%20Analysis.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: homotopic curves.md
 feed: hide
 date: 16-04-2023
-permalink: /homotopic%20curves.md
 format: list
 ---
 

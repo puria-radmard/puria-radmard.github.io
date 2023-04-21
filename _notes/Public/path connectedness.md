@@ -2,7 +2,6 @@
 title: path connectedness.md
 feed: hide
 date: 16-04-2023
-permalink: /path%20connectedness.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: Lengyel et al., 2015 - the Role of Time.md
 feed: hide
 date: 15-04-2023
-permalink: /Lengyel%20et%20al.,%202015%20-%20the%20Role%20of%20Time.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: Travis et al., 2013 - Contextual cuing.md
 feed: hide
 date: 18-04-2023
-permalink: /Travis%20et%20al.,%202013%20-%20Contextual%20cuing.md
 format: list
 ---
 

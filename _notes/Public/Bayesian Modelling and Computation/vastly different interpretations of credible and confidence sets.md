@@ -2,7 +2,6 @@
 title: vastly different interpretations of credible and confidence sets.md
 feed: hide
 date: 10-02-2023
-permalink: /Bayesian%20Modelling%20and%20Computation/vastly%20different%20interpretations%20of%20credible%20and%20confidence%20sets.md
 format: list
 ---
 

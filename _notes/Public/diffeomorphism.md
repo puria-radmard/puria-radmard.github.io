@@ -2,7 +2,6 @@
 title: diffeomorphism.md
 feed: hide
 date: 20-04-2023
-permalink: /diffeomorphism.md
 format: list
 ---
 

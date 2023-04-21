@@ -2,7 +2,6 @@
 title: de Finneti's theorem on exchangable priors.md
 feed: hide
 date: 20-04-2023
-permalink: /de%20Finneti's%20theorem%20on%20exchangable%20priors.md
 format: list
 ---
 

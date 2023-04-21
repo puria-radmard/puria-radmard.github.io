@@ -2,7 +2,6 @@
 title: metrisable space.md
 feed: hide
 date: 16-04-2023
-permalink: /metrisable%20space.md
 format: list
 ---
 

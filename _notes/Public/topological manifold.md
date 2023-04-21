@@ -2,7 +2,6 @@
 title: topological manifold.md
 feed: hide
 date: 19-04-2023
-permalink: /topological%20manifold.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: the quotient map.md
 feed: hide
 date: 16-04-2023
-permalink: /the%20quotient%20map.md
 format: list
 ---
 

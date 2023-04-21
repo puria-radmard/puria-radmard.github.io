@@ -2,7 +2,6 @@
 title: measure theoretic Bayes' rule.md
 feed: hide
 date: 10-02-2023
-permalink: /Bayesian%20Modelling%20and%20Computation/measure%20theoretic%20Bayes'%20rule.md
 format: list
 ---
 

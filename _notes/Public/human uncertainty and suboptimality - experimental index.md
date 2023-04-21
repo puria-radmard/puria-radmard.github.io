@@ -2,7 +2,6 @@
 title: human uncertainty and suboptimality - experimental index.md
 feed: hide
 date: 15-04-2023
-permalink: /human%20uncertainty%20and%20suboptimality%20-%20experimental%20index.md
 format: list
 ---
 

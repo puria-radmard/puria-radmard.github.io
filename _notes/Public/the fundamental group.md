@@ -2,7 +2,6 @@
 title: the fundamental group.md
 feed: hide
 date: 16-04-2023
-permalink: /the%20fundamental%20group.md
 format: list
 ---
 

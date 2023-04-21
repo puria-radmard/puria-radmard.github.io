@@ -2,7 +2,6 @@
 title: predicate logic.md
 feed: hide
 date: 15-04-2023
-permalink: /predicate%20logic.md
 format: list
 ---
 

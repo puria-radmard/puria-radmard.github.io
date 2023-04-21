@@ -2,7 +2,6 @@
 title: T2 (Hausdroff) topological space.md
 feed: hide
 date: 16-04-2023
-permalink: /T2%20(Hausdroff)%20topological%20space.md
 format: list
 ---
 

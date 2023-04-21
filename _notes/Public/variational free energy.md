@@ -2,7 +2,6 @@
 title: variational free energy.md
 feed: hide
 date: 24-03-2023
-permalink: /variational%20free%20energy.md
 format: list
 ---
 

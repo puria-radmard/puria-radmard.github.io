@@ -2,7 +2,6 @@
 title: contralateral delay activity.md
 feed: hide
 date: 18-04-2023
-permalink: /contralateral%20delay%20activity.md
 format: list
 ---
 

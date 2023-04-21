@@ -2,7 +2,6 @@
 title: recursion in the sequential BLU predictor.md
 feed: hide
 date: 28-03-2023
-permalink: /recursion%20in%20the%20sequential%20BLU%20predictor.md
 format: list
 ---
 

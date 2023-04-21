@@ -2,7 +2,6 @@
 title: partition of unity.md
 feed: hide
 date: 16-04-2023
-permalink: /partition%20of%20unity.md
 format: list
 ---
 

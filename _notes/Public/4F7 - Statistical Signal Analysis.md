@@ -2,7 +2,6 @@
 title: 4F7 - Statistical Signal Analysis.md
 feed: hide
 date: 28-03-2023
-permalink: /4F7%20-%20Statistical%20Signal%20Analysis.md
 format: list
 ---
 

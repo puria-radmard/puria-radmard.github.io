@@ -2,7 +2,6 @@
 title: Bayesian Computation.md
 feed: hide
 date: 17-03-2023
-permalink: /Bayesian%20Computation/Bayesian%20Computation.md
 format: list
 ---
 

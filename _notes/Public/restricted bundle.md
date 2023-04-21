@@ -2,7 +2,6 @@
 title: restricted bundle.md
 feed: hide
 date: 19-04-2023
-permalink: /restricted%20bundle.md
 format: list
 ---
 

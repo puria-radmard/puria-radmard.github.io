@@ -16,7 +16,6 @@ header_template = """
 title: {title}
 feed: hide
 date: {date}
-permalink: {permalink}
 format: list
 ---
 """[1:] # remove \n at start!
@@ -76,7 +75,7 @@ def generate_header(file_name_as_list):
     header = header_template.format(
         title = file_name_as_list[-1],
         date = datetime.fromtimestamp(os.stat(original_file_name).st_birthtime).strftime('%d-%m-%Y'),
-        permalink = "/" + build_path(file_name_as_list).replace(' ', '%20')
+        #permalink = "/" + build_path(file_name_as_list).replace(' ', '%20')
     )
     return header
 

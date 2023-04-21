@@ -2,7 +2,6 @@
 title: propositional logic.md
 feed: hide
 date: 15-04-2023
-permalink: /propositional%20logic.md
 format: list
 ---
 

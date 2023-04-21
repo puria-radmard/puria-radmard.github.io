@@ -2,7 +2,6 @@
 title: bundle morphism.md
 feed: hide
 date: 19-04-2023
-permalink: /bundle%20morphism.md
 format: list
 ---
 

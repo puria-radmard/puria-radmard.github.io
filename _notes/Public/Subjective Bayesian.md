@@ -2,7 +2,6 @@
 title: Subjective Bayesian.md
 feed: hide
 date: 20-04-2023
-permalink: /Subjective%20Bayesian.md
 format: list
 ---
 

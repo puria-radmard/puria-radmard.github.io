@@ -2,7 +2,6 @@
 title: Structural Discovery.md
 feed: hide
 date: 15-04-2023
-permalink: /Structural%20Discovery.md
 format: list
 ---
 

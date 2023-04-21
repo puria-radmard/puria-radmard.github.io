@@ -2,7 +2,6 @@
 title: sequential best linear unbiased predictor.md
 feed: hide
 date: 28-03-2023
-permalink: /sequential%20best%20linear%20unbiased%20predictor.md
 format: list
 ---
 

@@ -2,7 +2,6 @@
 title: homeomorphism.md
 feed: hide
 date: 16-04-2023
-permalink: /homeomorphism.md
 format: list
 ---
 

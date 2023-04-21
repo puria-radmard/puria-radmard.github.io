@@ -2,7 +2,6 @@
 title: neural manifold analysis.md
 feed: hide
 date: 19-03-2023
-permalink: /neural%20manifold%20analysis.md
 format: list
 ---
 

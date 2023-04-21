@@ -2,7 +2,6 @@
 title: the map index.md
 feed: hide
 date: 15-04-2023
-permalink: /the%20map%20index.md
 format: list
 ---
 

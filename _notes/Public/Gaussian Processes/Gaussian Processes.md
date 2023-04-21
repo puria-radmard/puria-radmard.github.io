@@ -2,7 +2,6 @@
 title: Gaussian Processes.md
 feed: hide
 date: 17-03-2023
-permalink: /Gaussian%20Processes/Gaussian%20Processes.md
 format: list
 ---
 

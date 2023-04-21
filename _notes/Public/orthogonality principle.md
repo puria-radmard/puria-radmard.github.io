@@ -2,7 +2,6 @@
 title: orthogonality principle.md
 feed: hide
 date: 28-03-2023
-permalink: /orthogonality%20principle.md
 format: list
 ---
 

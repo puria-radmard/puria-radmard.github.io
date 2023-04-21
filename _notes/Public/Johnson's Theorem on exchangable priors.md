@@ -2,7 +2,6 @@
 title: Johnson's Theorem on exchangable priors.md
 feed: hide
 date: 20-04-2023
-permalink: /Johnson's%20Theorem%20on%20exchangable%20priors.md
 format: list
 ---
 

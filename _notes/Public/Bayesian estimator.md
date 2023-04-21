@@ -2,7 +2,6 @@
 title: Bayesian estimator.md
 feed: hide
 date: 20-04-2023
-permalink: /Bayesian%20estimator.md
 format: list
 ---
 

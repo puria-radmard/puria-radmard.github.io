@@ -2,7 +2,6 @@
 title: Generative Models.md
 feed: hide
 date: 24-03-2023
-permalink: /Generative%20Models.md
 format: list
 ---
 

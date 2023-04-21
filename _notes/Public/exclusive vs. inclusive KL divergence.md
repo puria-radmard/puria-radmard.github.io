@@ -2,7 +2,6 @@
 title: exclusive vs. inclusive KL divergence.md
 feed: hide
 date: 31-03-2023
-permalink: /exclusive%20vs.%20inclusive%20KL%20divergence.md
 format: list
 ---
 

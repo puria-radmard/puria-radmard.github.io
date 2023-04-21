@@ -2,7 +2,6 @@
 title: animal-like neural networks - approaches index.md
 feed: hide
 date: 18-04-2023
-permalink: /animal-like%20neural%20networks%20-%20approaches%20index.md
 format: list
 ---
 

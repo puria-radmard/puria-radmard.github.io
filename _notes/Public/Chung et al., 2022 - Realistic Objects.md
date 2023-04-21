@@ -2,7 +2,6 @@
 title: Chung et al., 2022 - Realistic Objects.md
 feed: hide
 date: 18-04-2023
-permalink: /Chung%20et%20al.,%202022%20-%20Realistic%20Objects.md
 format: list
 ---
 

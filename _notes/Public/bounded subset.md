@@ -2,7 +2,6 @@
 title: bounded subset.md
 feed: hide
 date: 16-04-2023
-permalink: /bounded%20subset.md
 format: list
 ---
 

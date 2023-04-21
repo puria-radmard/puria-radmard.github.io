@@ -2,7 +2,6 @@
 title: equivalence class.md
 feed: hide
 date: 15-04-2023
-permalink: /equivalence%20class.md
 format: list
 ---
 

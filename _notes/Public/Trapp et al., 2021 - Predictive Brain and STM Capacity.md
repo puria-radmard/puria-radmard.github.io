@@ -2,7 +2,6 @@
 title: Trapp et al., 2021 - Predictive Brain and STM Capacity.md
 feed: hide
 date: 18-04-2023
-permalink: /Trapp%20et%20al.,%202021%20-%20Predictive%20Brain%20and%20STM%20Capacity.md
 format: list
 ---
 

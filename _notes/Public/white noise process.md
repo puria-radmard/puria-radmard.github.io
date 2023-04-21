@@ -2,7 +2,6 @@
 title: white noise process.md
 feed: hide
 date: 28-03-2023
-permalink: /white%20noise%20process.md
 format: list
 ---
 

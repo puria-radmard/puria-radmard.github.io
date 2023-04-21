@@ -2,7 +2,6 @@
 title: manifold atlas.md
 feed: hide
 date: 20-04-2023
-permalink: /manifold%20atlas.md
 format: list
 ---
 

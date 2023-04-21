@@ -2,7 +2,6 @@
 title: the linear algebra index.md
 feed: hide
 date: 16-04-2023
-permalink: /the%20linear%20algebra%20index.md
 format: list
 ---
 

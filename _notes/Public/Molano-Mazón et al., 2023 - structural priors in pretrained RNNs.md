@@ -2,7 +2,6 @@
 title: Molano-Mazón et al., 2023 - structural priors in pretrained RNNs.md
 feed: hide
 date: 18-04-2023
-permalink: /Molano-Mazón%20et%20al.,%202023%20-%20structural%20priors%20in%20pretrained%20RNNs.md
 format: list
 ---
 

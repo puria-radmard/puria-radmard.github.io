@@ -2,7 +2,6 @@
 title: C0-compatible.md
 feed: hide
 date: 20-04-2023
-permalink: /C0-compatible.md
 format: list
 ---
 

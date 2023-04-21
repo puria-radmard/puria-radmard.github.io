@@ -2,7 +2,6 @@
 title: Helmholtz machine.md
 feed: hide
 date: 24-03-2023
-permalink: /Helmholtz%20machine.md
 format: list
 ---
 

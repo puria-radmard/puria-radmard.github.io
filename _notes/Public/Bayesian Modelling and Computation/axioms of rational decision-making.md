@@ -2,7 +2,6 @@
 title: axioms of rational decision-making.md
 feed: hide
 date: 10-02-2023
-permalink: /Bayesian%20Modelling%20and%20Computation/axioms%20of%20rational%20decision-making.md
 format: list
 ---
 

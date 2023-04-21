@@ -2,7 +2,6 @@
 title: convergence.md
 feed: hide
 date: 16-04-2023
-permalink: /convergence.md
 format: list
 ---
 

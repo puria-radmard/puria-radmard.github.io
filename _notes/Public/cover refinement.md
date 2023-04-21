@@ -2,7 +2,6 @@
 title: cover refinement.md
 feed: hide
 date: 16-04-2023
-permalink: /cover%20refinement.md
 format: list
 ---
 

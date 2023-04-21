@@ -2,7 +2,6 @@
 title: component functions.md
 feed: hide
 date: 20-04-2023
-permalink: /component%20functions.md
 format: list
 ---
 

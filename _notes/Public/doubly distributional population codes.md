@@ -2,7 +2,6 @@
 title: doubly distributional population codes.md
 feed: hide
 date: 19-03-2023
-permalink: /doubly%20distributional%20population%20codes.md
 format: list
 ---
 

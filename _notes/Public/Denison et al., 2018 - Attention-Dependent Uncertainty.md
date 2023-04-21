@@ -2,7 +2,6 @@
 title: Denison et al., 2018 - Attention-Dependent Uncertainty.md
 feed: hide
 date: 15-04-2023
-permalink: /Denison%20et%20al.,%202018%20-%20Attention-Dependent%20Uncertainty.md
 format: list
 ---
 

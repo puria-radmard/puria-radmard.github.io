@@ -2,7 +2,6 @@
 title: product topology.md
 feed: hide
 date: 16-04-2023
-permalink: /product%20topology.md
 format: list
 ---
 

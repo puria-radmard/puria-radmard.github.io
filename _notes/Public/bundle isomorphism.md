@@ -2,7 +2,6 @@
 title: bundle isomorphism.md
 feed: hide
 date: 19-04-2023
-permalink: /bundle%20isomorphism.md
 format: list
 ---
 

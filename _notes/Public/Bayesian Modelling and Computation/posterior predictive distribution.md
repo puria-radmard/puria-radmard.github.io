@@ -2,7 +2,6 @@
 title: posterior predictive distribution.md
 feed: hide
 date: 10-02-2023
-permalink: /Bayesian%20Modelling%20and%20Computation/posterior%20predictive%20distribution.md
 format: list
 ---
 

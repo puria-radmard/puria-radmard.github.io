@@ -2,7 +2,6 @@
 title: atlas structure and compatability.md
 feed: hide
 date: 20-04-2023
-permalink: /atlas%20structure%20and%20compatability.md
 format: list
 ---
 

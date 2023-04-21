@@ -2,7 +2,6 @@
 title: topologically isomorphic.md
 feed: hide
 date: 16-04-2023
-permalink: /topologically%20isomorphic.md
 format: list
 ---
 

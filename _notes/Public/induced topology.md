@@ -2,7 +2,6 @@
 title: induced topology.md
 feed: hide
 date: 16-04-2023
-permalink: /induced%20topology.md
 format: list
 ---
 

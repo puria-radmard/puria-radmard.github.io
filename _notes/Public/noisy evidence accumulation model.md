@@ -2,7 +2,6 @@
 title: noisy evidence accumulation model.md
 feed: hide
 date: 15-04-2023
-permalink: /noisy%20evidence%20accumulation%20model.md
 format: list
 ---
 

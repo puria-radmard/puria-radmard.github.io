@@ -2,7 +2,6 @@
 title: Xie et al., 2022 - CNN-RNN.md
 feed: hide
 date: 15-04-2023
-permalink: /Xie%20et%20al.,%202022%20-%20CNN-RNN.md
 format: list
 ---
 

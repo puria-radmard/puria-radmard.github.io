@@ -2,7 +2,6 @@
 title: the standard topology.md
 feed: hide
 date: 16-04-2023
-permalink: /the%20standard%20topology.md
 format: list
 ---
 

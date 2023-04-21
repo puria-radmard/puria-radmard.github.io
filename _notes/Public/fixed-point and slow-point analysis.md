@@ -2,7 +2,6 @@
 title: fixed-point and slow-point analysis.md
 feed: hide
 date: 31-03-2023
-permalink: /fixed-point%20and%20slow-point%20analysis.md
 format: list
 ---
 

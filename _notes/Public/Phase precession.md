@@ -2,7 +2,6 @@
 title: Phase precession.md
 feed: hide
 date: 31-03-2023
-permalink: /Phase%20precession.md
 format: list
 ---
 

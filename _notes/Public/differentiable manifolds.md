@@ -2,7 +2,6 @@
 title: differentiable manifolds.md
 feed: hide
 date: 20-04-2023
-permalink: /differentiable%20manifolds.md
 format: list
 ---
 

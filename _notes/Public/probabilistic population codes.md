@@ -2,7 +2,6 @@
 title: probabilistic population codes.md
 feed: hide
 date: 23-03-2023
-permalink: /probabilistic%20population%20codes.md
 format: list
 ---
 

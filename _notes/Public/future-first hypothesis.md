@@ -2,7 +2,6 @@
 title: future-first hypothesis.md
 feed: hide
 date: 18-04-2023
-permalink: /future-first%20hypothesis.md
 format: list
 ---
 
