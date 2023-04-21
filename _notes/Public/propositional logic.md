@@ -1,5 +1,5 @@
 ---
-title: propositional logic.md
+title: propositional logic
 feed: hide
 date: 15-04-2023
 format: list

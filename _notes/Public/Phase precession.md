@@ -1,5 +1,5 @@
 ---
-title: Phase precession.md
+title: Phase precession
 feed: hide
 date: 31-03-2023
 format: list

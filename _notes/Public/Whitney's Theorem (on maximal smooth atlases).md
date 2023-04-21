@@ -1,5 +1,5 @@
 ---
-title: Whitney's Theorem (on maximal smooth atlases).md
+title: Whitney's Theorem (on maximal smooth atlases)
 feed: hide
 date: 20-04-2023
 format: list

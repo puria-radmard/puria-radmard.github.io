@@ -1,5 +1,5 @@
 ---
-title: the map index.md
+title: the map index
 feed: hide
 date: 15-04-2023
 format: list

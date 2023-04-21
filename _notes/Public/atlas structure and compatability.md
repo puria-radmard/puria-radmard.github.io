@@ -1,5 +1,5 @@
 ---
-title: atlas structure and compatability.md
+title: atlas structure and compatability
 feed: hide
 date: 20-04-2023
 format: list

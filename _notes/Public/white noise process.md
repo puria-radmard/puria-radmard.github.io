@@ -1,5 +1,5 @@
 ---
-title: white noise process.md
+title: white noise process
 feed: hide
 date: 28-03-2023
 format: list

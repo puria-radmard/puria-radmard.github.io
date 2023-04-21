@@ -1,5 +1,5 @@
 ---
-title: animal-like neural networks - approaches index.md
+title: animal-like neural networks - approaches index
 feed: hide
 date: 18-04-2023
 format: list

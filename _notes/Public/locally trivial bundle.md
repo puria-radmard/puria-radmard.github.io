@@ -1,5 +1,5 @@
 ---
-title: locally trivial bundle.md
+title: locally trivial bundle
 feed: hide
 date: 20-04-2023
 format: list

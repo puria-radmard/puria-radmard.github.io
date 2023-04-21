@@ -1,5 +1,5 @@
 ---
-title: metric-induced topology.md
+title: metric-induced topology
 feed: hide
 date: 16-04-2023
 format: list

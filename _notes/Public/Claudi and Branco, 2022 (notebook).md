@@ -1,5 +1,5 @@
 ---
-title: Claudi and Branco, 2022 (notebook).md
+title: Claudi and Branco, 2022 (notebook)
 feed: hide
 date: 19-03-2023
 format: list

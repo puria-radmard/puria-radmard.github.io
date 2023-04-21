@@ -1,5 +1,5 @@
 ---
-title: sequential best linear unbiased predictor.md
+title: sequential best linear unbiased predictor
 feed: hide
 date: 28-03-2023
 format: list

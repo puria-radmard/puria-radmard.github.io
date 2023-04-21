@@ -1,5 +1,5 @@
 ---
-title: bundle morphism.md
+title: bundle morphism
 feed: hide
 date: 19-04-2023
 format: list

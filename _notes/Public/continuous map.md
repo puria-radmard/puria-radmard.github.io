@@ -1,5 +1,5 @@
 ---
-title: continuous map.md
+title: continuous map
 feed: hide
 date: 16-04-2023
 format: list

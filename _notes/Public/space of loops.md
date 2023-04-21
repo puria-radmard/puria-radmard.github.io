@@ -1,5 +1,5 @@
 ---
-title: space of loops.md
+title: space of loops
 feed: hide
 date: 16-04-2023
 format: list

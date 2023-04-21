@@ -1,5 +1,5 @@
 ---
-title: doubly distributional population codes.md
+title: doubly distributional population codes
 feed: hide
 date: 19-03-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: predicate logic.md
+title: predicate logic
 feed: hide
 date: 15-04-2023
 format: list

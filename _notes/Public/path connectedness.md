@@ -1,5 +1,5 @@
 ---
-title: path connectedness.md
+title: path connectedness
 feed: hide
 date: 16-04-2023
 format: list

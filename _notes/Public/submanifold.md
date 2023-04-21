@@ -1,5 +1,5 @@
 ---
-title: submanifold.md
+title: submanifold
 feed: hide
 date: 19-04-2023
 format: list

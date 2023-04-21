@@ -1,5 +1,5 @@
 ---
-title: open set.md
+title: open set
 feed: hide
 date: 16-04-2023
 format: list

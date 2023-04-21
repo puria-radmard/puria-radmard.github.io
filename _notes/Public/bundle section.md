@@ -1,5 +1,5 @@
 ---
-title: bundle section.md
+title: bundle section
 feed: hide
 date: 19-04-2023
 format: list

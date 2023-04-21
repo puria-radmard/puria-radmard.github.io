@@ -1,5 +1,5 @@
 ---
-title: Synaptic Plasticity.md
+title: Synaptic Plasticity
 feed: hide
 date: 17-03-2023
 format: list

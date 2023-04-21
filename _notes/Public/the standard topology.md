@@ -1,5 +1,5 @@
 ---
-title: the standard topology.md
+title: the standard topology
 feed: hide
 date: 16-04-2023
 format: list

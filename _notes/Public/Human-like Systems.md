@@ -1,5 +1,5 @@
 ---
-title: Human-like Systems.md
+title: Human-like Systems
 feed: hide
 date: 25-03-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: variational inference.md
+title: variational inference
 feed: hide
 date: 31-03-2023
 format: list

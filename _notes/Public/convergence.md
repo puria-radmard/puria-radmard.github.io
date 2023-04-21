@@ -1,5 +1,5 @@
 ---
-title: convergence.md
+title: convergence
 feed: hide
 date: 16-04-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: T1 topological space.md
+title: T1 topological space
 feed: hide
 date: 16-04-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: the set and space index.md
+title: the set and space index
 feed: hide
 date: 15-04-2023
 format: list

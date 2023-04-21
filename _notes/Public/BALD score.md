@@ -1,5 +1,5 @@
 ---
-title: BALD score.md
+title: BALD score
 feed: hide
 date: 15-04-2023
 format: list

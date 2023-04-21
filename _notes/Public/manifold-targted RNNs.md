@@ -1,5 +1,5 @@
 ---
-title: manifold-targted RNNs.md
+title: manifold-targted RNNs
 feed: hide
 date: 19-03-2023
 format: list

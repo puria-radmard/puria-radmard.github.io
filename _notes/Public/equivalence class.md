@@ -1,5 +1,5 @@
 ---
-title: equivalence class.md
+title: equivalence class
 feed: hide
 date: 15-04-2023
 format: list

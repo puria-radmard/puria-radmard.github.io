@@ -1,5 +1,5 @@
 ---
-title: Sahani and Dayan 2003 (notebook).md
+title: Sahani and Dayan 2003 (notebook)
 feed: hide
 date: 19-03-2023
 format: list

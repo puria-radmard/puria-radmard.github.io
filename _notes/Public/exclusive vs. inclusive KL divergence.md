@@ -1,5 +1,5 @@
 ---
-title: exclusive vs. inclusive KL divergence.md
+title: exclusive vs. inclusive KL divergence
 feed: hide
 date: 31-03-2023
 format: list

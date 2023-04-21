@@ -1,5 +1,5 @@
 ---
-title: measure theoretic Bayesian decision making.md
+title: measure theoretic Bayesian decision making
 feed: hide
 date: 10-02-2023
 format: list

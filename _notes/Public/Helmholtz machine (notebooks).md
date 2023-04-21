@@ -1,5 +1,5 @@
 ---
-title: Helmholtz machine (notebooks).md
+title: Helmholtz machine (notebooks)
 feed: hide
 date: 24-03-2023
 format: list

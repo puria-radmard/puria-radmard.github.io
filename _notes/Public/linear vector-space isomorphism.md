@@ -1,5 +1,5 @@
 ---
-title: linear vector-space isomorphism.md
+title: linear vector-space isomorphism
 feed: hide
 date: 20-04-2023
 format: list

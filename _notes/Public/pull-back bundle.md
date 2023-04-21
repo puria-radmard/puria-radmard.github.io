@@ -1,5 +1,5 @@
 ---
-title: pull-back bundle.md
+title: pull-back bundle
 feed: hide
 date: 20-04-2023
 format: list

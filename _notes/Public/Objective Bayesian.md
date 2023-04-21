@@ -1,5 +1,5 @@
 ---
-title: Objective Bayesian.md
+title: Objective Bayesian
 feed: hide
 date: 20-04-2023
 format: list

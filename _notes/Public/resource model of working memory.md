@@ -1,5 +1,5 @@
 ---
-title: resource model of working memory.md
+title: resource model of working memory
 feed: hide
 date: 15-04-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: Dimensionality Reduction.md
+title: Dimensionality Reduction
 feed: hide
 date: 17-03-2023
 format: list

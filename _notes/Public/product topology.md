@@ -1,5 +1,5 @@
 ---
-title: product topology.md
+title: product topology
 feed: hide
 date: 16-04-2023
 format: list

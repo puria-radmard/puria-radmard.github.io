@@ -1,5 +1,5 @@
 ---
-title: the discrete topology.md
+title: the discrete topology
 feed: hide
 date: 16-04-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: 4F7 - Statistical Signal Analysis.md
+title: 4F7 - Statistical Signal Analysis
 feed: hide
 date: 28-03-2023
 format: list

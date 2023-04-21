@@ -1,5 +1,5 @@
 ---
-title: Helmholtz machine.md
+title: Helmholtz machine
 feed: hide
 date: 24-03-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: Denison et al., 2018 - Attention-Dependent Uncertainty.md
+title: Denison et al., 2018 - Attention-Dependent Uncertainty
 feed: hide
 date: 15-04-2023
 format: list

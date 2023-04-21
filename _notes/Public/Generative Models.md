@@ -1,5 +1,5 @@
 ---
-title: Generative Models.md
+title: Generative Models
 feed: hide
 date: 24-03-2023
 format: list

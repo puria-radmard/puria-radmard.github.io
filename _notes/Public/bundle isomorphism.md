@@ -1,5 +1,5 @@
 ---
-title: bundle isomorphism.md
+title: bundle isomorphism
 feed: hide
 date: 19-04-2023
 format: list

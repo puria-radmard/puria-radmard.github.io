@@ -1,5 +1,5 @@
 ---
-title: Radon-Nikodym theorm.md
+title: Radon-Nikodym theorm
 feed: hide
 date: 10-02-2023
 format: list

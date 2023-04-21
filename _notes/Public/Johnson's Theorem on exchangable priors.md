@@ -1,5 +1,5 @@
 ---
-title: Johnson's Theorem on exchangable priors.md
+title: Johnson's Theorem on exchangable priors
 feed: hide
 date: 20-04-2023
 format: list

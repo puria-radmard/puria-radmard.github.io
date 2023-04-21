@@ -1,5 +1,5 @@
 ---
-title: open neighbourhood.md
+title: open neighbourhood
 feed: hide
 date: 16-04-2023
 format: list

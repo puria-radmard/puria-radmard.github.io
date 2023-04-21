@@ -1,5 +1,5 @@
 ---
-title: wake-sleep algorithm.md
+title: wake-sleep algorithm
 feed: hide
 date: 24-03-2023
 format: list

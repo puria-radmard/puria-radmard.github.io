@@ -1,5 +1,5 @@
 ---
-title: topologically isomorphic.md
+title: topologically isomorphic
 feed: hide
 date: 16-04-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: Brady et al., 2016 - Real-world Objects.md
+title: Brady et al., 2016 - Real-world Objects
 feed: hide
 date: 18-04-2023
 format: list

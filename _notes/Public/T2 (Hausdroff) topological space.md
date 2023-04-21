@@ -1,5 +1,5 @@
 ---
-title: T2 (Hausdroff) topological space.md
+title: T2 (Hausdroff) topological space
 feed: hide
 date: 16-04-2023
 format: list

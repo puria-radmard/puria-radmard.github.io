@@ -1,5 +1,5 @@
 ---
-title: posterior predictive distribution.md
+title: posterior predictive distribution
 feed: hide
 date: 10-02-2023
 format: list

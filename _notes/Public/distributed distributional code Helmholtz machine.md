@@ -1,5 +1,5 @@
 ---
-title: distributed distributional code Helmholtz machine.md
+title: distributed distributional code Helmholtz machine
 feed: hide
 date: 31-03-2023
 format: list

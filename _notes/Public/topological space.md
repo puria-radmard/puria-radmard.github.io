@@ -1,5 +1,5 @@
 ---
-title: topological space.md
+title: topological space
 feed: hide
 date: 16-04-2023
 format: list

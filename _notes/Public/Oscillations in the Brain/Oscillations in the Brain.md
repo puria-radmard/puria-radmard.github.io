@@ -1,5 +1,5 @@
 ---
-title: Oscillations in the Brain.md
+title: Oscillations in the Brain
 feed: hide
 date: 17-03-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: topological manifold.md
+title: topological manifold
 feed: hide
 date: 19-04-2023
 format: list

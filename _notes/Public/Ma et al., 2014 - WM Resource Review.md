@@ -1,5 +1,5 @@
 ---
-title: Ma et al., 2014 - WM Resource Review.md
+title: Ma et al., 2014 - WM Resource Review
 feed: hide
 date: 15-04-2023
 format: list

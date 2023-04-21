@@ -1,5 +1,5 @@
 ---
-title: Bayesian estimator.md
+title: Bayesian estimator
 feed: hide
 date: 20-04-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: Bayesian Modelling and Computation.md
+title: Bayesian Modelling and Computation
 feed: hide
 date: 09-02-2023
 format: list

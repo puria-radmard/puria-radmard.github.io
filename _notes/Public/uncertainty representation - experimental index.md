@@ -1,5 +1,5 @@
 ---
-title: uncertainty representation - experimental index.md
+title: uncertainty representation - experimental index
 feed: hide
 date: 15-04-2023
 format: list

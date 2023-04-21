@@ -1,5 +1,5 @@
 ---
-title: 2-torus.md
+title: 2-torus
 feed: hide
 date: 16-04-2023
 format: list

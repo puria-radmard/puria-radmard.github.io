@@ -1,5 +1,5 @@
 ---
-title: absolutely continuous.md
+title: absolutely continuous
 feed: hide
 date: 10-02-2023
 format: list

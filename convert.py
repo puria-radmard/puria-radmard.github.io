@@ -72,8 +72,9 @@ def construct_directory_structure(list_files):
 
 def generate_header(file_name_as_list):
     original_file_name = build_path(file_name_as_list, base = src_dir)
+    assert file_name_as_list[-1][-3:] == '.md'
     header = header_template.format(
-        title = file_name_as_list[-1],
+        title = file_name_as_list[-1][:-3],
         date = datetime.fromtimestamp(os.stat(original_file_name).st_birthtime).strftime('%d-%m-%Y'),
         #permalink = "/" + build_path(file_name_as_list).replace(' ', '%20')
     )

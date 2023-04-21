@@ -1,5 +1,5 @@
 ---
-title: Kalman Filter.md
+title: Kalman Filter
 feed: hide
 date: 28-03-2023
 format: list

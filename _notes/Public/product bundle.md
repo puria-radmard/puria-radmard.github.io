@@ -1,5 +1,5 @@
 ---
-title: product bundle.md
+title: product bundle
 feed: hide
 date: 19-04-2023
 format: list

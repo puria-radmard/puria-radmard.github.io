@@ -1,5 +1,5 @@
 ---
-title: Control Theory.md
+title: Control Theory
 feed: hide
 date: 17-03-2023
 format: list

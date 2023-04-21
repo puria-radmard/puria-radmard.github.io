@@ -1,5 +1,5 @@
 ---
-title: vector space.md
+title: vector space
 feed: hide
 date: 20-04-2023
 format: list

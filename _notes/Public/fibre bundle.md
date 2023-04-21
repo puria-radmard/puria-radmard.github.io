@@ -1,5 +1,5 @@
 ---
-title: fibre bundle.md
+title: fibre bundle
 feed: hide
 date: 19-04-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: RNN connectivity.md
+title: RNN connectivity
 feed: hide
 date: 19-03-2023
 format: list

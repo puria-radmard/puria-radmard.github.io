@@ -1,5 +1,5 @@
 ---
-title: manifold atlas.md
+title: manifold atlas
 feed: hide
 date: 20-04-2023
 format: list

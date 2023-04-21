@@ -1,5 +1,5 @@
 ---
-title: noisy evidence accumulation model.md
+title: noisy evidence accumulation model
 feed: hide
 date: 15-04-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: fibre.md
+title: fibre
 feed: hide
 date: 19-04-2023
 format: list

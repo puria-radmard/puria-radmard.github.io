@@ -1,5 +1,5 @@
 ---
-title: orthogonality (random variables).md
+title: orthogonality (random variables)
 feed: hide
 date: 28-03-2023
 format: list

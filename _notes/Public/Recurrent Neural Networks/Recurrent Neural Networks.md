@@ -1,5 +1,5 @@
 ---
-title: Recurrent Neural Networks.md
+title: Recurrent Neural Networks
 feed: hide
 date: 17-03-2023
 format: list

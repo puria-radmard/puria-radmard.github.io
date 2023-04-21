@@ -1,5 +1,5 @@
 ---
-title: Uncertainty Representation.md
+title: Uncertainty Representation
 feed: hide
 date: 19-03-2023
 format: list

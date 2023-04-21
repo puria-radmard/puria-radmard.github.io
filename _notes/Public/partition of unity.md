@@ -1,5 +1,5 @@
 ---
-title: partition of unity.md
+title: partition of unity
 feed: hide
 date: 16-04-2023
 format: list

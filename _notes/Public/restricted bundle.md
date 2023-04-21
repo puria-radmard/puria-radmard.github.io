@@ -1,5 +1,5 @@
 ---
-title: restricted bundle.md
+title: restricted bundle
 feed: hide
 date: 19-04-2023
 format: list

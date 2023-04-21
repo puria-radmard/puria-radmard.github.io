@@ -1,5 +1,5 @@
 ---
-title: recursion in the sequential BLU predictor.md
+title: recursion in the sequential BLU predictor
 feed: hide
 date: 28-03-2023
 format: list

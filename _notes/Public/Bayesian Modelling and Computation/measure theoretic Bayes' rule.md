@@ -1,5 +1,5 @@
 ---
-title: measure theoretic Bayes' rule.md
+title: measure theoretic Bayes' rule
 feed: hide
 date: 10-02-2023
 format: list

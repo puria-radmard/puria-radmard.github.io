@@ -1,5 +1,5 @@
 ---
-title: axioms of rational decision-making.md
+title: axioms of rational decision-making
 feed: hide
 date: 10-02-2023
 format: list

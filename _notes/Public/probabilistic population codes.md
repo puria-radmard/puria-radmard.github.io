@@ -1,5 +1,5 @@
 ---
-title: probabilistic population codes.md
+title: probabilistic population codes
 feed: hide
 date: 23-03-2023
 format: list

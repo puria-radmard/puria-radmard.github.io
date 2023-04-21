@@ -1,5 +1,5 @@
 ---
-title: product manifold.md
+title: product manifold
 feed: hide
 date: 19-04-2023
 format: list

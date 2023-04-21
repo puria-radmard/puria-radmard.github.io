@@ -1,5 +1,5 @@
 ---
-title: ideal evidence accumulation model.md
+title: ideal evidence accumulation model
 feed: hide
 date: 15-04-2023
 format: list

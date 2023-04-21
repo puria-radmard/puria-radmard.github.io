@@ -1,5 +1,5 @@
 ---
-title: Reinforcement Learning.md
+title: Reinforcement Learning
 feed: hide
 date: 25-03-2023
 format: list

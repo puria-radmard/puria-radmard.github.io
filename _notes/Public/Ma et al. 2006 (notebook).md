@@ -1,5 +1,5 @@
 ---
-title: Ma et al. 2006 (notebook).md
+title: Ma et al. 2006 (notebook)
 feed: hide
 date: 23-03-2023
 format: list

@@ -1,5 +1,5 @@
 ---
-title: the chaotic topology.md
+title: the chaotic topology
 feed: hide
 date: 16-04-2023
 format: list

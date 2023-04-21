@@ -1,5 +1,5 @@
 ---
-title: future-first hypothesis.md
+title: future-first hypothesis
 feed: hide
 date: 18-04-2023
 format: list

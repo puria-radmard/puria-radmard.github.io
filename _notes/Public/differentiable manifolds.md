@@ -1,5 +1,5 @@
 ---
-title: differentiable manifolds.md
+title: differentiable manifolds
 feed: hide
 date: 20-04-2023
 format: list

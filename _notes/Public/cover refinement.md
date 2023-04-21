@@ -1,5 +1,5 @@
 ---
-title: cover refinement.md
+title: cover refinement
 feed: hide
 date: 16-04-2023
 format: list

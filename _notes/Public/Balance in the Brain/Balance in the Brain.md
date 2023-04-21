@@ -1,5 +1,5 @@
 ---
-title: Balance in the Brain.md
+title: Balance in the Brain
 feed: hide
 date: 17-03-2023
 format: list

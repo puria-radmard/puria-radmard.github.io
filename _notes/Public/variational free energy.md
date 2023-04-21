@@ -1,5 +1,5 @@
 ---
-title: variational free energy.md
+title: variational free energy
 feed: hide
 date: 24-03-2023
 format: list

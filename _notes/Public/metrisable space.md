@@ -1,5 +1,5 @@
 ---
-title: metrisable space.md
+title: metrisable space
 feed: hide
 date: 16-04-2023
 format: list
