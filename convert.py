@@ -9,7 +9,7 @@ from datetime import datetime
 
 ### Constants
 
-src_dir="/Users/puriaradmard/Library/Mobile Documents/iCloud~md~obsidian/Documents/BACKUP PhD Knowledge"
+src_dir="/Users/puriaradmard/Library/Mobile Documents/iCloud~md~obsidian/Documents/PhD Knowledge"
 out_dir="_notes/Public"
 image_path="assets/img"
 home_page_file="Homepage.md"
@@ -52,7 +52,7 @@ def fix_maths(string):
             else:
                 #fixed_string += '$$\n\n'
                 fixed_string += "\\]"
-        string = fixed_string.removesuffix('\n\n$$')    # oops
+        string = fixed_string.removesuffix("\\]")    # oops
     # # Then the single ones, in a hacky way
     # string = string.replace('$', '$$')
     # string = string.replace('$$$$', '$$')
