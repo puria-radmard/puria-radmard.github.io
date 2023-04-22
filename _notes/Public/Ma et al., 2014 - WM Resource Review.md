@@ -69,7 +69,7 @@ page_order: 42
 	
 	- Interestingly:
 		- Activity (BOLD and CDA) = h(N)
-		- Slope of h $$\propto$$ performance in WM task
+		- Slope of h $\propto$ performance in WM task
 		- CDA also correlated with recall precision, regardless of N
 	- i.e. these signals may reflect information content as well
 	
@@ -131,3 +131,5 @@ page_order: 42
 
 
 - SEE OPEN QUESTIONS AT THE END - MIGHT BE A BIT DATED
+
+\(

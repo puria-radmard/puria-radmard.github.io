@@ -7,11 +7,13 @@ page_order: 42
 ---
 
 
-The open ball of radius $$r\in\mathbb R^+$$ at $$x$$ can be defined in any [[metric space]] $$M$$ equipped with metric $$\forall x, y \in M: d(x, y)\geq 0$$ as: 
+The open ball of radius $r\in\mathbb R^+$ at $x$ can be defined in any [[metric space]] $M$ equipped with metric $\forall x, y \in M: d(x, y)\geq 0$ as: 
 
-$$B_r(x) := \{y\in M ert d(x, y) < r\}$$
+\[B_r(x) := \{y\in M ert d(x, y) < r\}\]
 
 
-The $$<$$ is key here, as this is now an [[open set]] in [[the standard topology]]
+The $<$ is key here, as this is now an [[open set]] in [[the standard topology]]
 
-$$
+\[
+
+\(
