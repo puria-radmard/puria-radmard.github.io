@@ -25,7 +25,7 @@ A refinement is open if $R\subseteq\mathcal O$, i.e. all sets used are [[open se
 A refinement is *locally finite* if for all points, you *can find at least one* [[open neighbourhood]] that intersects with only finitely many sets in the refinement, i.e.: 
 
 $$
-\forall p\in M: \exists U(p) : \{ \tilde{U}\in R ert \tilde{U}\cap U(p) \neq\emptyset \}
+\forall p\in M: \exists U(p) : \{ \tilde{U}\in R | \tilde{U}\cap U(p) \neq\emptyset \}
 $$
 
 is finite as a set.

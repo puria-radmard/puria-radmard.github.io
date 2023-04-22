@@ -13,7 +13,7 @@ Generally speaking, noise means we have to choose  $x = \arg\max_k(z_k + \epsilo
 
 Because noise is noisy, we now have a probability over which $x$ is chosen, namely: 
 
-$$p(x = k ert z_{1:K}) = \int d\epsilon_{1:K}\ p(\epsilon_k \gt z_j + \epsilon_k - z_k\ \forall\ j\neq k\ ert\ z_{1:K}, \epsilon_{1:K}) \prod_k p(\epsilon_k)$$
+$$p(x = k | z_{1:K}) = \int d\epsilon_{1:K}\ p(\epsilon_k \gt z_j + \epsilon_k - z_k\ \forall\ j\neq k\ |\ z_{1:K}, \epsilon_{1:K}) \prod_k p(\epsilon_k)$$
 
 assuming perturbation to each category posterior is independent.
 

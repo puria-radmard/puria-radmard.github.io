@@ -15,13 +15,13 @@ This is done by maximising the [[mutual information]] between the unseen new out
 - In active learning this something is the posterior over the parameters of the model
 - In active sensing this something is the posterior over the identity of the scene
 
-We will stick to the latter for now, and denote this posterior as $\pi(cert\mathcal D)$, i.e. the category of the scene given the data collected
+We will stick to the latter for now, and denote this posterior as $\pi(c|\mathcal D)$, i.e. the category of the scene given the data collected
 
 **Interpretation 1**
 The BALD score is originally:
 
 $$
-	score(xert\mathcal{D}_t) = \mathbb{E}_{y\sim p(y ert x, \mathcal D_t)}\left[H(c ert \mathcal D_t) - H(c ert \mathcal D_{t+1})\right] = H(c ert \mathcal D_t) - \mathbb{E}_{y\sim p(y ert x, \mathcal D)}\left[H(c ert \mathcal D_{t+1})\right]
+	score(x|\mathcal{D}_t) = \mathbb{E}_{y\sim p(y | x, \mathcal D_t)}\left[H(c | \mathcal D_t) - H(c | \mathcal D_{t+1})\right] = H(c | \mathcal D_t) - \mathbb{E}_{y\sim p(y | x, \mathcal D)}\left[H(c | \mathcal D_{t+1})\right]
 $$
 
 since the unseen output has no part in the first term
@@ -32,7 +32,7 @@ This is the easier interpretation - you maximise the score as the *expected* dif
 Now flip the mutual information:
 
 $$
-	score(xert\mathcal{D}_t) = \mathbb{E}_{c\sim \pi(c ert \mathcal D_t)}\left[H(y ert x, \mathcal D_t) - H(y ert x, c, \mathcal D_{t})\right] = H(y ert x, \mathcal D_t) - \mathbb{E}_{c\sim \pi(c ert \mathcal D_t)}\left[H(y ert x, c, \mathcal D_{t})\right]
+	score(x|\mathcal{D}_t) = \mathbb{E}_{c\sim \pi(c | \mathcal D_t)}\left[H(y | x, \mathcal D_t) - H(y | x, c, \mathcal D_{t})\right] = H(y | x, \mathcal D_t) - \mathbb{E}_{c\sim \pi(c | \mathcal D_t)}\left[H(y | x, c, \mathcal D_{t})\right]
 $$
 
 where $\mathcal D_{t}$ can be taken out of the second term if data is i.i.d. - which it is usually assumed to be.

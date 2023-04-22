@@ -9,14 +9,14 @@ page_order: 42
 
 PPCs, as described in [[Ma et al. 2006 (notebook)]], consider neurons as encoders of probability distributions rather than encoders of variable values.
 
-This gives an explanation of response variability, since the population response is drawn from $p(\boldsymbol rerts)$, e.g. in the independent Poisson case 
+This gives an explanation of response variability, since the population response is drawn from $p(\boldsymbol r|s)$, e.g. in the independent Poisson case 
 
-$$p(\boldsymbol rerts) = \prod_i \frac{e^{-f_i(s)}f_i(s)^{r_i}}{r_i!}$$
+$$p(\boldsymbol r|s) = \prod_i \frac{e^{-f_i(s)}f_i(s)^{r_i}}{r_i!}$$
 
 
 This then encodes a posterior ditribution naturally, e.g.  in the independent Poisson case: 
 
-$$p(sert\boldsymbol r) \propto  p(s)\prod_i \frac{e^{-f_i(s)}f_i(s)^{r_i}}{r_i!}$$
+$$p(s|\boldsymbol r) \propto  p(s)\prod_i \frac{e^{-f_i(s)}f_i(s)^{r_i}}{r_i!}$$
 
 Where the prior over stimulus is often taken as flat over stimulus values $s$.
 
@@ -26,16 +26,16 @@ $$\boldsymbol r_3 = \boldsymbol F(\boldsymbol r_1, \boldsymbol r_2)$$
 
 then the transformation $\boldsymbol F$ is called Bayes optimal if the two equivalent statements apply:
 
-$$p(\boldsymbol r_3erts) = p(\boldsymbol F(\boldsymbol r_1, \boldsymbol r_2)erts) \propto p(\boldsymbol r_1, \boldsymbol r_2erts) \iff p(sert\boldsymbol r_3) = p(s ert \boldsymbol r_1, \boldsymbol r_2)$$
+$$p(\boldsymbol r_3|s) = p(\boldsymbol F(\boldsymbol r_1, \boldsymbol r_2)|s) \propto p(\boldsymbol r_1, \boldsymbol r_2|s) \iff p(s|\boldsymbol r_3) = p(s | \boldsymbol r_1, \boldsymbol r_2)$$
 
 i.e. there is no *loss of information* during the message passing.
 
 The analysis in the paper considers the exponential family likelihood case, that is when:
 
-$$p(\boldsymbol r_k ert s) = \frac{\phi_k(\boldsymbol r_k)}{\eta_k(s)}\exp\left(\boldsymbol h_k^\intercal (s) \boldsymbol r_k\right)$$
+$$p(\boldsymbol r_k | s) = \frac{\phi_k(\boldsymbol r_k)}{\eta_k(s)}\exp\left(\boldsymbol h_k^\intercal (s) \boldsymbol r_k\right)$$
 
 
-In the case when the presynaptic rates are independent, i.e. $p(\boldsymbol r_1, \boldsymbol r_2erts) = p(\boldsymbol r_1 ert s) p(\boldsymbol r_2erts)$, then a *linear* Bayes optimal combination of rates applies:
+In the case when the presynaptic rates are independent, i.e. $p(\boldsymbol r_1, \boldsymbol r_2|s) = p(\boldsymbol r_1 | s) p(\boldsymbol r_2|s)$, then a *linear* Bayes optimal combination of rates applies:
 
 $$\boldsymbol F(\boldsymbol r_1, \boldsymbol r_2) = \boldsymbol A_1^\intercal \boldsymbol r_1 + \boldsymbol A_2^\intercal \boldsymbol r_2$$
 

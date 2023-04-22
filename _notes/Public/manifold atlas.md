@@ -9,7 +9,7 @@ page_order: 42
 
 A collection of [[chart]]s on a [[topological manifold]] where the [[open neighbourhood]]s [[cover]] the manifold itself exactly, i.e.
 
-$$\mathscr A:= \{(U_\alpha, x_\alpha)ert\alpha\in \mathcal A\}$$
+$$\mathscr A:= \{(U_\alpha, x_\alpha)|\alpha\in \mathcal A\}$$
 
  such that 
 

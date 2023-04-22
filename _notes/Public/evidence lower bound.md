@@ -7,11 +7,11 @@ page_order: 42
 ---
 
 
-For a given generative distribution $p_\theta(zertx)$, the ELBO of some [[variational approximation]] $q$ is:
+For a given generative distribution $p_\theta(z|x)$, the ELBO of some [[variational approximation]] $q$ is:
 
 
 $$
-	\mathcal E(q, \theta, x) = \log p_\theta(x) - \text{KL}[q(zertx)\ertp_\theta(zertx)]
+	\mathcal E(q, \theta, x) = \log p_\theta(x) - \text{KL}[q(z|x)\|p_\theta(z|x)]
 $$
 
 

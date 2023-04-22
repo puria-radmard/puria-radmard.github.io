@@ -9,7 +9,7 @@ page_order: 42
 
 Given a [[bundle]] $(E, \pi, M)$ and a map $f:M'\to M$ from some other [[topological manifold]], a pull-back bundle has:
 
-- Its [[total space]] $E' := \{(m',e)\in M'\times E ert f(m') = \pi(e)\}$
+- Its [[total space]] $E' := \{(m',e)\in M'\times E | f(m') = \pi(e)\}$
 - Its [[base space]] $M'$
 - Its projective map: $\pi'(m',e) := m'$
 

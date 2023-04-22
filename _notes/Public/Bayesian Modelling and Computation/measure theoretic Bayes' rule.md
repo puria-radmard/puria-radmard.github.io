@@ -9,16 +9,16 @@ page_order: 42
 
 Using the third property of the [[measure theoretic posterior distribution]], and assuming a [[dominated model]], then we can write the posterior as a density: 
 
-$$\pi_{\ThetaertX}(d\theta ert x) = \left( \frac{f(xert\theta) }{ \int_{\mathcal P} f(xert\theta) \pi_\Theta(d\theta) } \right) \pi_\Theta(d\theta)$$
+$$\pi_{\Theta|X}(d\theta | x) = \left( \frac{f(x|\theta) }{ \int_{\mathcal P} f(x|\theta) \pi_\Theta(d\theta) } \right) \pi_\Theta(d\theta)$$
 
 
 where $\mathcal P$ is the parameter space, and $f$ is the generative likelihood model (see: [[Bayesian Modelling and Computation]])
 
-i.e. the posterior is [[absolutely continuous]] with respect to the prior ($\pi_{\Theta ert X} \ll \pi_\theta$), and everything in the brackets is the density
+i.e. the posterior is [[absolutely continuous]] with respect to the prior ($\pi_{\Theta | X} \ll \pi_\theta$), and everything in the brackets is the density
 
 Or, more familiarily: 
 
-$$\pi(d\theta ert x) \propto f(x ert \theta) \pi(d\theta)$$
+$$\pi(d\theta | x) \propto f(x | \theta) \pi(d\theta)$$
 
 
 (with subscripts dropped)

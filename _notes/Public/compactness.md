@@ -9,7 +9,7 @@ page_order: 42
 
 A [[topological space]] $(M, \mathcal O)$ is compact if every *open* [[cover]] has a *finite* [[subcover]]
 
-An [[induced topology]] $\mathcal O_N$ on $N\subseteq M$ is a *compact subspace* if $(N, \mathcal Oert_N)$ is compact. The subset $N$ is also called compact
+An [[induced topology]] $\mathcal O_N$ on $N\subseteq M$ is a *compact subspace* if $(N, \mathcal O|_N)$ is compact. The subset $N$ is also called compact
 
 The [[Heine-Borel Theorem]] makes it easy to identify compact subsets in a [[metric space]]
 
