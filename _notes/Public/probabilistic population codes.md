@@ -9,39 +9,39 @@ page_order: 42
 
 PPCs, as described in [[Ma et al. 2006 (notebook)]], consider neurons as encoders of probability distributions rather than encoders of variable values.
 
-This gives an explanation of response variability, since the population response is drawn from $p(\boldsymbol rerts)$, e.g. in the independent Poisson case 
+This gives an explanation of response variability, since the population response is drawn from $$p(\boldsymbol rerts)$$, e.g. in the independent Poisson case 
 
-\[p(\boldsymbol rerts) = \prod_i \frac{e^{-f_i(s)}f_i(s)^{r_i}}{r_i!}\]
+$$p(\boldsymbol rerts) = \prod_i \frac{e^{-f_i(s)}f_i(s)^{r_i}}{r_i!}$$
 
 
 This then encodes a posterior ditribution naturally, e.g.  in the independent Poisson case: 
 
-\[p(sert\boldsymbol r) \propto  p(s)\prod_i \frac{e^{-f_i(s)}f_i(s)^{r_i}}{r_i!}\]
+$$p(sert\boldsymbol r) \propto  p(s)\prod_i \frac{e^{-f_i(s)}f_i(s)^{r_i}}{r_i!}$$
 
-Where the prior over stimulus is often taken as flat over stimulus values $s$.
+Where the prior over stimulus is often taken as flat over stimulus values $$s$$.
 
 The aim now is to combine the information from multiple (wlog 2 here) presynaptic populations of neurons into one postsynaptic one, in a 'Bayes optimal' way. If the rates are related with:
 
-\[\boldsymbol r_3 = \boldsymbol F(\boldsymbol r_1, \boldsymbol r_2)\]
+$$\boldsymbol r_3 = \boldsymbol F(\boldsymbol r_1, \boldsymbol r_2)$$
 
-then the transformation $\boldsymbol F$ is called Bayes optimal if the two equivalent statements apply:
+then the transformation $$\boldsymbol F$$ is called Bayes optimal if the two equivalent statements apply:
 
-\[p(\boldsymbol r_3erts) = p(\boldsymbol F(\boldsymbol r_1, \boldsymbol r_2)erts) \propto p(\boldsymbol r_1, \boldsymbol r_2erts) \iff p(sert\boldsymbol r_3) = p(s ert \boldsymbol r_1, \boldsymbol r_2)\]
+$$p(\boldsymbol r_3erts) = p(\boldsymbol F(\boldsymbol r_1, \boldsymbol r_2)erts) \propto p(\boldsymbol r_1, \boldsymbol r_2erts) \iff p(sert\boldsymbol r_3) = p(s ert \boldsymbol r_1, \boldsymbol r_2)$$
 
 i.e. there is no *loss of information* during the message passing.
 
 The analysis in the paper considers the exponential family likelihood case, that is when:
 
-\[p(\boldsymbol r_k ert s) = \frac{\phi_k(\boldsymbol r_k)}{\eta_k(s)}\exp\left(\boldsymbol h_k^\intercal (s) \boldsymbol r_k\right)\]
+$$p(\boldsymbol r_k ert s) = \frac{\phi_k(\boldsymbol r_k)}{\eta_k(s)}\exp\left(\boldsymbol h_k^\intercal (s) \boldsymbol r_k\right)$$
 
 
-In the case when the presynaptic rates are independent, i.e. $p(\boldsymbol r_1, \boldsymbol r_2erts) = p(\boldsymbol r_1 ert s) p(\boldsymbol r_2erts)$, then a *linear* Bayes optimal combination of rates applies:
+In the case when the presynaptic rates are independent, i.e. $$p(\boldsymbol r_1, \boldsymbol r_2erts) = p(\boldsymbol r_1 ert s) p(\boldsymbol r_2erts)$$, then a *linear* Bayes optimal combination of rates applies:
 
-\[\boldsymbol F(\boldsymbol r_1, \boldsymbol r_2) = \boldsymbol A_1^\intercal \boldsymbol r_1 + \boldsymbol A_2^\intercal \boldsymbol r_2\]
+$$\boldsymbol F(\boldsymbol r_1, \boldsymbol r_2) = \boldsymbol A_1^\intercal \boldsymbol r_1 + \boldsymbol A_2^\intercal \boldsymbol r_2$$
 
-where the matrices are chosen such that $\boldsymbol h_k(s) = \boldsymbol A_k \boldsymbol b(s)$ for all (both) presynaptic populations. A similar pattern applies in the dependent case (see supplementary material).
+where the matrices are chosen such that $$\boldsymbol h_k(s) = \boldsymbol A_k \boldsymbol b(s)$$ for all (both) presynaptic populations. A similar pattern applies in the dependent case (see supplementary material).
 
-The special case is when $\boldsymbol r_1$ and $\boldsymbol r_2$ have the same number of neurons, and each corresponding tuning curve is proportional (i.e. $r_{1,i}, r_{2,i} \propto f_i(s) \ \forall\ i$ ), when $\boldsymbol F$ is just a sum. The notebook shows examples where this is and examples where this is not the case.
+The special case is when $$\boldsymbol r_1$$ and $$\boldsymbol r_2$$ have the same number of neurons, and each corresponding tuning curve is proportional (i.e. $$r_{1,i}, r_{2,i} \propto f_i(s) \ \forall\ i$$ ), when $$\boldsymbol F$$ is just a sum. The notebook shows examples where this is and examples where this is not the case.
 
 **Example: combining Gaussian and sigmoidal tuning curves**
 In the notebook we follow the example in Figure 3 (also in Supplementary Material section 3) except that we do not randomly generate the tuning curves but rather define them with a grid of parameters.
@@ -51,12 +51,10 @@ We follow the example given here by the supplementary material:
 2. Get the output of the basis set, and the three presynaptic layers to all possible stimuli. 'Output' here refers to the value of the tuning curves, i.e. the mean rate, rather than an actual Poisson trial
 3. Find the A matrices using the standard var.-over-covar. linear regression solution (with a unit regulariser):
 
-\[\boldsymbol A_k^\intercal = \left[\boldsymbol C_b + \boldsymbol I \right]\boldsymbol C_{bh^*,k}\]
+$$\boldsymbol A_k^\intercal = \left[\boldsymbol C_b + \boldsymbol I \right]\boldsymbol C_{bh^*,k}$$
 
-which solves the OLS of $\boldsymbol h_k(s) = \boldsymbol A_k \boldsymbol b(s)$ as required
+which solves the OLS of $$\boldsymbol h_k(s) = \boldsymbol A_k \boldsymbol b(s)$$ as required
 
 More commetary given on the notebook!
 
-\[
-
-\(
+$$

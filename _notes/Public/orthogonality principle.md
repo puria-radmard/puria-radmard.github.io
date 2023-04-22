@@ -11,8 +11,8 @@ The error vector of the optimal (lease MSE) estimator is orthogonal to any possi
 
 For example, for the [[sequential best linear unbiased predictor]] has an error that is ortogonal to any piece of data:
 
-\[\mathbb{E}[(X - K[XertY_{1:n}]) Y_i] = 0\ \forall\ i=1,...,n\]
+$$\mathbb{E}[(X - K[XertY_{1:n}]) Y_i] = 0\ \forall\ i=1,...,n$$
 
 
 
-\[
+$$

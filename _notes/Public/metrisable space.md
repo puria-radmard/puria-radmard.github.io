@@ -7,6 +7,4 @@ page_order: 42
 ---
 
 
-A [[topological space]] $(M, \mathcal O)$ is metrisable if there exists a metric function $d$ such that the $\mathcal O = \mathcal O_d$, the [[metric-induced topology]] of that metric function 
-
-\(
+A [[topological space]] $$(M, \mathcal O)$$ is metrisable if there exists a metric function $$d$$ such that the $$\mathcal O = \mathcal O_d$$, the [[metric-induced topology]] of that metric function 

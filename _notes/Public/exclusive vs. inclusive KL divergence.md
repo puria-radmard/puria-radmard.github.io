@@ -7,18 +7,16 @@ page_order: 42
 ---
 
 
-If we're fitting $q$ to $p$:
+If we're fitting $$q$$ to $$p$$:
 
-**Exclusive KL $KL(q\ertp)$:**
-- Requires $p$ dominates $q$
-- No normalisation wrt $p$ required
+**Exclusive KL $$KL(q\ertp)$$:**
+- Requires $$p$$ dominates $$q$$
+- No normalisation wrt $$p$$ required
 - Mode seeking
 
-**Inclusive KL $KL(p\ertq)$:**
-- Requires $q$ dominates $p$
-- Requires normalisation wrt $p$
+**Inclusive KL $$KL(p\ertq)$$:**
+- Requires $$q$$ dominates $$p$$
+- Requires normalisation wrt $$p$$
 - Mean seeking
 
 Exclusive KL, used often in [[variational inference]] can cause lowballing of the posterior estimate
-
-\(

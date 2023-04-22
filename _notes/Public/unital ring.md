@@ -7,8 +7,6 @@ page_order: 42
 ---
 
 
-A [[ring]] where the multiplication $\cdot$ also has a neutral element, i.e. a concept of 1 exists in $R\backslash\{0\}$ such that $\exists 1\in (R\backslash\{0\}): \forall a\in (R\backslash\{0\}): a\cdot 1 = 1\cdot a = a$
+A [[ring]] where the multiplication $$\cdot$$ also has a neutral element, i.e. a concept of 1 exists in $$R\backslash\{0\}$$ such that $$\exists 1\in (R\backslash\{0\}): \forall a\in (R\backslash\{0\}): a\cdot 1 = 1\cdot a = a$$
 
-e.g. the space of all $m\times n$ matrices
-
-\(
+e.g. the space of all $$m\times n$$ matrices
