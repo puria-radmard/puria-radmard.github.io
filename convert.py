@@ -37,8 +37,8 @@ def write_to_file(string, output_path):
         f.write(string)
 
 def fixs_maths(string):
-    # First fix double dollars
     string = string.replace('|', '\vert')    # Assume they are all in latex anyway!!
+    # First fix double dollars
     if '$$' in string:
         split_by_double = string.split('$$')
         fixed_string = ""
@@ -49,6 +49,9 @@ def fixs_maths(string):
             else:
                 fixed_string += '$$\n\n'
         string = fixed_string
+    # Then the single ones, in a hacky way
+    string = string.replace('$', '$$')
+    string = string.replace('$$$$', '$$')
     return string
 
 def convert_file(file_list, header_string):

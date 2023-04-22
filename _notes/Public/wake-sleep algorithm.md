@@ -18,21 +18,21 @@ $$\tilde{\mathcal F}(\mathcal W, \mathcal G) = L(\mathcal G) - \mathbb{E}_{\text
 - Rather than taking weighted sums for the expectation over the approximate prior, and the KL divergence, we can take *stochastic samples* from each distribution
 
 - The **[[wake phase]]** replaces the [[M-phase]]:
-	1. Take a sample $\textbf u$ from the true distribution $P[\textbf u]$
-	2. Use that to take a sample $\textbf v$ from the current recognition distribution $Q[\textbf v ert \textbf u, \mathcal W]$
+	1. Take a sample $$\textbf u$$ from the true distribution $$P[\textbf u]$$
+	2. Use that to take a sample $$\textbf v$$ from the current recognition distribution $$Q[\textbf v ert \textbf u, \mathcal W]$$
 	3. Apply the rules:
-		- $\textbf g \leftarrow \textbf g + \epsilon(\textbf v - \textbf f(\textbf g))$
-		- $\textbf h \leftarrow \textbf h + \epsilon(\textbf u - \textbf f(\textbf h + \textbf G \textbf v))$
-		- $\textbf G \leftarrow \textbf G + \epsilon(\textbf u - \textbf f(\textbf h + \textbf G \textbf v))\textbf v^\intercal$
+		- $$\textbf g \leftarrow \textbf g + \epsilon(\textbf v - \textbf f(\textbf g))$$
+		- $$\textbf h \leftarrow \textbf h + \epsilon(\textbf u - \textbf f(\textbf h + \textbf G \textbf v))$$
+		- $$\textbf G \leftarrow \textbf G + \epsilon(\textbf u - \textbf f(\textbf h + \textbf G \textbf v))\textbf v^\intercal$$
 	
 	- "Wake" refers to the fact that we are using real data
 
 - The [[sleep phase]] replaces the [[E-phase]]:
-	1. Take a sample $\textbf v$ from the current prior $P[\textbf v ert \mathcal G]$
-	2. Use that to a sample $\textbf u$ from the current generative distribution $P[\textbf u ert \textbf v, \mathcal G]$
+	1. Take a sample $$\textbf v$$ from the current prior $$P[\textbf v ert \mathcal G]$$
+	2. Use that to a sample $$\textbf u$$ from the current generative distribution $$P[\textbf u ert \textbf v, \mathcal G]$$
 	3. Apply the rules:
-		- $\textbf w \leftarrow \textbf w + \epsilon(\textbf v - \textbf f(\textbf w + \textbf W \textbf u))$
-		- $\textbf W \leftarrow \textbf W + \epsilon(\textbf v - \textbf f(\textbf w + \textbf W \textbf u))\textbf u^\intercal$
+		- $$\textbf w \leftarrow \textbf w + \epsilon(\textbf v - \textbf f(\textbf w + \textbf W \textbf u))$$
+		- $$\textbf W \leftarrow \textbf W + \epsilon(\textbf v - \textbf f(\textbf w + \textbf W \textbf u))\textbf u^\intercal$$
 	
 	- "Sleep" refers to the fact that we are 'fantasising' data
 

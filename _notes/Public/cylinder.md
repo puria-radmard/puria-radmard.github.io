@@ -6,4 +6,4 @@ format: list
 ---
 
 
-$C:=\mathbb R\times S^1$, equipped with relevant [[product topology]]
+$$C:=\mathbb R\times S^1$$, equipped with relevant [[product topology]]

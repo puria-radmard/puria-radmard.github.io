@@ -30,13 +30,13 @@ However, previous tasks fail to discriminate between the two behaviourally.
 - Figure 3A: real data is used
 - Patterns of overall choice variance for fitted variability models follows those noted in [[noisy evidence accumulation model]]
 - Bayes factor comparison suggests *inference variability model is the best fit to real data*
-- Note that only sensory variability can be used to make preditions across values of $K$, and these predictions are not great
+- Note that only sensory variability can be used to make preditions across values of $$K$$, and these predictions are not great
 
 
 **Task 2 (Figure 4)**
 - Now a tone is played at the end last observation, 50% of the time
 - If no tone - task is the same as last time (and data is combined with Task 1 when fitting models)
-- If tone - last card is selected independently of the last $T_n-1$ cards, and task is to discriminate only that one (disregard accumulated evidence)
+- If tone - last card is selected independently of the last $$T_n-1$$ cards, and task is to discriminate only that one (disregard accumulated evidence)
 
 - As one would expect, the sensory model fit the tone trials best, and performance was much better than that predicted from the no-tone fitted model.
 - Vice-versa: choice variability is much higher in the no-tone sensory models than predicted by the tone sensory model
@@ -47,7 +47,7 @@ However, previous tasks fail to discriminate between the two behaviourally.
 - Figure 3C: number suboptimal
 	- This is an interesting metric. It basically says the number of choices amde that don't agree with even the noisy Bayesian decision making model
 	- Look at the integral in [[noisy evidence accumulation model]] to see this
-	- This proprotion decreases with $T$, given that [[signal-to-noise ratio]] of the decision variables ($z_{1:K}$) increases with observations
+	- This proprotion decreases with $$T$$, given that [[signal-to-noise ratio]] of the decision variables ($$z_{1:K}$$) increases with observations
 
 
 **Task 3 (Figure 6 and 7)**

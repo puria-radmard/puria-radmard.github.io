@@ -6,7 +6,7 @@ format: list
 ---
 
 
-A [[topological space]] $(M, \mathcal O)$ is Hausdroff if any distinct pair of points have their own entirely disjoint [[open neighbourhood]]s, i.e.
+A [[topological space]] $$(M, \mathcal O)$$ is Hausdroff if any distinct pair of points have their own entirely disjoint [[open neighbourhood]]s, i.e.
 
 $$
 \forall p, q \in M: p\neq q\implies \exists U(p), V(q)\in\mathcal O: U(p) \cap V(q) = \emptyset

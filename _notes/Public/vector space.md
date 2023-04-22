@@ -6,4 +6,4 @@ format: list
 ---
 
 
-Given a [[algebraic field]] $(K, +, \cdot)$, 
+Given a [[algebraic field]] $$(K, +, \cdot)$$, 

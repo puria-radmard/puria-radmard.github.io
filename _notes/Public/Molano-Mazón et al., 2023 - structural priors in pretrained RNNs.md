@@ -42,7 +42,7 @@ format: list
 	
 	- The bit in **bold** is the key to the hypothesis
 	- Rats are 'pretrained' on much more complex environments, where number of choices  N>>2
-	- A wrong choice does not rule out 1/2 of the choice set there, but 1/N $\approx$ 0
+	- A wrong choice does not rule out 1/2 of the choice set there, but 1/N $$\approx$$ 0
 
 - **RNNs are super-rat (Figure 1D,E)**
 	- No such correct/incorrect bias in psychometric curves

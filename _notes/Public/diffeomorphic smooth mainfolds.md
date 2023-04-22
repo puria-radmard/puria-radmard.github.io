@@ -6,7 +6,7 @@ format: list
 ---
 
 
-Two [[smooth manifold]]s $(M, \mathcal O_M, \mathscr A_M)$ and $(N, \mathcal O_N, \mathscr A_N)$ are called diffeomophic, i.e. 
+Two [[smooth manifold]]s $$(M, \mathcal O_M, \mathscr A_M)$$ and $$(N, \mathcal O_N, \mathscr A_N)$$ are called diffeomophic, i.e. 
 
 $$(M, \mathcal O_M, \mathscr A_M)\cong_\text{diff}(N, \mathcal O_N, \mathscr A_N)$$
 

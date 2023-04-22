@@ -6,7 +6,7 @@ format: list
 ---
 
 
-For a given generative distribution $p_\theta(zertx)$, the ELBO of some [[variational approximation]] $q$ is:
+For a given generative distribution $$p_\theta(zertx)$$, the ELBO of some [[variational approximation]] $$q$$ is:
 
 
 $$

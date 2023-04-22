@@ -6,4 +6,4 @@ format: list
 ---
 
 
-$T^2 :=\mathbb S^1\times S^1$, equipped with relevant [[product topology]]
+$$T^2 :=\mathbb S^1\times S^1$$, equipped with relevant [[product topology]]

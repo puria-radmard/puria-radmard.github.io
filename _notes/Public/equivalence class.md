@@ -6,12 +6,12 @@ format: list
 ---
 
 
-For [[equivalence relation]] $\sim$ on set $M$, we define the set:
+For [[equivalence relation]] $$\sim$$ on set $$M$$, we define the set:
 
 $$[m] := \{n\in Mertm\sim n\}$$
 
 
-it immediately follows that $a\in[m]\implies[a]=[m]$, and that equivalence classes are disjoint.
+it immediately follows that $$a\in[m]\implies[a]=[m]$$, and that equivalence classes are disjoint.
 
 
 
