@@ -27,5 +27,3 @@ Note that this is a map between open subsets of $\mathbb R^d$
 **Related:**
 - [[Whitney's Theorem (on maximal smooth atlases)]]
 - 
-
-$$

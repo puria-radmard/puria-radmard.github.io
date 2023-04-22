@@ -40,7 +40,7 @@ Note that the integral is over $[0,1]$, which is the parameter space $\mathcal P
 - $x$ is the 'realised version' of $X_{1:n}$ and $S_n$ is 'realised' as $s_n$
 
 - Consider this sequence without order, i.e. an urn containing $k$ ones and $m-k$ zeros
-- $\pi(X_{1:n} = x | S_m=k)$ is the sum of $n$ draws without replacement from this urn
+- $\pi(X_{1:n} = x \vert S_m=k)$ is the sum of $n$ draws without replacement from this urn
 	- Given that each draw is uniform over remainings (i.e. an urn!)...
 	- This value = ($k$ [[choose]] $s_n$) * ($m-k$ choose $n-s_n$) / ($m$ choose $n$)
 	- This nails home the intuition behind introducing $m$
@@ -68,19 +68,17 @@ noting that the fraction $s_n$ is actually seen by the data!
 - But how valid is this Bernoulli approximation?
 
 **Approximation Lemma**
-- The result is that $|q(n, s_n, m, m\theta) - \theta^{s_n} (1-\theta)^{1-s_n}| \leq \exp\left\{\frac{2n^2}{m-n}\right\} -1$
+- The result is that $\vertq(n, s_n, m, m\theta) - \theta^{s_n} (1-\theta)^{1-s_n}\vert \leq \exp\left\{\frac{2n^2}{m-n}\right\} -1$
 - See the bottom of this page for proof
 - Note that the approximation bound is independent of $\theta$...
 
 **Finalise**
 - For any observation sequence $x$, we have: 
 
-$$|\pi(X_{1:n}=x) - \pi^{\rho_m}(X_{1:n}=x)| \leq \int_0^1 \left(\exp\left\{\frac{2n^2}{m-n}\right\} -1\right)\rho_m(d\theta) = \exp\left\{\frac{2n^2}{m-n}\right\} -1 \to 0$$
+$$\vert\pi(X_{1:n}=x) - \pi^{\rho_m}(X_{1:n}=x)\vert \leq \int_0^1 \left(\exp\left\{\frac{2n^2}{m-n}\right\} -1\right)\rho_m(d\theta) = \exp\left\{\frac{2n^2}{m-n}\right\} -1 \to 0$$
 
 
 - as $m\to\infty$, which is the reasonable case, i.e. we are selecting from an infinitely repeatable pool
 
 - The result: under the reasonable case that we are selecting from an infinite pool, the total prior for an exchangable (expressed by our uniformity given the sum) prior is the same as this equivalent i.i.d parametric model one.
 - We even hae a law ove $\theta$ for the Bernoulli distribution
-
-$$

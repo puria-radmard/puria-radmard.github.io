@@ -21,5 +21,3 @@ Homotopy is an [[equivalence relation]], and it is used to define [[the fundamen
 This means $h$ can deform one curve into the other, with the first parameter controlling the deformation:
 
 ADD IMAGE
-
-$$

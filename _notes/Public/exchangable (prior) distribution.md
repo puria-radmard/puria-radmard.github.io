@@ -15,5 +15,3 @@ $$\pi(X_1\in A_1,...,X_n\in A_n) = \pi(X_{\sigma(1)}\in A_1, ..., X_{\sigma(n)}\
 Note that only the order of the variables change, not the sets that we are measuring over.
 
 Note that $\pi$ is generally, does not straight away assume i.i.d.. If it did then the above would be trivial.
-
-$$

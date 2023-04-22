@@ -9,7 +9,7 @@ page_order: 42
 
 A [[parametric model]] $f$ is dominated if there exists some [[measure]] $\Lambda$ on $(\mathcal X, \mathcal B)$ (i.e. the data sample space) such that 
 
-$$f(\cdot | \theta) \ll \Lambda \;\;\; \forall \ \theta \in \mathcal P$$
+$$f(\cdot \vert \theta) \ll \Lambda \;\;\; \forall \ \theta \in \mathcal P$$
 
 
 i.e. for all individual members of the parameter space, the induced function is [[absolutely continuous]] wrt the measure
@@ -18,6 +18,4 @@ By the [[Radon-Nikodym theorm]] for absolutely continuous measures, then that me
 
 $\Lambda$ is typically the [[Lebesgue measure]] for pdfs or some [[counting measure]] for pmfs
 
-Because this assumption is so common for likelihoods, we often denote $f(x|\theta)$ to mean its own [[Radon-Nikodym derivative]] wrt this dominating measure
-
-$$
+Because this assumption is so common for likelihoods, we often denote $f(x\vert\theta)$ to mean its own [[Radon-Nikodym derivative]] wrt this dominating measure

@@ -13,5 +13,3 @@ $$\exists r\in\mathbb R^+: S\subseteq B_r(0)$$
 
 
 As always, this is easiest to understand in [[the standard topology]] of $\mathbb R^d$.
-
-$$

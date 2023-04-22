@@ -20,5 +20,3 @@ This is an $\mathbb R^d\mapsto\mathbb R^d$ map, so [[continuity]] is defined in 
 See figure:
 
 XXX HANDDRAWN AT END OF PAGE 45
-
-$$

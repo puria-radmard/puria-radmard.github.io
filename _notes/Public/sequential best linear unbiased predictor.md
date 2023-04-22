@@ -19,7 +19,7 @@ $$\{Y_1,...,Y_n\}$ has the form:
         
         ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1ff8ba7d-8a3f-4e91-9c0f-29562a6bf97d/Untitled.png)
         
-    -   We denote this filter with $K[X | Y_{1:n}]$
+    -   We denote this filter with $K[X \vert Y_{1:n}]$
         
         -   NB K is a function with two arguments
         -   For any target r.v. and r.v. sequence, there is a relevant set of filter coefficients that K solves the minimisation problem for

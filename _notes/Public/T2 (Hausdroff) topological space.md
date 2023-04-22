@@ -19,5 +19,3 @@ All T2 spaces are also [[T1 topological space]]s
 On Euclidean space, [[the standard topology]] is Hausdroff
 
 Clearly, [[convergence]] of a sequence in a Hausdroff space means the sequence has a unique limit point.
-
-$$

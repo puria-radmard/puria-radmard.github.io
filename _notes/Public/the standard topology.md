@@ -23,5 +23,3 @@ $(\mathbb R^d, \mathcal O_\text{std})$ is indeed a toplogy (see: [[topological s
 - Balls contained in sets will be contained in any unions they join
 
 This is a key example of a [[metric-induced topology]]
-
-$$

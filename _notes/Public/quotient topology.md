@@ -10,7 +10,7 @@ page_order: 42
 For a [[topological space]] $(M, \mathcal O)$ and an [[equivalence relation]] $\sim$ on $M$:
 
 $$
-\mathcal O_{M/\sim}:= \{U\subseteq M/\sim \big| \bigcup U = \bigcup_{[a]\in U}[a]\in \mathcal {O}\}
+\mathcal O_{M/\sim}:= \{U\subseteq M/\sim \big\vert \bigcup U = \bigcup_{[a]\in U}[a]\in \mathcal {O}\}
 $$
 
 
@@ -21,7 +21,7 @@ Easy to show that this is a valid topology on the [[quotient set]], i.e. the spa
 An equivalent definition is to define via [[the preimage]] of the [[the quotient map]]:
 
 $$
-\mathcal O_{M/\sim}:= \{U\subseteq M/\sim \big| \text{preim}_q(U)\in \mathcal {O}\}
+\mathcal O_{M/\sim}:= \{U\subseteq M/\sim \big\vert \text{preim}_q(U)\in \mathcal {O}\}
 $$
 
 
@@ -30,5 +30,3 @@ Example: define circular equivalnce relation: $x\sim y:\iff \forall n\in \mathbb
 
 
 ADD IMAGE HERE
-
-$$

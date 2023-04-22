@@ -20,5 +20,3 @@ i.e. open sets can be matched up (not nec. 1-to-1, see: [[homeomorphism]])
 If either space is equipped with [[the chaotic topology]], then any map is continuous
 
 As with [[convergence]], using the [[the standard topology]] for both spaces gives the standard [[open ball]] definition of continuity in measure theory...
-
-$$

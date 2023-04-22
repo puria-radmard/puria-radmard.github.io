@@ -10,7 +10,7 @@ page_order: 42
 For a [[topological space]] $(M, \mathcal O)$, the space of loops at any point $p\in M$ is: 
 
 $$
-\mathscr L_p := \{\gamma:[0,1]\mapsto M\ |\ \gamma\ \text{is continuous} \ \land \gamma(0) = \gamma(1)\}
+\mathscr L_p := \{\gamma:[0,1]\mapsto M\ \vert\ \gamma\ \text{is continuous} \ \land \gamma(0) = \gamma(1)\}
 $$
 
 i.e. all continuous (see: [[continuity]]) loops that start and end at the point
@@ -27,5 +27,3 @@ $$(\gamma\ast\delta)(\lambda):=\delta(2\lambda-1) \;\; \text{if}  \;\; \lambda\i
 
 
 Clear by definition. This can be used to define [[the fundamental group]] of a topological space
-
-$$

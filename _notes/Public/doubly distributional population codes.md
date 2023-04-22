@@ -46,5 +46,3 @@ This allows you to differentiate between:
 2. A simple but highly/multimodally uncertainty stimulus (vice versa)
 
 $p(m)$ can be learned by experience, and adapt to context. While decoding encoding rates back to $p(m)$ is not biologically necassary, an example is show in the original paper: [[Sahani and Dayan 2003 (notebook)]] 
-
-$$

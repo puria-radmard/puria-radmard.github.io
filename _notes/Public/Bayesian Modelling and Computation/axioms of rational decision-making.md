@@ -39,5 +39,3 @@ $$\alpha d_1 + (1-\alpha)d_3 \preceq d_2 \preceq  \alpha d_1 + (1-\alpha)d_3$$
 
 
 The [[von Neumann-Morgenstern theorem]] proves that if the ordering $\preceq$ follows these axioms, then the rational decision maker is actually following the [[principle of expected utility maximisation]] for some (latent) utility over outcomes
-
-$$

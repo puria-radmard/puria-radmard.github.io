@@ -39,7 +39,7 @@ def write_to_file(string, output_path):
         f.write(string)
 
 def fix_maths(string):
-    # string = string.replace('|', '\vert')    # Assume they are all in latex anyway!!
+    string = string.replace('|', '\\vert')    # Assume they are all in latex anyway!!
     # First fix double dollars
     if '$$' in string:
         split_by_double = string.split('$$')
@@ -52,7 +52,7 @@ def fix_maths(string):
             else:
                 #fixed_string += '$$\n\n'
                 fixed_string += '$$\n\n'
-        string = fixed_string
+        string = fixed_string.removesuffix('\n\n$$')    # oops
     # # Then the single ones, in a hacky way
     # string = string.replace('$', '$$')
     # string = string.replace('$$$$', '$$')

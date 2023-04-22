@@ -23,6 +23,3 @@ For example:
 
 ADD IMAGE
 
-
-
-$$

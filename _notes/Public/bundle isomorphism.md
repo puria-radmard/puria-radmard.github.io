@@ -24,5 +24,3 @@ Note that the pairs of manifolds can be [[topologically isomorphic]], but fail t
 - e.g., [[Mobius strip]] and [[cylinder]]. The [[base space]]s are both $S^1$ and (I think) the [[total space]]s are also homeomorphic, but the 'twist' is encoded in the projection map, so as bundles they are not isomorphic
 
 Sometimes, this is too strong a condition, so we instead just require a [[local bundle isomorphism]]
-
-$$

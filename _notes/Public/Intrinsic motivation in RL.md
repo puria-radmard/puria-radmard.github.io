@@ -38,20 +38,20 @@ page_order: 42
 	- Learning the task requires we are following a task policy, but this can be done by interacting with the environment, and/or dreaming trials in the model:
 
 $$
-	\mathcal D_g = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ |\ a_i\sim\pi_g(s_i), s_{i+1}\sim[\mathcal M, T](s_i, a_i) \}
+	\mathcal D_g = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ \vert\ a_i\sim\pi_g(s_i), s_{i+1}\sim[\mathcal M, T](s_i, a_i) \}
 	$$
 
 
 	- Similarly, to learn an exploration policy, an agent needs to be exploring effectively:
 
 $$
-	\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ |\ a_i\sim\pi_\epsilon(s_i), s_{i+1}\sim[\mathcal M, T](s_i, a_i) \}
+	\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ \vert\ a_i\sim\pi_\epsilon(s_i), s_{i+1}\sim[\mathcal M, T](s_i, a_i) \}
 	$$
 
 
 	- But if you are learning a model, you can learn from any policy, as long as the training data comes from real interactions with the environment: 
 
-$$\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ |\ a_i\sim[\pi_\epsilon, \pi_g](s_i), s_{i+1}\sim T(s_i, a_i) \}
+$$\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ \vert\ a_i\sim[\pi_\epsilon, \pi_g](s_i), s_{i+1}\sim T(s_i, a_i) \}
 	$$
 
 
@@ -76,13 +76,13 @@ $$\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ |\ a_i\sim[\pi_\
 - However, to understand past approaches, a better classification is how they use the model...
 
 1. **Model uncertainty intrinsic signals** $\mathcal L[M]$
-	1. Error between model and true dynamics $R_\text{int} = |\tilde{S} - \mathcal M(S)|$
+	1. Error between model and true dynamics $R_\text{int} = \vert\tilde{S} - \mathcal M(S)\vert$
 			Examples: [[ICM (Pathak, et al. 2017)]], [[SelMo (Groth, et al. 2021)]], [[EMI (Kim, et al. 2019)]], [[Director (Hafner, et al. 2022)]]
 	2. Diversity between model ensemble members $D[\mathcal M^k(S)]$
 			Examples: [[Plan2Explore (Sekar, et al. 2020)]], [[LEXA (Mendonca, et al. 2021)]], [[MEEE (Yao, et al. 2021)]], [[MAX (Shyam, et al. 2019)]]
 
 2. **Knowledge gain** $\Delta \mathcal M$
-	This is the change in the model after receiving new information $R_\text{int}(t) = |\mathcal M(t) - \mathcal M(t-n)|$
+	This is the change in the model after receiving new information $R_\text{int}(t) = \vert\mathcal M(t) - \mathcal M(t-n)\vert$
 			Examples: [[AWML gamma-Progress (Kim, et al. 2020)]], [[VIME (Houthooft, et al. 2022)]], [[Deep ICAC (Hafez, et al. 2019)]]
 
 3. **Environment morphology** $\chi [\mathcal M]: R_\text{int} = X[\mathcal M, S]$
@@ -121,7 +121,7 @@ $$\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ |\ a_i\sim[\pi_\
 
 3. **Intrinsically motivated goals**
 	- A goal space must be defined here, and it is typically done by making the agent hierarchical:
-		- A lower level $\pi(a|s, g)$ selects actions, and an upper level $\pi(g|s)$ selects goals
+		- A lower level $\pi(a\verts, g)$ selects actions, and an upper level $\pi(g\verts)$ selects goals
 		- This means the goal space is the same as the state space (i.e. goals select based on current state)
 		- See: [[Director (Hafner, et al. 2022)]]
 	
@@ -137,5 +137,3 @@ $$\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ |\ a_i\sim[\pi_\
 	
 	- Method 2: **choice of goals**
 		- I don't know what they were getting at here but they mention [[SRICS (Zadianchuck, et al. 2022)]] again
-
-$$

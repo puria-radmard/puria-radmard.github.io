@@ -17,6 +17,3 @@ $$
 i.e. this is the coarsest topology defined such that [[continuity]] of maps is maintained on the resulting topology.
 
 This can be extended to Cartesian producting $n$ spaces, and [[the standard topology]] on $\mathbb R^d$ can be defined as $\mathcal O_\text{std} = \mathcal O_{\mathbb R \times ... \times \mathbb R}$
-
-
-$$

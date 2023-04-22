@@ -9,11 +9,8 @@ page_order: 42
 
 For [[equivalence relation]] $\sim$ on set $M$, we define the set:
 
-$$[m] := \{n\in M|m\sim n\}$$
+$$[m] := \{n\in M\vertm\sim n\}$$
 
 
 it immediately follows that $a\in[m]\implies[a]=[m]$, and that equivalence classes are disjoint.
 
-
-
-$$

@@ -13,6 +13,3 @@ We assume that $\pi$ is an [[exchangable (prior) distribution]] again, but also 
 
 $$\pi(x)$$
 
-
-
-$$

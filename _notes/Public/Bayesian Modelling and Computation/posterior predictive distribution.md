@@ -9,7 +9,7 @@ page_order: 42
 
 In the simplest setting, we have data $X = (X_1, X_2, ..., X_n)$ which is drawn i.i.d., so our posterior distribution has the form:
 
-$$\pi(d\theta | x) \propto \prod_{i=1}^n f(x_i|\theta)\pi(d\theta)$$
+$$\pi(d\theta \vert x) \propto \prod_{i=1}^n f(x_i\vert\theta)\pi(d\theta)$$
 
 
 NB: here, $x$ is the observed specific values of all the data so far, $x_1, x_2, ..., x_n$.
@@ -18,7 +18,7 @@ Then $X_{n+1}$ is an unobserved, also i.i.d. new data variable, from the same mo
 
 The **posterior predictive distribution** is the regular conditional distribution on this unobserved data, given all previous data:
 
-$$\pi(dx_{n+1}|x) = \int_\mathcal P f(dx_{n+1} | \theta) \pi(d\theta | x)$$
+$$\pi(dx_{n+1}\vertx) = \int_\mathcal P f(dx_{n+1} \vert \theta) \pi(d\theta \vert x)$$
 
 
 Note that the [[prior distribution]] full determines the predictive distribution. The prior distribution is therefore "the way in which a Bayesian inducts from data to future observations".
@@ -29,6 +29,3 @@ These are the Bayesian counterparts of frequentist [[prediction intervals]], but
 
 In this decision making case, we have $U^*$ be a function of $d$ and $X_{n+1}$
 
-
-
-$$

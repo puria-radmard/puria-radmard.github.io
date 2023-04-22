@@ -18,5 +18,3 @@ In English:
 Note here that the expectation is taken wrt a probability decision mapped from the decision space
 
 Very important so mentioning again: the utility function here is over the outcomes, not the decisions
-
-$$

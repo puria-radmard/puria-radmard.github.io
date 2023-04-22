@@ -40,5 +40,3 @@ Item 3 generalises to the full pushforward: all points in $T_pM$ are linear comb
 Note that if an embedding function of an $m<n$ dimensional manifold exists for ambient space $\mathbb{R}^k, k<n$, then a simple orthogonal matrix of shape $n\times k$ will complete the embedding to $\mathbb{R}^n$.
 
 Since $\phi\circ x^{-1}\circ f_j$ maps $\mathbb{R}$ to $\mathbb{R}^n$, i.e. to the final ambient space, derivatives can be found numerically. Examples are given in the [[Claudi and Branco, 2022 (notebook)]], where we also cover how the [[RNN connectivity]] is derived from all the jargon above!
-
-$$

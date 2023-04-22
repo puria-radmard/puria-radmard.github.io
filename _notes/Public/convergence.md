@@ -23,6 +23,3 @@ In [[the chaotic topology]], convergence is vacuous.
 In [[the discrete topology]], convergence requires $q_n = a$ after some $N$.
 
 In [[the standard topology]] (and generalised versions with other definitions of the [[open ball]]), this becomes the same as the measure theoretic definitions...
-
-
-$$

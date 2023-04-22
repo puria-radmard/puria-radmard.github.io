@@ -20,5 +20,3 @@ $$M\cong_\text{diff}N$$
 if there exists a [[diffeomorphism]] between them.
 
 This is an [[equivalence relation]], and often we consider two diffeomorphic smooth mainfolds to be *the same*. A natural question is how many unique smooth manifolds can exist? The answer is bizarre: [[Radon-Moise Theorem]]
-
-$$

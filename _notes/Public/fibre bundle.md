@@ -13,5 +13,3 @@ $$\forall p \in M: \text{preim}_\pi(\{p\}) \cong_\text{top} F$$
 
 
 The [[product bundle]] with [[base space]] being one of the product operands is a fibre bundle with $F=N$, the other product operand
-
-$$

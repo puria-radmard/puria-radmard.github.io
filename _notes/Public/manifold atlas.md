@@ -9,7 +9,7 @@ page_order: 42
 
 A collection of [[chart]]s on a [[topological manifold]] where the [[open neighbourhood]]s [[cover]] the manifold itself exactly, i.e.
 
-$$\mathscr A:= \{(U_\alpha, x_\alpha)|\alpha\in \mathcal A\}$$
+$$\mathscr A:= \{(U_\alpha, x_\alpha)\vert\alpha\in \mathcal A\}$$
 
  such that 
 
@@ -22,5 +22,3 @@ However, we may wish to add more structure to the atlas: [[atlas structure and c
 An atlas helps us consider manifolds in terms of more 'physical' Euclidean space. For example, checks for [[continuity]] of functions can be done via their charts, as can curves on the manifold can be defined as smooth.
 
 The [[transition map]]s between charts allow you to forget about the 'inner structure' of the manifold itself, and just consider Euclidean space. Concepts related to differentiability are much easier to manipulate here.
-
-$$
