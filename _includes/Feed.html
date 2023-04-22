@@ -36,7 +36,7 @@
     {%- if site.preferences.search.enabled -%}
         <!-- search bar -->
         <div class="block">
-            <input class="input is-medium" type="text" placeholder="Search notes.." id="search-input" autocomplete="off">
+            <input class="input is-medium" type="text" placeholder="Search notes..." id="search-input" autocomplete="off">
             <div id="search-results" class="search-results"></div>
         </div>
         <script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendor/lunr.min.js"></script>
@@ -44,7 +44,8 @@
     {%- endif -%}
     <!-- feed with filter-->
     <div class="related-wrapper">
-    {% assign note_items = site.notes | sort: "date" | reverse %}
+    <!--{% assign note_items = site.notes | sort: "date" | reverse %}-->
+    {% assign note_items = site.notes | sort: "page_order" %}
     {% for note_items in note_items %}
         {%- if note_items.feed == "show" -%}
                 <div class="notelist-feed">
