@@ -7,6 +7,6 @@ page_order: 42
 ---
 
 
-This is the toplogy $$\mathcal O = {\emptyset, M}$$ on set $$M$$.
+This is the toplogy $\mathcal O = {\emptyset, M}$ on set $M$.
 
-This is clearly the coarsest topology on $$M$$
+This is clearly the coarsest topology on $M$

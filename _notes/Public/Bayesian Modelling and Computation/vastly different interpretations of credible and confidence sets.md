@@ -7,11 +7,11 @@ page_order: 42
 ---
 
 
-Using [[credible sets for Bayesian decision theory]] shows how these constructs might be considered similar to [[confidence intervals]], i.e. you pick some $$\alpha$$ and make a decision such that you have some probability mass that the true parameter is held in your decision
+Using [[credible sets for Bayesian decision theory]] shows how these constructs might be considered similar to [[confidence intervals]], i.e. you pick some $\alpha$ and make a decision such that you have some probability mass that the true parameter is held in your decision
 
-However there are some key differences, and for finite sample sizes, $$\alpha$$-[[credible sets]] rarely coicide with confidences sets of coverage $$1-\alpha$$, even though they have been compared above.
+However there are some key differences, and for finite sample sizes, $\alpha$-[[credible sets]] rarely coicide with confidences sets of coverage $1-\alpha$, even though they have been compared above.
 
-In the case of i.i.d. data, credible sets can have the same coverage in the [[Frequentist]] sense, but only asymptotically as data count $$n\to\infty$$. These are covered by the [[Bernstein-von Mises theorems]]
+In the case of i.i.d. data, credible sets can have the same coverage in the [[Frequentist]] sense, but only asymptotically as data count $n\to\infty$. These are covered by the [[Bernstein-von Mises theorems]]
 
 Take this example:
 

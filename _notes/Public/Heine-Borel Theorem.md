@@ -7,7 +7,7 @@ page_order: 42
 ---
 
 
-"A subset of $$\mathbb R^d$$ equipped with [[the standard topology]] is compact iff it is a closed (see: [[open set]]) and [[bounded subset]]"
+"A subset of $\mathbb R^d$ equipped with [[the standard topology]] is compact iff it is a closed (see: [[open set]]) and [[bounded subset]]"
 
 See how a subset can be compact: [[compactness]]
 

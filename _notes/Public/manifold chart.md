@@ -7,4 +7,4 @@ page_order: 42
 ---
 
 
-For a [[topological manifold]], the [[open neighbourhood]]-[[homeomorphism]] pair $$(U,x)$$ where $$U\in\mathcal O, x:U\mapsto U(x)\subseteq\mathbb R^d$$ is a chart on the manifold
+For a [[topological manifold]], the [[open neighbourhood]]-[[homeomorphism]] pair $(U,x)$ where $U\in\mathcal O, x:U\mapsto U(x)\subseteq\mathbb R^d$ is a chart on the manifold

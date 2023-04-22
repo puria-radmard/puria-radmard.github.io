@@ -53,19 +53,19 @@ def fix_maths(string):
                 #fixed_string += '$$\n\n'
                 fixed_string += '$$\n\n'
         string = fixed_string
-    # Then the single ones, in a hacky way
-    string = string.replace('$', '$$')
-    string = string.replace('$$$$', '$$')
-    # if '$' in string:
-    #     split_by_single = string.split('$')
-    #     fixed_string = ""
-    #     for i, sbd in enumerate(split_by_single):
-    #         fixed_string += sbd
-    #         if i % 2 == 0:
-    #             fixed_string += ' \('
-    #         else:
-    #             fixed_string += '\) '
-    #     string = fixed_string
+    # # Then the single ones, in a hacky way
+    # string = string.replace('$', '$$')
+    # string = string.replace('$$$$', '$$')
+    # # if '$' in string:
+    # #     split_by_single = string.split('$')
+    # #     fixed_string = ""
+    # #     for i, sbd in enumerate(split_by_single):
+    # #         fixed_string += sbd
+    # #         if i % 2 == 0:
+    # #             fixed_string += ' \('
+    # #         else:
+    # #             fixed_string += '\) '
+    # #     string = fixed_string
     return string
 
 def fix_images(string:str):

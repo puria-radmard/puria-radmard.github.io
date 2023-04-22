@@ -7,4 +7,4 @@ page_order: 42
 ---
 
 
-Given a [[metric space]] $$(M, d)$$, the metric-induced topology $$\mathcal O_d$$ is defined in the same way as [[the standard topology]], but with the correct metrics used to define the [[open ball]]
+Given a [[metric space]] $(M, d)$, the metric-induced topology $\mathcal O_d$ is defined in the same way as [[the standard topology]], but with the correct metrics used to define the [[open ball]]
