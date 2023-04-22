@@ -10,11 +10,7 @@ page_order: 42
 **Generic definition:**
 Given two [[manifold chart]]s $(U,x)$ and $(V,y)$, the [[transition map]] is $\bullet$-compatible if either:
 1. They do not intersect: $U\cap V = \emptyset$
-2. They have a $\bullet$ [[transition map]]: 
-
-$$(y\circ x^{-1}): x(U\cap V)\mapsto y(U\cap V)$$
-
-
+2. They have a $\bullet$ [[transition map]]: \[(y\circ x^{-1}): x(U\cap V)\mapsto y(U\cap V)\]
 Note that this is a map between open subsets of $\mathbb R^d$
 
 **Examples:**
@@ -26,4 +22,4 @@ Note that this is a map between open subsets of $\mathbb R^d$
 
 **Related:**
 - [[Whitney's Theorem (on maximal smooth atlases)]]
-- 
+- \[

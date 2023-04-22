@@ -48,10 +48,10 @@ def fix_maths(string):
             fixed_string += sbd
             if i % 2 == 0:
                 #fixed_string += '\n\n$$'
-                fixed_string += '\n\n$$'
+                fixed_string += "\\["
             else:
                 #fixed_string += '$$\n\n'
-                fixed_string += '$$\n\n'
+                fixed_string += "\\]"
         string = fixed_string.removesuffix('\n\n$$')    # oops
     # # Then the single ones, in a hacky way
     # string = string.replace('$', '$$')

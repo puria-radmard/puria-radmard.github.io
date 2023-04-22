@@ -11,11 +11,7 @@ Following directly on from the [[ideal evidence accumulation model]]
 
 Generally speaking, noise means we have to choose  $x = \arg\max_k(z_k + \epsilon_k)$, and there are various ways to model this perturbation
 
-Because noise is noisy, we now have a probability over which $x$ is chosen, namely: 
-
-$$p(x = k \vert z_{1:K}) = \int d\epsilon_{1:K}\ p(\epsilon_k \gt z_j + \epsilon_k - z_k\ \forall\ j\neq k\ \vert\ z_{1:K}, \epsilon_{1:K}) \prod_k p(\epsilon_k)$$
-
-assuming perturbation to each category posterior is independent.
+Because noise is noisy, we now have a probability over which $x$ is chosen, namely: \[p(x = k \vert z_{1:K}) = \int d\epsilon_{1:K}\ p(\epsilon_k \gt z_j + \epsilon_k - z_k\ \forall\ j\neq k\ \vert\ z_{1:K}, \epsilon_{1:K}) \prod_k p(\epsilon_k)\]assuming perturbation to each category posterior is independent.
 
 There are various ways to add noise, and each one leads to a new form of $\epsilon$. We don't cover the derivations here, as they depend on the model. Some are covered in [[Drugowitsch et al., 2016 - Computational Precision]]
 
@@ -30,4 +26,4 @@ Importantly, the effect of selection stage variability does not depend on the nu
 
 Sensory variaiblity often induces a non-linear final variailibty in choice, due to non-linearities in the likelihood function.
 
-Inference variability often induces a linear final variailibty in choice, due to the linear increase in overal variance after each likelihood perturbation.
+Inference variability often induces a linear final variailibty in choice, due to the linear increase in overal variance after each likelihood perturbation.\[

@@ -39,14 +39,11 @@ We define $U^*(d, \Theta) = \mathbb E_{P_d}\left[U(\omega) \vert \Theta\right]$,
 
 This maps $U^*: \mathcal D\times\mathcal P \mapsto \mathbb R$, i.e. takes in a decision *and a single element of the parameter space*
 
-By the (reversal of the) [[tower property]]: 
-
-$$\int_\Omega U(\omega) P_d(d\omega) = \int_\mathcal P U^*(d, \Theta)\pi_{\Theta \vert x}( d\theta \vert x)$$
-
-
+By the (reversal of the) [[tower property]]: \[\int_\Omega U(\omega) P_d(d\omega) = \int_\mathcal P U^*(d, \Theta)\pi_{\Theta \vert x}( d\theta \vert x)\]
 Recalling from the [[von Neumann-Morgenstern theorem]], the LHS is is easy to understand: the expected utility of the outcome given some action $d$, which is to be maximised.
 
 We can instead maximise the RHS, i.e. the total expectation under environment and parameter of the original outcome utility ($U$)
 i.e.: $d_\text{opt} = \arg \max_{d\in\mathcal D} RHS$
 
 i.e. **any rational agent follows this maximiser**, hence following the [[principle of expected utility maximisation]]
+\[

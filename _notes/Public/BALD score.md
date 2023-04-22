@@ -18,27 +18,19 @@ This is done by maximising the [[mutual information]] between the unseen new out
 We will stick to the latter for now, and denote this posterior as $\pi(c\vert\mathcal D)$, i.e. the category of the scene given the data collected
 
 **Interpretation 1**
-The BALD score is originally:
-
-$$
+The BALD score is originally:\[
 	score(x\vert\mathcal{D}_t) = \mathbb{E}_{y\sim p(y \vert x, \mathcal D_t)}\left[H(c \vert \mathcal D_t) - H(c \vert \mathcal D_{t+1})\right] = H(c \vert \mathcal D_t) - \mathbb{E}_{y\sim p(y \vert x, \mathcal D)}\left[H(c \vert \mathcal D_{t+1})\right]
-$$
-
-since the unseen output has no part in the first term
+\]since the unseen output has no part in the first term
 
 This is the easier interpretation - you maximise the score as the *expected* difference in uncertainty in the key variable before and after revealing $y$.
 
 **Interpretation 2**
-Now flip the mutual information:
-
-$$
+Now flip the mutual information:\[
 	score(x\vert\mathcal{D}_t) = \mathbb{E}_{c\sim \pi(c \vert \mathcal D_t)}\left[H(y \vert x, \mathcal D_t) - H(y \vert x, c, \mathcal D_{t})\right] = H(y \vert x, \mathcal D_t) - \mathbb{E}_{c\sim \pi(c \vert \mathcal D_t)}\left[H(y \vert x, c, \mathcal D_{t})\right]
-$$
-
-where $\mathcal D_{t}$ can be taken out of the second term if data is i.i.d. - which it is usually assumed to be.
+\]where $\mathcal D_{t}$ can be taken out of the second term if data is i.i.d. - which it is usually assumed to be.
 
 This interpretation:
 - First term encourages selecting $x$ that we are currently overall uncertain about
 - Second term encourages selecting $x$ that we are currently certain about for each category
 
-This form was originally derived to make entropies easier to calculate - in low dimensional output space rather than high dimensional parameter space
+This form was originally derived to make entropies easier to calculate - in low dimensional output space rather than high dimensional parameter space\[

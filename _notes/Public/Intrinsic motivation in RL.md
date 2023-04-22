@@ -35,26 +35,14 @@ page_order: 42
 - Each of these have a training set of transition triplets (s,a,s')
 - The difference is how they are sampled:
 
-	- Learning the task requires we are following a task policy, but this can be done by interacting with the environment, and/or dreaming trials in the model:
-
-$$
+	- Learning the task requires we are following a task policy, but this can be done by interacting with the environment, and/or dreaming trials in the model:\[
 	\mathcal D_g = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ \vert\ a_i\sim\pi_g(s_i), s_{i+1}\sim[\mathcal M, T](s_i, a_i) \}
-	$$
-
-
-	- Similarly, to learn an exploration policy, an agent needs to be exploring effectively:
-
-$$
+	\]
+	- Similarly, to learn an exploration policy, an agent needs to be exploring effectively:\[
 	\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ \vert\ a_i\sim\pi_\epsilon(s_i), s_{i+1}\sim[\mathcal M, T](s_i, a_i) \}
-	$$
-
-
-	- But if you are learning a model, you can learn from any policy, as long as the training data comes from real interactions with the environment: 
-
-$$\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ \vert\ a_i\sim[\pi_\epsilon, \pi_g](s_i), s_{i+1}\sim T(s_i, a_i) \}
-	$$
-
-
+	\]
+	- But if you are learning a model, you can learn from any policy, as long as the training data comes from real interactions with the environment: \[\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ \vert\ a_i\sim[\pi_\epsilon, \pi_g](s_i), s_{i+1}\sim T(s_i, a_i) \}
+	\]
 
 **Training part 2: loss functions**:
 - These three objects require a loss function each.
@@ -136,4 +124,4 @@ $$\mathcal D_\epsilon = \{\tau_H = (s_i, a_i, s_{i+1})_{0:H-1}\ \vert\ a_i\sim[\
 		- Further examples which I didn't really understand from this review: [[SMORL (Zdianchuk, et al. 2020)]], [[SRICS (Zadianchuck, et al. 2022)]]
 	
 	- Method 2: **choice of goals**
-		- I don't know what they were getting at here but they mention [[SRICS (Zadianchuck, et al. 2022)]] again
+		- I don't know what they were getting at here but they mention [[SRICS (Zadianchuck, et al. 2022)]] again\[

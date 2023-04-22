@@ -8,9 +8,7 @@ page_order: 42
 
 
 -   _The Best Linear Predictor_
-    -   A linear predictor of an r.v. $X$ using an r.v. sequence ${}
-
-$$\{Y_1,...,Y_n\}$ has the form:
+    -   A linear predictor of an r.v. $X$ using an r.v. sequence ${}\[\{Y_1,...,Y_n\}$ has the form:
         
         ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7222d37b-fb9a-458c-a74d-c7cae0ca7a5b/Untitled.png)
         
@@ -96,5 +94,4 @@ $$\{Y_1,...,Y_n\}$ has the form:
             
         5.  Derivation... the filters are the same
 
-$$
-
+\]

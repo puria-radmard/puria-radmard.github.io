@@ -53,27 +53,15 @@ This is a very wide topic, but we start with the "non-Bayesian Kalman Filter" de
 
 **Update step**
     -   First, let's define the _Innovations:_
-        
-
-$$ I_{n+1} = Y_{n+1} - K[Y_{n+1} \vert Y_{1:n}] = Y_{n+1} - g_{n+1}K[X_{n+1}\vertY_{1:n}] = Y_{n+1} - g_{n+1}f_n\hat X_n $$
-
-
+        \[ I_{n+1} = Y_{n+1} - K[Y_{n+1} \vert Y_{1:n}] = Y_{n+1} - g_{n+1}K[X_{n+1}\vertY_{1:n}] = Y_{n+1} - g_{n+1}f_n\hat X_n \]
         -   i.e. the difference between the newly revealed _output_, and the prediction made using all previous outputs
     -   Let's look at an important Kalman filter fact:
         
-        
-
-$$ K[\cdot\vertY_{1:n+1}] = K[\cdot\vertY_{1:n},I_{n+1}] = K[\cdot\vertY_{1:n}] + K[\cdot\vertI_{n+1}] - \mathbb{E}[\cdot] $$
-
-
+        \[ K[\cdot\vertY_{1:n+1}] = K[\cdot\vertY_{1:n},I_{n+1}] = K[\cdot\vertY_{1:n}] + K[\cdot\vertI_{n+1}] - \mathbb{E}[\cdot] \]
         1.  i.e No gain or loss in estimation based on $Y_{n+1}$ vs. $I_{n+1}$, given $Y_{1:n}$
         2.  This is because $(Y_{1:n},I_{n+1})^\intercal$ is an affine transformation of $(Y_{1:n},Y_{n+1})^\intercal$, so predictor stays the same!
     -   This means that we have:
-  
-
-$$ \hat{X}_{n+1} = K[X_{n+1}\vertY_{1:n+1}] = K[X_{n+1}\vertY_{1:n}] + K[X_{n+1}\vertI_{n+1}] - \mathbb{E}[X_{n+1}] $$
-
-
+  \[ \hat{X}_{n+1} = K[X_{n+1}\vertY_{1:n+1}] = K[X_{n+1}\vertY_{1:n}] + K[X_{n+1}\vertI_{n+1}] - \mathbb{E}[X_{n+1}] \]
         1.  ⇒ Having calculated the first term, we only need $K[X_{n+1}\vertI_{n+1}]$ and $\mathbb{E}[X_{n+1}]$!
         2.  This is starting to look like recursion...
         3.  And what is the thing we are adding?
@@ -84,31 +72,19 @@ $$ \hat{X}_{n+1} = K[X_{n+1}\vertY_{1:n+1}] = K[X_{n+1}\vertY_{1:n}] + K[X_{n+1}
                     
                 -   This would make most sense as a demeaned version, i.e.:
                     
-                    
-
-$$ K[X_{n+1}\vertI_{n+1}] = \mathbb{E}[X_{n+1}] + cI_{n+1} \quad \text{s.t. } \quad c = \argmin\ \mathbb{E}[(X_{n+1} - \mathbb{E}[X_{n+1}] - cI_{n+1})^2] $$
-
-
+                    \[ K[X_{n+1}\vertI_{n+1}] = \mathbb{E}[X_{n+1}] + cI_{n+1} \quad \text{s.t. } \quad c = \argmin\ \mathbb{E}[(X_{n+1} - \mathbb{E}[X_{n+1}] - cI_{n+1})^2] \]
                     
                 -   Differentiating, we get:
                     
+                    \[ \mathbb{E}[(X_{n+1} - \mathbb{E}[X_{n+1}] - cI_{n+1}) I_{n+1}] = 0 \implies c = \mathbb{E}[X_{n+1}I_{n+1}] / Var(I_{n+1})
                     
-
-$$ \mathbb{E}[(X_{n+1} - \mathbb{E}[X_{n+1}] - cI_{n+1}) I_{n+1}] = 0 \implies c = \mathbb{E}[X_{n+1}I_{n+1}] / Var(I_{n+1})
-                    
-                    $$
-
-
+                    \]
                     
                 -   $Var(I_{n+1}) = \mathbb{E}[I_{n+1}^2] \sout{- \mathbb{E}[I_{n+1}]^2}$, since $I_{n+1} = Y_{n+1} - K[Y_{n+1} \vert Y_{1:n}]$ and the output prediction is unbiased
                     
             3.  so...
                 
-                
-
-$$ K[X_{n+1}\vertI_{n+1}] - \mathbb{E}[X_{n+1}] = \frac{g_{n+1}(f_n^2\sigma_n + q_n)}{g_{n+1}^2(f_n^2\sigma_n + q_n) + r_{n+1}}I_{n+1} $$
-
-
+                \[ K[X_{n+1}\vertI_{n+1}] - \mathbb{E}[X_{n+1}] = \frac{g_{n+1}(f_n^2\sigma_n + q_n)}{g_{n+1}^2(f_n^2\sigma_n + q_n) + r_{n+1}}I_{n+1} \]
                 
                 -   This is a couple page derivation in the notes, but can be done easily (also in EP):
                     
@@ -170,14 +146,10 @@ $$ K[X_{n+1}\vertI_{n+1}] - \mathbb{E}[X_{n+1}] = \frac{g_{n+1}(f_n^2\sigma_n + 
                 
             6.  Finally - we get to next update error:
                 
-                
-
-$$ \sigma_{n+1} = \frac{\bar\sigma_{n+1}r_{n+1}}{g_{n+1}^2\bar\sigma_{n+1} + r_{n+1}} $$
-
-
+                \[ \sigma_{n+1} = \frac{\bar\sigma_{n+1}r_{n+1}}{g_{n+1}^2\bar\sigma_{n+1} + r_{n+1}} \]
                 
         -   With this, we have got the Kalman update step
             
             1.  Define the innovation
             2.  Update the estimate using the simple update to the prediction
-            3.  Calculate the updated error, again a simple update
+            3.  Calculate the updated error, again a simple update\[

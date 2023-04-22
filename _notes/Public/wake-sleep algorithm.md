@@ -11,11 +11,7 @@ This is an algorithm for unsupervised neural network training using [[variationa
 
 **Example - training the [[Helmholtz machine]]**
 
-- Resuming from that page, we now have the approximation to the EM algorithm, where want to *maximise* 
-
-$$\tilde{\mathcal F}(\mathcal W, \mathcal G) = L(\mathcal G) - \mathbb{E}_{\textbf u \sim P[\textbf u \vert \mathcal G]}\left[\sum_{\textbf v} P[\textbf v \vert \textbf u, \mathcal G] \log\left(\frac{P[\textbf v \vert \textbf u, \mathcal G]}{Q[\textbf v \vert \textbf u, \mathcal W]}\right)\right]$$
-
-
+- Resuming from that page, we now have the approximation to the EM algorithm, where want to *maximise* \[\tilde{\mathcal F}(\mathcal W, \mathcal G) = L(\mathcal G) - \mathbb{E}_{\textbf u \sim P[\textbf u \vert \mathcal G]}\left[\sum_{\textbf v} P[\textbf v \vert \textbf u, \mathcal G] \log\left(\frac{P[\textbf v \vert \textbf u, \mathcal G]}{Q[\textbf v \vert \textbf u, \mathcal W]}\right)\right]\]
 - Rather than taking weighted sums for the expectation over the approximate prior, and the KL divergence, we can take *stochastic samples* from each distribution
 
 - The **[[wake phase]]** replaces the [[M-phase]]:
@@ -37,4 +33,4 @@ $$\tilde{\mathcal F}(\mathcal W, \mathcal G) = L(\mathcal G) - \mathbb{E}_{\text
 	
 	- "Sleep" refers to the fact that we are 'fantasising' data
 
-- Check out the notebook for the loss function from which these update rules are derived (spoilers: it's cross entropy)
+- Check out the notebook for the loss function from which these update rules are derived (spoilers: it's cross entropy)\[

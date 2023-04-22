@@ -14,8 +14,4 @@ For a [[topological space]] $(M, \mathcal O)$, a partition of unity $\mathcal F$
 2. Partitions unity: $\sum_{f\in\mathcal{F}}f(p)=1$
 
 
-$\mathcal F$ is said to be **subordinate to the open [[cover]]** $C$ if 
-
-$$\forall f\in \mathcal F: \exists U\in C: f(x)\neq 0\implies x\in U$$
-
-i.e. all functions in $\mathcal F$ have supports contained by [[open set]]s in the cover
+$\mathcal F$ is said to be **subordinate to the open [[cover]]** $C$ if \[\forall f\in \mathcal F: \exists U\in C: f(x)\neq 0\implies x\in U\]i.e. all functions in $\mathcal F$ have supports contained by [[open set]]s in the cover\[
