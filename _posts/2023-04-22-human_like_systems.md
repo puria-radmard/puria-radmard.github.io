@@ -1,6 +1,6 @@
 ---
 
-title: Human-like Systems
+title: Training Human-like Systems
 
 ---
 
