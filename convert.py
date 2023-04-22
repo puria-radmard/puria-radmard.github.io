@@ -37,7 +37,7 @@ def write_to_file(string, output_path):
     with open(output_path, 'w') as f:
         f.write(string)
 
-def fixs_maths(string):
+def fix_maths(string):
     string = string.replace('|', '\vert')    # Assume they are all in latex anyway!!
     # First fix double dollars
     if '$$' in string:
@@ -67,12 +67,25 @@ def fixs_maths(string):
     #     string = fixed_string
     return string
 
+def fix_images(string:str):
+    assert not string.startswith('![[')
+    image_start_splits = string.split('![[')
+    output_string = image_start_splits[0]
+    for iss in image_start_splits[1:]:
+        split_next = iss.split(']]')
+        img_filename = build_path([split_next[0]], base=out_dir)
+        output_string += f'![{split_next[0]}]({img_filename})'
+        output_string += '{:class="img-responsive"}'
+        output_string += "]]".join(split_next[1:])
+    return output_string
+
 def convert_file(file_list, header_string):
     input_path = build_path(file_list, base=src_dir)
     output_path = build_path(file_list, base=out_dir)
     starting_string = get_string_from_path(input_path)
     resulting_string = prepend_file_string(starting_string, header_string)
-    resulting_string = fixs_maths(resulting_string)
+    resulting_string = fix_maths(resulting_string)
+    resulting_string = fix_images(resulting_string)
     write_to_file(resulting_string, output_path)
 
 def remove_prefix(text, prefix):
