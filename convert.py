@@ -11,7 +11,7 @@ from datetime import datetime
 
 src_dir="/Users/puriaradmard/Library/Mobile Documents/iCloud~md~obsidian/Documents/BACKUP PhD Knowledge"
 out_dir="_notes/Public"
-out_dir_fmt="/_notes/Public"
+image_path="assets/img"
 home_page_file="Homepage.md"
 header_template = """
 ---
@@ -74,7 +74,7 @@ def fix_images(string:str):
     output_string = image_start_splits[0]
     for iss in image_start_splits[1:]:
         split_next = iss.split(']]')
-        img_filename = build_path([split_next[0]], base=out_dir_fmt)
+        img_filename = build_path([split_next[0]], base=image_path)
         output_string += f'![]({img_filename})'
         output_string += '{:class="img-responsive"}'
         output_string += "]]".join(split_next[1:])
@@ -110,10 +110,16 @@ def construct_directory_structure(list_files):
         all_at_this_depth = set([tuple(lf[:depth-1]) for lf in list_files if len(lf) == depth])
         for dir_tup in all_at_this_depth:
             dir_path = build_path(dir_tup, base = out_dir)
+            image_dir_path = build_path(dir_tup, base = image_path)
             try:
                 os.mkdir(dir_path)
             except FileExistsError:
                 print(dir_path, 'already exists')
+            try:
+                os.mkdir(image_dir_path)
+            except FileExistsError:
+                print(image_dir_path, 'already exists')
+
 
 
 def generate_header(file_name_as_list, show, index):
@@ -137,11 +143,13 @@ def copy_over_files(all_files_as_lists, links_on_homepage):
                 index = 1 + (links_on_homepage.index(file_list[-1][:-3]) if is_on_homepage else len(links_on_homepage))
                 header_string = generate_header(file_list, show = is_on_homepage, index = index)
                 convert_file(file_list=file_list, header_string=header_string)
-            else:
+            elif file_list[-1].endswith(".jpg") or file_list[-1].endswith(".jpeg") or file_list[-1].endswith(".png"):
                 shutil.copy(
                     build_path(file_list, src_dir),
-                    build_path(file_list, out_dir)
+                    build_path(file_list, image_path)
                 )
+            else:
+                raise TypeError(file_list[-1])
 
 
 def get_front_page_titles():
