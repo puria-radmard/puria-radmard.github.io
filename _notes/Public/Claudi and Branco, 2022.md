@@ -19,9 +19,13 @@ This mirrors the advice on intuition of tangent spaces provided in the course "[
 Instead, one should view the tangent vectors as [[equivalence class]]. Again, this is all explained in [[Geometric Anatomy of Theoretical Physics]], as well as the [[Part III: Differential Geometry]] course.
 
 The authors not that one could define the [[tangent vector field]] on the manifold itself, then defining an [[embedding function]] $\phi$, which generates a [[pushforward]]:
+
+
 $$
 	\phi^*: T_pM\mapsto T_{\phi(p)}\phi(M)
 $$
+
+
 so we can set the codomain to be the state space, successfully embedding the *precalculated* tangent vector field.
 
 However, this paper's approach consists of defining the basis vectors of $T_pM$ in a semi-standard way:
@@ -35,3 +39,5 @@ Item 3 generalises to the full pushforward: all points in $T_pM$ are linear comb
 Note that if an embedding function of an $m<n$ dimensional manifold exists for ambient space $\mathbb{R}^k, k<n$, then a simple orthogonal matrix of shape $n\times k$ will complete the embedding to $\mathbb{R}^n$.
 
 Since $\phi\circ x^{-1}\circ f_j$ maps $\mathbb{R}$ to $\mathbb{R}^n$, i.e. to the final ambient space, derivatives can be found numerically. Examples are given in the [[Claudi and Branco, 2022 (notebook)]], where we also cover how the [[RNN connectivity]] is derived from all the jargon above!
+
+$$

@@ -8,4 +8,10 @@ format: list
 
 This generalises [[de Finneti's theorem on exchangable priors]] for each datapoint $X_i\in\{1,2,...,k\}$, but requires some weaker notions.
 
-We assume that $\pi$ is an [[exchangable (prior) distribution]] again, but also assume that:$$\pi(x)$$
+We assume that $\pi$ is an [[exchangable (prior) distribution]] again, but also assume that:
+
+$$\pi(x)$$
+
+
+
+$$

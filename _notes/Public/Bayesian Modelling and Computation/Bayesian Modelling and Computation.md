@@ -18,10 +18,10 @@ Homepage for the Bayesian Modelling and Computation course, Lent 2023
 - We specify a [[prior distribution]] over parameter sample space $(\mathcal P, \mathcal B_\mathcal P)$, denoted $\pi_\Theta$
 	- i.e. it is a regular distribution over the sigma-algebra
 
-- Therefore, the joint [[law]] over data and parameters is $f(dx | \theta) \pi_\Theta(d\theta)$ 
+- Therefore, the joint [[law]] over data and parameters is $f(dx ert \theta) \pi_\Theta(d\theta)$ 
 	- This is defined over the [[product space]] $(\mathcal X \times \mathcal P, \mathcal B \times \mathcal B_\mathcal P)$, which, as seen, has a [[product sigma-algebra]]
 
-- Therefore, the marginal law over the data is: $\pi_X(dx) = \int_{\theta\in\mathcal P}f(dx | \theta) \pi_\Theta(d\theta)$
+- Therefore, the marginal law over the data is: $\pi_X(dx) = \int_{\theta\in\mathcal P}f(dx ert \theta) \pi_\Theta(d\theta)$
 
 - We can final define a [[measure theoretic posterior distribution]] over the parameters
 
@@ -58,7 +58,7 @@ Homepage for the Bayesian Modelling and Computation course, Lent 2023
 - Some go even further, and argue that parameters don't exist at all, and we can only put a prior on observables themselves!
 
 - In any i.i.d. parametric [[dominated model]], a prior $\pi_\Theta$ over the parameters will induce a prior distribution on the data $X_1, X_2, ..., X_n$:
-	- $\pi(x) = \int_\mathcal P \prod_{i=1}^n f(x_i | \theta) \pi(d\theta)$
+	- $\pi(x) = \int_\mathcal P \prod_{i=1}^n f(x_i ert \theta) \pi(d\theta)$
 	- NB: prior here is on one element of the parameter space
 	- This prior entirely determines the [[posterior predictive distribution]] (see: [[dominated model]])
 

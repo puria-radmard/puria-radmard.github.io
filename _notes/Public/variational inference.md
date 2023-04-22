@@ -6,6 +6,6 @@ format: list
 ---
 
 
-Given a generative model $p_\theta(z|x)$, variational inference involves learning some [[variational approximation]] $q$, which maximises the [[evidence lower bound]]
+Given a generative model $p_\theta(zertx)$, variational inference involves learning some [[variational approximation]] $q$, which maximises the [[evidence lower bound]]
 
-This typically involves learning the parameters $\phi$ of some function that estimates the posterior distribution, $q_\phi(z|x) \approx p_\theta(z|x)$
+This typically involves learning the parameters $\phi$ of some function that estimates the posterior distribution, $q_\phi(zertx) \approx p_\theta(zertx)$

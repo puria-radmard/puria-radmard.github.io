@@ -7,7 +7,9 @@ format: list
 
 
 -   _The Best Linear Predictor_
-    -   A linear predictor of an r.v. $X$ using an r.v. sequence ${}$$\{Y_1,...,Y_n\}$ has the form:
+    -   A linear predictor of an r.v. $X$ using an r.v. sequence ${}
+
+$$\{Y_1,...,Y_n\}$ has the form:
         
         ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7222d37b-fb9a-458c-a74d-c7cae0ca7a5b/Untitled.png)
         
@@ -16,7 +18,7 @@ format: list
         
         ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1ff8ba7d-8a3f-4e91-9c0f-29562a6bf97d/Untitled.png)
         
-    -   We denote this filter with $K[X | Y_{1:n}]$
+    -   We denote this filter with $K[X ert Y_{1:n}]$
         
         -   NB K is a function with two arguments
         -   For any target r.v. and r.v. sequence, there is a relevant set of filter coefficients that K solves the minimisation problem for
@@ -92,4 +94,6 @@ format: list
             ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1fd694cb-f25a-436c-8cdb-3db37a3210e0/Untitled.png)
             
         5.  Derivation... the filters are the same
+
+$$
 

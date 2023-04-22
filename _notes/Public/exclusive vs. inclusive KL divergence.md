@@ -8,12 +8,12 @@ format: list
 
 If we're fitting $q$ to $p$:
 
-**Exclusive KL $KL(q\|p)$:**
+**Exclusive KL $KL(q\ertp)$:**
 - Requires $p$ dominates $q$
 - No normalisation wrt $p$ required
 - Mode seeking
 
-**Inclusive KL $KL(p\|q)$:**
+**Inclusive KL $KL(p\ertq)$:**
 - Requires $q$ dominates $p$
 - Requires normalisation wrt $p$
 - Mean seeking

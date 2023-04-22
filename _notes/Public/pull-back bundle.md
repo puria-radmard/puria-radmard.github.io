@@ -8,7 +8,7 @@ format: list
 
 Given a [[bundle]] $(E, \pi, M)$ and a map $f:M'\to M$ from some other [[topological manifold]], a pull-back bundle has:
 
-- Its [[total space]] $E' := \{(m',e)\in M'\times E | f(m') = \pi(e)\}$
+- Its [[total space]] $E' := \{(m',e)\in M'\times E ert f(m') = \pi(e)\}$
 - Its [[base space]] $M'$
 - Its projective map: $\pi'(m',e) := m'$
 
@@ -26,4 +26,10 @@ A [[bundle section]] on the original bundle pulls back to the pull-back bundle. 
 
 XXX
 
-We can define the pull-back bundle section as: $$\sigma': M'\mapsto E'\;\;\;\;\;\;\;\sigma(m') = (m', (\sigma\circ f)(m'))$$which clearly satisfies $\pi'\circ\sigma' = \text{id}_{M'}$ as required. The second component is defined so that $\sigma(m')\in E'\ \forall\ m'\in M'$.
+We can define the pull-back bundle section as: 
+
+$$\sigma': M'\mapsto E'\;\;\;\;\;\;\;\sigma(m') = (m', (\sigma\circ f)(m'))$$
+
+which clearly satisfies $\pi'\circ\sigma' = \text{id}_{M'}$ as required. The second component is defined so that $\sigma(m')\in E'\ \forall\ m'\in M'$.
+
+$$

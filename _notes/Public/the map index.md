@@ -12,7 +12,7 @@ i.e. for each member of the *domain* there is one member of the *target aka codo
 Notationally, it is easier to say $phi(a) :=b: \phi(a,b)$
 
 Using [[the principle of restricted comprehension]], we can define the *image* of the domain under the map, namely:
-- $\phi(A) \equiv \text{im}_{\phi}(A) := \{\phi(a) | a \in A\}$
+- $\phi(A) \equiv \text{im}_{\phi}(A) := \{\phi(a) ert a \in A\}$
 
 
 Here are some key example maps and map terminology, in the order that we meet them in [[Geometric Anatomy of Theoretical Physics]]

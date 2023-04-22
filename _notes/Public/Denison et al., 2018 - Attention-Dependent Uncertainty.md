@@ -35,7 +35,7 @@ format: list
 - $\boldsymbol k$ therefore the same for all trials
 
 **Bayesian model**
-- $z = \frac{p(\pi = \pi_T | \hat{\theta})}{p(\pi = \pi_W | \hat{\theta})}$ (plus some noise they say)
+- $z = \frac{p(\pi = \pi_T ert \hat{\theta})}{p(\pi = \pi_W ert \hat{\theta})}$ (plus some noise they say)
 - Easy to show that this means $\boldsymbol k$ depends on attention, so even though it is the same for all trials, plotting them against $\hat{\theta}$ directly shows that they change per trial
 - This model, as per the assertions of the paper, fits the behavioural data much better (Figure 3C, 3D)
 

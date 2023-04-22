@@ -6,9 +6,13 @@ format: list
 ---
 
 
-A  [[topological space]] $(M, \mathcal O)$ is *path-connected* if$$
+A  [[topological space]] $(M, \mathcal O)$ is *path-connected* if
+
+$$
 \forall p, q\in M: \exists\gamma:[0,1]\mapsto M: (\gamma(0)=p) \land (\gamma(1)=q)
 $$
+
+
 where $\gamma$ is a *continuous curve*, with [[continuity]] defined on [[the standard topology]] of the domain $[0,1]$
 
 Of course, [[the standard topology]] on Euclidean space is path connected.
@@ -18,3 +22,6 @@ For example:
 
 ADD IMAGE
 
+
+
+$$

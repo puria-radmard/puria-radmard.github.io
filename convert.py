@@ -36,11 +36,27 @@ def write_to_file(string, output_path):
     with open(output_path, 'w') as f:
         f.write(string)
 
+def fixs_maths(string):
+    # First fix double dollars
+    string = string.replace('|', '\vert')    # Assume they are all in latex anyway!!
+    if '$$' in string:
+        split_by_double = string.split('$$')
+        fixed_string = ""
+        for i, sbd in enumerate(split_by_double):
+            fixed_string += sbd
+            if i % 2 == 0:
+                fixed_string += '\n\n$$'
+            else:
+                fixed_string += '$$\n\n'
+        string = fixed_string
+    return string
+
 def convert_file(file_list, header_string):
     input_path = build_path(file_list, base=src_dir)
     output_path = build_path(file_list, base=out_dir)
     starting_string = get_string_from_path(input_path)
     resulting_string = prepend_file_string(starting_string, header_string)
+    resulting_string = fixs_maths(resulting_string)
     write_to_file(resulting_string, output_path)
 
 def remove_prefix(text, prefix):
