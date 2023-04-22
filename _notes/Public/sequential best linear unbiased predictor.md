@@ -8,9 +8,9 @@ page_order: 42
 
 
 -   _The Best Linear Predictor_
-    -   A linear predictor of an r.v.  \(X\)  using an r.v. sequence  \({}
+    -   A linear predictor of an r.v. $$X$$ using an r.v. sequence $${}
 
-\[\{Y_1,...,Y_n\}\)  has the form:
+$$\{Y_1,...,Y_n\}$$ has the form:
         
         ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7222d37b-fb9a-458c-a74d-c7cae0ca7a5b/Untitled.png)
         
@@ -19,7 +19,7 @@ page_order: 42
         
         ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1ff8ba7d-8a3f-4e91-9c0f-29562a6bf97d/Untitled.png)
         
-    -   We denote this filter with  \(K[X ert Y_{1:n}]\) 
+    -   We denote this filter with $$K[X ert Y_{1:n}]$$
         
         -   NB K is a function with two arguments
         -   For any target r.v. and r.v. sequence, there is a relevant set of filter coefficients that K solves the minimisation problem for
@@ -29,7 +29,7 @@ page_order: 42
         
         -   With the factor of 2 ignored because it is set to zero
             
-        -   1.8: differentiate wrt  \(h_0\) . 1.9: differentiate wrt  \(h_1,...,h_n\) 
+        -   1.8: differentiate wrt $$h_0$$. 1.9: differentiate wrt $$h_1,...,h_n$$
             
             ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7fb42f03-d865-457a-aece-34142883ce4c/Untitled.png)
 
@@ -43,18 +43,18 @@ page_order: 42
     ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/30183200-c0c2-4c93-82b3-c25f28cc5710/Untitled.png)
     
     -   for i = 1,...,n
-    -   The  \(-\mathbb{E}[Y_i]\)  at the end depends on the sum in the inner bracket being  \(0\) , as shown ⇒ multiplying it by  \(-\mathbb{E}[Y_i]\)  retains 0
-        -    \(\mathbb{E}[\mathbb{E}[Y_i]] = \mathbb{E}[Y_i]\) 
+    -   The $$-\mathbb{E}[Y_i]$$ at the end depends on the sum in the inner bracket being $$0$$, as shown ⇒ multiplying it by $$-\mathbb{E}[Y_i]$$ retains 0
+        -   $$\mathbb{E}[\mathbb{E}[Y_i]] = \mathbb{E}[Y_i]$$
 -   You can represent this in vector form!
     
-    -    \(\bold{m} = \mathbb{E}[\bold{Y}] = [\mathbb{E}[Y_1],...,\mathbb{E}[Y_n]]^\intercal\) 
+    -   $$\bold{m} = \mathbb{E}[\bold{Y}] = [\mathbb{E}[Y_1],...,\mathbb{E}[Y_n]]^\intercal$$
         
-    -    \(\bold{p} = [Cov(X,Y_1),...,Cov(X,Y_n)]^\intercal\) 
+    -   $$\bold{p} = [Cov(X,Y_1),...,Cov(X,Y_n)]^\intercal$$
         
-    -    \(\Sigma = Cov(\bold{Y}) = \mathbb{E}[\bold{Y}^\intercal\bold{Y}] - \bold{m}\bold{m}^\intercal\) 
+    -   $$\Sigma = Cov(\bold{Y}) = \mathbb{E}[\bold{Y}^\intercal\bold{Y}] - \bold{m}\bold{m}^\intercal$$
         
-        -   i.e.  \([\Sigma]_{ij} = Cov(Y_i, Y_j)\) 
-    -   ⇒  \(\bold{h} = \Sigma^{-1}\bold{p}\) 
+        -   i.e. $$[\Sigma]_{ij} = Cov(Y_i, Y_j)$$
+    -   ⇒ $$\bold{h} = \Sigma^{-1}\bold{p}$$
         
     -   i.e. optimal filter = (covariance of Y)^-1 *(cross-correlation of X and Y)
 
@@ -66,7 +66,7 @@ page_order: 42
     
     -   This is a _key result needed for [[recursion in the sequential BLU predictor]]_
 
-2. For an invertible matrix  \(C\in\R^{n\times n}\)  and a vector  \(\bold{b}\) , we can apply the affine (invertible) transformation to the data:
+2. For an invertible matrix $$C\in\R^{n\times n}$$ and a vector $$\bold{b}$$, we can apply the affine (invertible) transformation to the data:
     
     ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c6f8a9f-b47c-484f-897f-816f7cc8c8fd/Untitled.png)
     
@@ -76,7 +76,7 @@ page_order: 42
         
     -   i.e. we can transform data to make it suit any assumptions!
         
-    -   If we ignore  \(\bold b\) , we can show this fairly easily:
+    -   If we ignore $$\bold b$$, we can show this fairly easily:
         
         1.  Covariance matrix of transformed data:
             
@@ -96,6 +96,5 @@ page_order: 42
             
         5.  Derivation... the filters are the same
 
-\]
+$$
 
- \(
