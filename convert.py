@@ -11,6 +11,7 @@ from datetime import datetime
 
 src_dir="/Users/puriaradmard/Library/Mobile Documents/iCloud~md~obsidian/Documents/BACKUP PhD Knowledge"
 out_dir="_notes/Public"
+out_dir_fmt="/notes/Public"
 home_page_file="Homepage.md"
 header_template = """
 ---
@@ -73,7 +74,7 @@ def fix_images(string:str):
     output_string = image_start_splits[0]
     for iss in image_start_splits[1:]:
         split_next = iss.split(']]')
-        img_filename = build_path([split_next[0]])
+        img_filename = build_path([split_next[0]], base=out_dir_fmt)
         output_string += f'![{split_next[0]}]({img_filename})'
         output_string += '{:class="img-responsive"}'
         output_string += "]]".join(split_next[1:])

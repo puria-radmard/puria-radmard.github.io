@@ -27,4 +27,4 @@ This means, over the single theta oscillation, cell activation 'moves' from cell
 All of the above is purely empirical observations. Some papers, such as [[Ujfalussy and Orbán 2022]], assume that this constitutes an implementation of trajectory planning. This might be a shakey assumption, given that the above observations are for a 1D track, where planning is minimal.
 
 
-![Phase precession notes from Mate.jpg](Phase precession notes from Mate.jpg){:class="img-responsive"}
+![Phase precession notes from Mate.jpg](/notes/Public/Phase precession notes from Mate.jpg){:class="img-responsive"}
