@@ -7,13 +7,13 @@ page_order: 35
 ---
 
 
-A map $$\phi:A\mapsto B$$ between two sets is really a [[relation]], i.e. $$\forall a\in A: \exists !b\in B: \phi(a, b)$$
+A map $\phi:A\mapsto B$ between two sets is really a [[relation]], i.e. $\forall a\in A: \exists !b\in B: \phi(a, b)$
 i.e. for each member of the *domain* there is one member of the *target aka codomain* satisfies the relation.
 
-Notationally, it is easier to say $$phi(a) :=b: \phi(a,b)$$
+Notationally, it is easier to say $phi(a) :=b: \phi(a,b)$
 
 Using [[the principle of restricted comprehension]], we can define the *image* of the domain under the map, namely:
-- $$\phi(A) \equiv \text{im}_{\phi}(A) := \{\phi(a) ert a \in A\}$$
+- $\phi(A) \equiv \text{im}_{\phi}(A) := \{\phi(a) ert a \in A\}$
 
 
 Here are some key example maps and map terminology, in the order that we meet them in [[Geometric Anatomy of Theoretical Physics]]
@@ -52,3 +52,5 @@ Here are some key example maps and map terminology, in the order that we meet th
 - [[pull-back]]
 - [[immersions]]
 - [[embeddings]]
+
+\(

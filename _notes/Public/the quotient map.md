@@ -7,4 +7,7 @@ page_order: 42
 ---
 
 
-Given a set $$M$$ and an [[equivalence relation]],  the map $$q: M\mapsto M/\sim$$ sends members of $$M$$ to equivalence classes they represent: $$q(m) = [m]$$
+Given a set $M$ and an [[equivalence relation]],  the map $q: M\mapsto M/\sim$ sends members of $M$ to equivalence classes they represent: $q(m) = [m]$
+
+
+\(
