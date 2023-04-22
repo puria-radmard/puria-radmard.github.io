@@ -56,14 +56,14 @@ def fixs_maths(string):
     #string = string.replace('$', '$$')
     #string = string.replace('$$$$', '$$')
     if '$' in string:
-        split_by_single = string.split('$$')
+        split_by_single = string.split('$')
         fixed_string = ""
         for i, sbd in enumerate(split_by_single):
             fixed_string += sbd
             if i % 2 == 0:
-                fixed_string += '\n\n\('
+                fixed_string += ' \('
             else:
-                fixed_string += '\)\n\n'
+                fixed_string += '\) '
         string = fixed_string
     return string
 

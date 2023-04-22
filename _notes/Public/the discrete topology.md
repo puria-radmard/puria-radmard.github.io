@@ -7,8 +7,6 @@ page_order: 42
 ---
 
 
-This is the toplogy $\mathcal O = \mathcal P(M)$ on set $M$.
+This is the toplogy  \(\mathcal O = \mathcal P(M)\)  on set  \(M\) .
 
-This is clearly the finest topology on $M$
-
-\(
+This is clearly the finest topology on  \(M\)  \(

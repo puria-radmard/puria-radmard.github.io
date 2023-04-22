@@ -7,6 +7,4 @@ page_order: 42
 ---
 
 
-Given a [[algebraic field]] $(K, +, \cdot)$, 
-
-\(
+Given a [[algebraic field]]  \((K, +, \cdot)\) ,  \(

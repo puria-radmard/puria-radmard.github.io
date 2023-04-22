@@ -14,7 +14,7 @@ This paper introduced a few new concepts for me, so I will try to break it down 
 **Inference aim**
 We are learning a deep generative model, that can be represented by a graphical model with one 'branch', as in page 2 of the paper.
 
-This means we have a 'chain' of latents variables: $p(z_L), p(z_{L-1} ert z_L) ,..., p(z_1 ert z_2), p(xertz_1)$, where x is the data we finally observe.
+This means we have a 'chain' of latents variables:  \(p(z_L), p(z_{L-1} ert z_L) ,..., p(z_1 ert z_2), p(xertz_1)\) , where x is the data we finally observe.
 
 We want to do [[variational inference]] of this graphical model, however there are some shortcomings of using the exclusive KL divergence (see [[exclusive vs. inclusive KL divergence]], recall that the classic formulation of the [[Helmholtz machine]] uses inclusive KL divergence). 
 
@@ -47,7 +47,5 @@ Generate approximations of the expected encodings for *real* data using the reco
 
 Use these to approximate the gradient of the evidence lower bound.
 
-Apply these gradients to the learned generative model, to optimise for $q$.
-
-
-\(
+Apply these gradients to the learned generative model, to optimise for  \(q\) .
+ \(

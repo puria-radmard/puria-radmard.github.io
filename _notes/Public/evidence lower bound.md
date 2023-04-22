@@ -7,7 +7,7 @@ page_order: 42
 ---
 
 
-For a given generative distribution $p_\theta(zertx)$, the ELBO of some [[variational approximation]] $q$ is:
+For a given generative distribution  \(p_\theta(zertx)\) , the ELBO of some [[variational approximation]]  \(q\)  is:
 
 
 \[
@@ -20,6 +20,4 @@ This is the same as the [[variational free energy]], but negative
 
 Some shortcomings are considered in: [[exclusive vs. inclusive KL divergence]]
 
-\[
-
-\(
+\[ \(
