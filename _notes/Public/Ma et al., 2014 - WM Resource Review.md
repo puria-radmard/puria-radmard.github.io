@@ -127,7 +127,7 @@ page_order: 42
 - **Probabilistic inference in change detection**
 	- Change detection requires both retrieval and 'use' of a working memory
 	- Figure 7 + annotations summarises this really well by itself:
-	- ![](assets/img/MaBays2014Figure7.jpeg){:class="img-responsive"}
+	- ![](assets/img/MaBays2014Figure7.jpeg)
 
 
 - SEE OPEN QUESTIONS AT THE END - MIGHT BE A BIT DATED

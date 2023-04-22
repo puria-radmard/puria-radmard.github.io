@@ -48,7 +48,7 @@ i.e. pick the **smallest $$\alpha$$-credible set**! Note that the constant $$\la
 
 ##### Illuminating example, in raw form:
 
-![](assets/img/Pasted image 20230210201453.png){:class="img-responsive"}
+![](assets/img/Pasted image 20230210201453.png)
 
 Keywords for image: [[Karush-Kuhn-Tucker theorem]]
 

@@ -76,7 +76,7 @@ def fix_images(string:str):
         split_next = iss.split(']]')
         img_filename = build_path([split_next[0]], base=image_path)
         output_string += f'![]({img_filename})'
-        output_string += '{:class="img-responsive"}'
+        # output_string += '{:class="img-responsive"}'
         output_string += "]]".join(split_next[1:])
     return output_string
 

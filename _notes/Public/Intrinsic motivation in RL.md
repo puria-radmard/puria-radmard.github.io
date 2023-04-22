@@ -17,7 +17,7 @@ page_order: 42
 
 **[[Model-based RL]]**:
 - They summarise model based RL in this helpful diagram:
-![](assets/img/Latyshev and Ranov 2023 figure 1.jpg){:class="img-responsive"}
+![](assets/img/Latyshev and Ranov 2023 figure 1.jpg)
 - Overall, the model $$\mathcal M$$ is a *set of functions* that describe the dynamics of the environment
 
 **Intrinsically motivated agent learning**:
@@ -26,7 +26,7 @@ page_order: 42
 	1. A complementary intrinsic reward $$R_\text{int}^*$$, which 'corrects' the main task reward
 	2. An exploratory policy $$\pi_\epsilon$$ to guide the agent to collect experience
 	3. A set of task agnostic *intrinsic goals* $$\mathcal G_\text{int}$$ and a schedule for learning them
-- This is again summarised nicely in a figure: ![](assets/img/Latyshev and Ranov 2023 figure 2.jpg){:class="img-responsive"}
+- This is again summarised nicely in a figure: ![](assets/img/Latyshev and Ranov 2023 figure 2.jpg)
 
 - Table 1 shows which papers mix and match which types of motivation. Will return to this below, giving more fine grained examples
 
