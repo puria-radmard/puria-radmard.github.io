@@ -4,7 +4,7 @@
 Standard library only, so the Action needs no pip step.
 Run locally with:  python3 scripts/fetch_feed.py
 """
-import json, os, re, sys, html, urllib.request, urllib.error, xml.etree.ElementTree as ET
+import json, os, re, sys, html, urllib.request, urllib.error, urllib.parse, xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 
@@ -49,12 +49,29 @@ def strip_html(s, n=240):
     return s if len(s) <= n else s[: n - 1].rsplit(" ", 1)[0] + "…"
 
 
+# Substack refuses GitHub's IP ranges outright, so the last resort fetches the RSS through a public read-only
+# proxy that originates the request elsewhere. Third party, so it is tried only after the direct routes fail.
+SUBSTACK_PROXY = os.environ.get("SUBSTACK_PROXY", "https://api.allorigins.win/raw?url=")
+
+
 def substack():
-    try:
-        return substack_rss()
-    except Exception as e:
-        print(f"substack rss failed ({type(e).__name__}: {e}); trying archive api", file=sys.stderr)
-        return substack_archive()
+    routes = [
+        ("rss", lambda: parse_rss(get(SUBSTACK_FEED))),
+        ("archive api", substack_archive),
+        ("rss via proxy", lambda: parse_rss(get(SUBSTACK_PROXY + urllib.parse.quote(SUBSTACK_FEED, safe="")))),
+    ]
+    last = None
+    for name, fn in routes:
+        try:
+            items = fn()
+            if items:
+                print(f"substack: ok via {name}")
+                return items
+            print(f"substack {name}: empty", file=sys.stderr)
+        except Exception as e:
+            last = e
+            print(f"substack {name} failed ({type(e).__name__}: {e})", file=sys.stderr)
+    raise last or RuntimeError("no substack route returned items")
 
 
 def substack_archive():
@@ -68,8 +85,8 @@ def substack_archive():
     } for p in posts if p.get("type", "newsletter") in ("newsletter", "podcast", "thread")]
 
 
-def substack_rss():
-    root = ET.fromstring(get(SUBSTACK_FEED))
+def parse_rss(xml_text):
+    root = ET.fromstring(xml_text)
     out = []
     for it in root.iter("item"):
         f = lambda tag: (it.findtext(tag) or "").strip()
@@ -111,14 +128,19 @@ def lesswrong():
 def main():
     feed = {"generated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "sample": False}
     errors = {}
+    try:  # previous run, so a failing source keeps its last good entries instead of going blank
+        with open(OUT) as f:
+            prev = json.load(f)
+    except Exception:
+        prev = {}
     for name, fn in (("substack", substack), ("lesswrong", lesswrong)):
         try:
             feed[name] = fn()
             print(f"{name}: {len(feed[name])} items")
         except Exception as e:  # keep the other feed even if one breaks
             errors[name] = f"{type(e).__name__}: {e}"
-            feed[name] = []
-            print(f"{name}: FAILED {errors[name]}", file=sys.stderr)
+            feed[name] = prev.get(name) or []
+            print(f"{name}: FAILED {errors[name]}; keeping {len(feed[name])} previous items", file=sys.stderr)
     if errors:
         feed["errors"] = errors
     # Don't clobber a good file with an empty one if everything failed
