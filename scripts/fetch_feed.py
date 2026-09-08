@@ -12,7 +12,12 @@ SUBSTACK_FEED = os.environ.get("SUBSTACK_FEED", "https://puriaradmard.substack.c
 LW_SLUG = "puria"
 LW_GRAPHQL = os.environ.get("LW_GRAPHQL", "https://www.lesswrong.com/graphql")
 OUT = os.environ.get("FEED_OUT", "data/feed.json")
-UA = {"User-Agent": "puria-site-feed/1.0 (+https://github.com)"}
+UA = {  # Substack sits behind Cloudflare, which 403s anything that doesn't look like a browser
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+    "Accept": "application/rss+xml, application/xml, text/xml, application/json;q=0.9, */*;q=0.8",
+    "Accept-Language": "en-GB,en;q=0.9",
+}
+SUBSTACK_ARCHIVE = os.environ.get("SUBSTACK_ARCHIVE", "https://puriaradmard.substack.com/api/v1/archive?sort=new&limit=50")
 
 
 def get(url, data=None, headers=None):
@@ -31,6 +36,25 @@ def strip_html(s, n=240):
 
 
 def substack():
+    try:
+        return substack_rss()
+    except Exception as e:
+        print(f"substack rss failed ({type(e).__name__}: {e}); trying archive api", file=sys.stderr)
+        return substack_archive()
+
+
+def substack_archive():
+    """Fallback: Substack's public archive endpoint returns JSON with title/subtitle/canonical_url/post_date."""
+    posts = json.loads(get(SUBSTACK_ARCHIVE))
+    return [{
+        "title": p.get("title", ""),
+        "subtitle": strip_html(p.get("subtitle") or p.get("description") or ""),
+        "url": p.get("canonical_url", ""),
+        "date": (p.get("post_date") or "")[:10],
+    } for p in posts if p.get("type", "newsletter") in ("newsletter", "podcast", "thread")]
+
+
+def substack_rss():
     root = ET.fromstring(get(SUBSTACK_FEED))
     out = []
     for it in root.iter("item"):
