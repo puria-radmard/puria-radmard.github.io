@@ -1,40 +1,66 @@
 {
-  "generated": "2026-09-08T22:06:31+00:00",
+  "generated": "2026-09-08T22:18:54+00:00",
   "sample": false,
-  "substack": [
-    {
-      "title": "[fixture] First test post",
-      "subtitle": "This subtitle came out of the RSS <description> field, with an entity & some markup to strip.",
-      "url": "https://puriaradmard.substack.com/p/fixture-one",
-      "date": "2026-09-01"
-    },
-    {
-      "title": "[fixture] Second test post, with a much longer title to check that the island truncation and the list ellipsis both behave",
-      "subtitle": "Second subtitle.",
-      "url": "https://puriaradmard.substack.com/p/fixture-two",
-      "date": "2026-05-12"
-    },
-    {
-      "title": "[fixture] Third test post",
-      "subtitle": "",
-      "url": "https://puriaradmard.substack.com/p/fixture-three",
-      "date": "2026-02-07"
-    }
-  ],
+  "substack": [],
   "lesswrong": [
     {
-      "title": "[fixture] A LessWrong test post",
-      "subtitle": "Plaintext description returned by the GraphQL contents field.",
-      "url": "https://www.lesswrong.com/posts/fixture1/a-lesswrong-test-post",
-      "date": "2026-06-20",
-      "karma": 57
+      "title": "Why study proto-training gaming as an adversarial alignment failure mode?",
+      "subtitle": "This is a dual post that lays out our current research project where we compare different pre-RL alignment methods and their ability to prevent models from ‘proto-training gaming,’ which we predict is selected for over the course of RL…",
+      "url": "https://www.lesswrong.com/posts/5KHLQkW8M87FzbM5a/why-study-proto-training-gaming-as-an-adversarial-alignment",
+      "date": "2026-07-08",
+      "karma": 55
     },
     {
-      "title": "[fixture] Another test post",
-      "subtitle": "",
-      "url": "https://www.lesswrong.com/posts/fixture2/another-test-post",
-      "date": "2026-03-02",
-      "karma": 12
+      "title": "Why study alignment interventions on pre-RL checkpoints?",
+      "subtitle": "This is a dual post that lays out our current research project where we compare pre-RL-training methods on their ability to prevent models from ‘proto-training gaming,’ which we predict is selected for over the course of production RL…",
+      "url": "https://www.lesswrong.com/posts/nhjkHsppEk98xxmPe/why-study-alignment-interventions-on-pre-rl-checkpoints",
+      "date": "2026-07-08",
+      "karma": 66
+    },
+    {
+      "title": "Announcing Geodesic Research",
+      "subtitle": "We're a Cambridge, UK-based AI safety organisation that’s asking: how can we build the most robust alignment initialisations for capable LLMs? We’re one of the few non-profit organisations positioned to answer this question empirically.…",
+      "url": "https://www.lesswrong.com/posts/xBbYGer8w45kxkaWr/announcing-geodesic-research",
+      "date": "2026-05-27",
+      "karma": 85
+    },
+    {
+      "title": "Learned Chain-of-Thought Obfuscation Generalises to Unseen Tasks",
+      "subtitle": "TL;DR Training against a CoT or summary-only monitor can lead to obfuscation of dangerous reasoning in unseen tasks. This strengthens the “don’t train against a monitor” claims. Figure 1. A Two prior results: penalising the CoT or final…",
+      "url": "https://www.lesswrong.com/posts/HPqRsgSzgQd5HQsrB/learned-chain-of-thought-obfuscation-generalises-to-unseen",
+      "date": "2026-05-21",
+      "karma": 31
+    },
+    {
+      "title": "Alignment Pretraining: AI Discourse Causes Self-Fulfilling (Mis)alignment",
+      "subtitle": "TL;DR LLMs pretrained on data about misaligned AIs themselves become less aligned. Luckily, pretraining LLMs with synthetic data about good AIs helps them become more aligned. These alignment priors persist through post-training,…",
+      "url": "https://www.lesswrong.com/posts/TcfyGD2aKdZ7Rt3hk/alignment-pretraining-ai-discourse-causes-self-fulfilling",
+      "date": "2025-12-21",
+      "karma": 207
+    },
+    {
+      "title": "Architectures for Increased Externalisation of Reasoning",
+      "subtitle": "TL;DR We propose a new post-training method for making LLMs more verbose reasoners by teaching a model to truncate forward passes early. We expect this technique to improve monitorability by decreasing the amount of computation available…",
+      "url": "https://www.lesswrong.com/posts/rEJbMjK4zP2bueiEK/architectures-for-increased-externalisation-of-reasoning",
+      "date": "2025-11-26",
+      "karma": 38
+    },
+    {
+      "title": "Generalisation Hacking: a first look at adversarial generalisation failures in deliberative alignment",
+      "subtitle": "Background Deliberative alignment is a powerful post-training alignment technique that involves generating and training on re-contextualised supervised fine-tuning (SFT) datasets generated with a set of principles in context. The process…",
+      "url": "https://www.lesswrong.com/posts/ddBHejnZwPrbfEyaj/generalisation-hacking-a-first-look-at-adversarial-2",
+      "date": "2025-11-17",
+      "karma": 54
+    },
+    {
+      "title": "I Am Large, I Contain Multitudes: Persona Transmission via Contextual Inference in LLMs",
+      "subtitle": "We demonstrate that LLMs can infer information about past personas from a set of nonsensical but innocuous questions and binary answers (“Yes.” vs “No.”, inspired by past work on deception detection) in context, and act upon them in…",
+      "url": "https://www.lesswrong.com/posts/Dba2Zga77dZXPAsuP/i-am-large-i-contain-multitudes-persona-transmission-via-2",
+      "date": "2025-09-08",
+      "karma": 33
     }
-  ]
+  ],
+  "errors": {
+    "substack": "HTTPError: HTTP Error 403: Forbidden"
+  }
 }
