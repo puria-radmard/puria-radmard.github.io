@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Puria Radmard</title>
+<meta name="description" content="Puria Radmard — technical director at Geodesic Research. Essays and papers.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:wght@400;600&family=Space+Grotesk:wght@300;500&family=Instrument+Serif&family=Courier+Prime&family=VT323&family=Special+Elite&family=Unbounded:wght@300;600&family=Syne+Mono&family=EB+Garamond&family=Major+Mono+Display&family=Redacted+Script&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--ink:#fff;--acc:#00ff41;--dim:#7a7a7a;--rule:#2a2a2a;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--font:var(--mono)}
+*{box-sizing:border-box}
+:root{--fsz:13px}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:300 var(--fsz)/1.6 var(--font);overflow:hidden}
+::selection{background:var(--acc);color:#000}
+a{color:var(--acc);text-decoration:none;border-bottom:1px solid var(--acc)}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:left}
+:focus-visible{outline:1px solid var(--acc);outline-offset:2px}
+
+/* field */
+#stage{position:fixed;inset:0;cursor:grab;user-select:none;touch-action:none;overflow:hidden}
+#stage.dragging{cursor:grabbing}
+#field{position:absolute;left:0;top:0;width:2600px;height:1700px;transform-origin:0 0;will-change:transform}
+.node{position:absolute;padding:8px 10px;max-width:300px}
+.node .k{display:block;font-size:11px;color:var(--dim)}
+.node .t{display:block;font-weight:400;font-size:14px;line-height:1.35}
+.node .d{display:block;font-size:11px;color:var(--dim);margin-top:3px;max-width:36ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.node:hover .t,.node:focus-visible .t,.node.on .t{color:var(--acc)}
+.node.centre{color:var(--dim);cursor:default;font-size:12px}
+.node.name{color:var(--dim);font-size:11px;letter-spacing:.06em}
+.node.name:hover{color:var(--ink)}
+
+/* bubble: a second rendering of the field in another theme, clipped by a soft circle */
+#bubble{position:fixed;inset:0;z-index:10;pointer-events:none;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--fsz);display:none}
+#bubble.on{display:block}
+#bubble #field2{position:absolute;left:0;top:0;width:2600px;height:1700px;transform-origin:0 0}
+#bubble .node{pointer-events:none}
+/* theme reveal */
+#reveal{position:fixed;right:16px;bottom:44px;z-index:15;width:260px;border:1px solid var(--ink);background:var(--bg);padding:14px;font-size:11px;display:none}
+#reveal.on{display:block}
+#reveal h3{font-size:11px;font-weight:300;color:var(--dim);margin:0 0 8px}
+#reveal .sw{display:flex;gap:0;margin:6px 0 10px;border:1px solid var(--rule)}
+#reveal .sw i{flex:1;height:18px;display:block}
+#reveal .row{display:flex;justify-content:space-between;gap:8px;color:var(--dim)}
+#reveal .row b{font-weight:400;color:var(--ink);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#reveal canvas{width:100%;height:60px;display:block;margin-top:8px;border:1px solid var(--rule)}
+#reveal .fontline{font-family:var(--font);font-size:var(--fsz);margin:8px 0 2px}
+#sound{position:fixed;right:16px;bottom:14px;z-index:15;font-size:11px;color:var(--ink)}
+#sound:hover,#sound.on{color:var(--acc)}
+/* panel: extends from the left in stages */
+#panel{position:fixed;left:0;top:0;bottom:0;display:flex;background:var(--bg);border-right:1px solid var(--ink);z-index:20;transform:translateX(-100%);transition:transform .2s steps(3)}
+#panel.open{transform:translateX(0)}
+.col{border-right:1px solid var(--rule);padding:22px 18px;overflow:auto;height:100%;display:none;flex:none}
+.col.on{display:block}
+#c1{width:180px}#c2{width:300px}#c3{width:400px;border-right:0}
+.col h2{font-size:11px;color:var(--dim);font-weight:300;margin:0 0 14px}
+.col ul{list-style:none;margin:0;padding:0}
+.col li button{display:block;width:100%;padding:6px 0;border-bottom:1px solid var(--rule)}
+.col li button:hover,.col li button.on{color:var(--acc)}
+.col li button small{display:block;color:var(--dim);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.col li button.on small{color:inherit}
+.col .empty{color:var(--dim);font-size:11px}
+#c3 h1{font-size:15px;font-weight:400;line-height:1.4;margin:0 0 4px}
+#c3 .meta{color:var(--dim);font-size:11px;margin:0 0 18px}
+#c3 p{margin:0 0 14px;max-width:52ch}
+#c3 .links{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px 16px}
+#close{position:absolute;right:-1px;top:0;transform:translateX(100%);padding:8px 12px;font-size:11px;border:1px solid var(--ink);border-left:0;background:var(--bg);color:var(--dim)}
+#close:hover{color:var(--acc)}
+
+/* corner controls */
+#corner{position:fixed;left:16px;bottom:14px;z-index:15;font-size:11px;color:var(--dim);display:flex;gap:14px;align-items:center}
+#corner button{color:var(--ink);padding:2px 0}#corner button:hover{color:var(--acc)}
+
+*{scrollbar-width:thin;scrollbar-color:var(--acc) var(--bg)}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--acc);border-radius:0}
+@media (max-width:760px){
+  #panel{right:0;border-right:0;display:block;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .col{width:100%!important;height:auto;overflow:visible;border-right:0;border-bottom:1px solid var(--rule)}
+  #close{transform:none;right:0;left:auto;top:0;border:0;border-bottom:1px solid var(--ink);border-left:1px solid var(--ink)}
+}
+</style>
+</head>
+<body>
+
+<div id="stage" aria-label="A field of islands. Drag to move, pinch or ctrl+scroll to zoom. Use the index for a list.">
+  <div id="field">
+    <button class="node centre" id="centre" disabled>you are somewhere in the middle of it. drag to move.</button>
+    <button class="node name" id="nameNode" data-sec="contact" data-i="0">puria radmard</button>
+  </div>
+</div>
+
+<div id="bubble" aria-hidden="true"><div id="field2"></div></div>
+
+<aside id="panel" aria-label="index">
+  <button id="close">close</button>
+  <div class="col on" id="c1"><h2>index</h2><ul id="l1"></ul></div>
+  <div class="col" id="c2"><h2 id="h2"></h2><ul id="l2"></ul></div>
+  <div class="col" id="c3"><div id="detail"></div></div>
+</aside>
+
+<div id="corner">
+  <button id="idx">index</button>
+  <button id="home">back to centre</button>
+  <button id="theme">theme</button>
+</div>
+<button id="sound">sound off</button>
+<div id="reveal" aria-live="polite"></div>
+
+<script>
+/* ===================== CONFIG ===================== */
+const CONFIG={
+  feedUrl:"data/feed.json",   // written by .github/workflows/feed.yml (weekly + on demand)
+  email:"",                   // e.g. "puria@geodesicresearch.ai"
+  substack:"https://puriaradmard.substack.com",
+  lesswrong:"https://www.lesswrong.com/users/puria",
+  scholar:"https://scholar.google.com/citations?hl=en&user=O3Lza0oAAAAJ",
+  geodesic:"https://www.geodesicresearch.ai",
+  papers:[
+    {title:"Alignment pretraining: AI discourse causes self-fulfilling (mis)alignment",
+     meta:"2025 · Tice*, Radmard*, Ratnam, Kim, Africa, O'Brien · Geodesic Research, UK AISI",
+     sub:"LLMs pretrained on data about misaligned AIs become less aligned. Pretraining on synthetic data about well-behaved AIs cuts base-model misalignment from 45% to 9%, and the effect persists through SFT and DPO.",
+     links:[["paper site","https://alignmentpretraining.ai/"],["arxiv","https://arxiv.org/abs/2601.10160"],["models & data","https://huggingface.co/collections/geodesic-research/alignment-pretraining-geodesic-2025-data-and-models"]]}
+  ]
+};
+/* =================================================== */
+
+const $=s=>document.querySelector(s);
+const stage=$('#stage'),field=$('#field'),panel=$('#panel');
+const FW=2600,FH=1700,CX=1300,CY=850;
+const SECTIONS={substack:"substack",lesswrong:"lesswrong",papers:"papers",contact:"contact"};
+let ITEMS={substack:[],lesswrong:[],papers:[],contact:[]},current={sec:null,i:null};
+
+/* ---- view: pan + zoom ---- */
+let x=0,y=0,z=1,drag=null,pinch=null,anim=null;
+const ZMIN=.35,ZMAX=2.5;
+function clampView(){const W=innerWidth,H=innerHeight;x=Math.min(0,Math.max(W-FW*z,x));y=Math.min(0,Math.max(H-FH*z,y))}
+function place(){clampView();const t=`translate(${x}px,${y}px) scale(${z})`;field.style.transform=t;$('#field2').style.transform=t}
+function centreOn(px,py){x=innerWidth/2-px*z;y=innerHeight/2-py*z;place()}
+function zoomAt(nz,cx,cy){nz=Math.min(ZMAX,Math.max(ZMIN,nz));x=cx-(cx-x)*(nz/z);y=cy-(cy-y)*(nz/z);z=nz;place()}
+function goHome(){ // animate translation only; zoom stays
+  if(anim)cancelAnimationFrame(anim);const tx=innerWidth/2-CX*z,ty=innerHeight/2-CY*z,sx=x,sy=y,t0=performance.now(),D=520;
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const step=t=>{let p=reduce?1:Math.min(1,(t-t0)/D);p=1-Math.pow(1-p,3);x=sx+(tx-sx)*p;y=sy+(ty-sy)*p;place();if(p<1)anim=requestAnimationFrame(step)};anim=requestAnimationFrame(step)}
+
+const ptrs=new Map();
+stage.addEventListener('pointerdown',e=>{ptrs.set(e.pointerId,e);
+  if(ptrs.size===2){stage.setPointerCapture(e.pointerId);const[a,b]=[...ptrs.values()];pinch={d:Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY),z};drag=null;return}
+  if(e.target.closest('.node'))return;stage.setPointerCapture(e.pointerId);drag={sx:e.clientX,sy:e.clientY,ox:x,oy:y};stage.classList.add('dragging')});
+stage.addEventListener('pointermove',e=>{if(!ptrs.has(e.pointerId))return;ptrs.set(e.pointerId,e);
+  if(pinch&&ptrs.size===2){const[a,b]=[...ptrs.values()];const d=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);zoomAt(pinch.z*d/pinch.d,(a.clientX+b.clientX)/2,(a.clientY+b.clientY)/2);return}
+  if(!drag)return;x=drag.ox+e.clientX-drag.sx;y=drag.oy+e.clientY-drag.sy;place()});
+const up=e=>{ptrs.delete(e.pointerId);if(ptrs.size<2)pinch=null;
+  const wasDrag=drag&&Math.hypot(e.clientX-drag.sx,e.clientY-drag.sy)>4;
+  if(!ptrs.size){if(drag&&!wasDrag&&!e.target.closest('.node'))bubbleClick(e.clientX,e.clientY);drag=null;stage.classList.remove('dragging')}};
+stage.addEventListener('pointerup',up);stage.addEventListener('pointercancel',up);
+stage.addEventListener('wheel',e=>{e.preventDefault();
+  if(e.ctrlKey||e.metaKey)zoomAt(z*Math.exp(-e.deltaY*.0025),e.clientX,e.clientY);
+  else{x-=e.deltaX;y-=e.deltaY;place()}},{passive:false});
+document.addEventListener('keydown',e=>{const s=80;
+  if(e.key==='ArrowLeft'){x+=s;place()}if(e.key==='ArrowRight'){x-=s;place()}if(e.key==='ArrowUp'){y+=s;place()}if(e.key==='ArrowDown'){y-=s;place()}
+  if(e.key==='+'||e.key==='=')zoomAt(z*1.2,innerWidth/2,innerHeight/2);if(e.key==='-')zoomAt(z/1.2,innerWidth/2,innerHeight/2);
+  if(e.key==='0')goHome();if(e.key==='Escape')closePanel();if(e.key==='i')togglePanel()});
+addEventListener('resize',place);
+$('#home').onclick=goHome;
+
+/* ---- island placement: 2D gaussian per section, resample on collision, sigma grows with count ---- */
+function gauss(){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+const MEANS={substack:[1850,560],lesswrong:[720,520],papers:[720,1230],contact:[1850,1300]};
+const NODE_W=300,NODE_H=90;   // exclusion box, since islands are wide and short
+function placeAll(){
+  const placed=[[CX-40,CY,520,60],[CX,CY-60,140,30]]; // keep the centre line and name clear
+  const out={};
+  for(const sec of Object.keys(MEANS)){const n=ITEMS[sec].length;if(!n)continue;
+    const sig=[Math.max(160,90*Math.sqrt(n)*1.6),Math.max(120,70*Math.sqrt(n)*1.6)];let s=1;out[sec]=[];
+    for(let i=0;i<n;i++){let p,ok=false,tries=0;
+      while(!ok&&tries<60){p=[MEANS[sec][0]+gauss()*sig[0]*s,MEANS[sec][1]+gauss()*sig[1]*s];tries++;
+        p[0]=Math.min(FW-NODE_W-40,Math.max(40,p[0]));p[1]=Math.min(FH-NODE_H-40,Math.max(40,p[1]));
+        ok=placed.every(q=>Math.abs(p[0]-q[0])>=(NODE_W+q[2])/2*.85||Math.abs(p[1]-q[1])>=(NODE_H+q[3])/2*1.1);
+        if(tries%20===0)s*=1.25}
+      placed.push([p[0],p[1],NODE_W,NODE_H]);out[sec].push(p)}}
+  return out}
+
+function buildItems(D){
+  ITEMS.substack=(D.substack||[]).map(p=>({k:"substack",t:p.title,d:p.subtitle||"",meta:fmtDate(p.date),links:[["read on substack",p.url]]}));
+  ITEMS.lesswrong=(D.lesswrong||[]).map(p=>({k:"lesswrong",t:p.title,d:p.subtitle||"",meta:fmtDate(p.date)+(p.karma!=null?` · ${p.karma} karma`:""),links:[["read on lesswrong",p.url]]}));
+  ITEMS.papers=CONFIG.papers.map(p=>({k:"paper",t:p.title,d:p.sub,meta:p.meta,links:p.links}));
+  ITEMS.contact=[{k:"door",t:"contact",d:"Technical director, Geodesic Research. Cambridge, UK.",meta:"",
+    body:`<p>Email is best. If you work on alignment inside a frontier lab and have an experiment you'd like run in the open, especially so.</p>`,
+    links:[CONFIG.email?["email","mailto:"+CONFIG.email]:null,["geodesic research",CONFIG.geodesic],["scholar",CONFIG.scholar],["substack",CONFIG.substack],["lesswrong",CONFIG.lesswrong]].filter(Boolean)}];
+}
+function fmtDate(s){if(!s)return"";const d=new Date(s);return isNaN(d)?s:d.toLocaleDateString('en-GB',{year:'numeric',month:'short',day:'numeric'})}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function buildField(){
+  field.querySelectorAll('.node[data-i]:not(#nameNode)').forEach(n=>n.remove());
+  $('#centre').style.left=(CX-260)+'px';$('#centre').style.top=(CY-10)+'px';
+  $('#nameNode').style.left=(CX-60)+'px';$('#nameNode').style.top=(CY-70)+'px';
+  const pos=placeAll();
+  for(const sec in pos)pos[sec].forEach((p,i)=>{const it=ITEMS[sec][i];const b=document.createElement('button');b.className='node';b.dataset.sec=sec;b.dataset.i=i;b.style.left=p[0]+'px';b.style.top=p[1]+'px';
+    b.innerHTML=`<span class="k">${it.k}</span><span class="t">${esc(it.t)}</span>${it.d?`<span class="d">${esc(it.d)}</span>`:''}`;field.appendChild(b)});
+  syncBubble();
+}
+function syncBubble(){const f2=$('#field2');f2.innerHTML=field.innerHTML;f2.querySelectorAll('[id]').forEach(n=>n.removeAttribute('id'));f2.querySelectorAll('button').forEach(b=>b.tabIndex=-1)}
+
+/* ---- panel: stage 1 index only, stage 2 section list, stage 3 item ---- */
+function openPanel(){panel.classList.add('open')}
+function closePanel(){panel.classList.remove('open')}
+function togglePanel(){if(panel.classList.contains('open'))closePanel();else{stageTo(1);openPanel()}}
+function stageTo(n){$('#c2').classList.toggle('on',n>=2);$('#c3').classList.toggle('on',n>=3)}
+$('#close').onclick=closePanel;$('#idx').onclick=togglePanel;
+
+function renderL1(){$('#l1').innerHTML=Object.keys(SECTIONS).map(s=>`<li><button data-sec="${s}" class="${current.sec===s?'on':''}">${SECTIONS[s]}<small>${s==='contact'?'':ITEMS[s].length+' item'+(ITEMS[s].length===1?'':'s')}</small></button></li>`).join('')}
+function showSection(sec){current.sec=sec;renderL1();$('#h2').textContent=SECTIONS[sec];
+  $('#l2').innerHTML=ITEMS[sec].length?ITEMS[sec].map((it,i)=>`<li><button data-sec="${sec}" data-i="${i}" class="${current.i===i?'on':''}">${esc(it.t)}<small>${esc(it.meta||it.d)}</small></button></li>`).join(''):`<li class="empty">nothing here yet</li>`;
+  openPanel()}
+function showItem(sec,i){current.sec=sec;current.i=i;showSection(sec);const it=ITEMS[sec][i];
+  $('#detail').innerHTML=`<h1>${esc(it.t)}</h1><p class="meta">${esc(it.meta)}</p>${it.d?`<p>${esc(it.d)}</p>`:''}${it.body||''}<div class="links">${it.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]}</a>`).join('')}</div>`;
+  stageTo(3);field.querySelectorAll('.node.on').forEach(n=>n.classList.remove('on'));const n=field.querySelector(`.node[data-sec="${sec}"][data-i="${i}"]`);if(n)n.classList.add('on');syncBubble();
+  try{history.replaceState(null,'',`#${sec}/${i}`)}catch{}}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-sec]');if(!b)return;
+  if(b.dataset.i!=null)showItem(b.dataset.sec,+b.dataset.i);else{current.i=null;stageTo(2);showSection(b.dataset.sec)}});
+
+/* ---- bubble of another theme ----
+   click background: a soft circle of a different palette + font opens at the click and grows with each click.
+   it decays when left alone. if it swallows the whole viewport it becomes the norm and a fresh theme is drawn.
+   refresh resets to matrix. */
+const FONTS=[['"Cormorant Garamond",serif',1.15],['"Space Grotesk",sans-serif',1],['"Instrument Serif",serif',1.12],['"Courier Prime",monospace',1],
+  ['"VT323",monospace',1.3],['"Special Elite",monospace',1],['"Unbounded",sans-serif',.9],['"Syne Mono",monospace',1],['"EB Garamond",serif',1.15],['"Major Mono Display",monospace',.95],['"Redacted Script",cursive',1.1]];
+const logu=(a,b)=>Math.exp(Math.log(a)+Math.random()*(Math.log(b)-Math.log(a)));
+function hsl(h,s,l){return `hsl(${h} ${s}% ${l}%)`}
+function lum(h,s,l){ // relative luminance from hsl via rgb
+  s/=100;l/=100;const k=n=>(n+h/30)%12,a=s*Math.min(l,1-l),f=n=>l-a*Math.max(-1,Math.min(k(n)-3,Math.min(9-k(n),1)));
+  const lin=c=>c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4);return .2126*lin(f(0))+.7152*lin(f(8))+.0722*lin(f(4))}
+const contrast=(a,b)=>(Math.max(a,b)+.05)/(Math.min(a,b)+.05);
+function randomTheme(){
+  const bh=Math.random()*360,bs=20+Math.random()*70,bl=Math.random()<.5?4+Math.random()*18:80+Math.random()*16;const bL=lum(bh,bs,bl);
+  let ink,acc,tries=0;
+  do{const h=Math.random()*360,s=Math.random()*40,l=bl<50?78+Math.random()*20:5+Math.random()*22;ink=[h,s,l]}while(contrast(lum(...ink),bL)<7&&++tries<200);   // rejection: ink must read on ground
+  tries=0;
+  do{const h=(bh+90+Math.random()*180)%360,s=70+Math.random()*30,l=bl<50?50+Math.random()*25:30+Math.random()*25;acc=[h,s,l]}
+  while((contrast(lum(...acc),bL)<3.5||Math.abs(((acc[0]-ink[0]+540)%360)-180)>150)&&++tries<200); // accent readable and not the ink's hue
+  const dl=bl<50?ink[2]-38:ink[2]+38;
+  const f=FONTS[(Math.random()*FONTS.length)|0];
+  return{bg:hsl(bh,bs,bl),ink:hsl(...ink),acc:hsl(...acc),dim:hsl(ink[0],ink[1],dl),rule:hsl(bh,bs,bl<50?bl+10:bl-10),font:f[0],fs:f[1],spectrum:randomSpectrum()};
+}
+function applyTheme(el,t){el.style.setProperty('--bg',t.bg);el.style.setProperty('--ink',t.ink);el.style.setProperty('--acc',t.acc);el.style.setProperty('--dim',t.dim);el.style.setProperty('--rule',t.rule);el.style.setProperty('--font',t.font);el.style.setProperty('--fsz',(13*t.fs)+'px')}
+const MATRIX={bg:'#000',ink:'#fff',acc:'#00ff41',dim:'#7a7a7a',rule:'#2a2a2a',font:'"IBM Plex Mono",monospace',fs:1,spectrum:{name:'white',hp:0,lp:0,peaks:[]}};
+let theme=MATRIX,bub=null,nextTheme=randomTheme();
+const SOFT=70;
+function bubbleClick(cx,cy){
+  const now=performance.now();
+  if(!bub){bub={x:cx,y:cy,r:0,last:now};applyTheme($('#bubble'),nextTheme);$('#bubble').classList.add('on');syncBubble();requestAnimationFrame(tickBubble)}
+  bub.x=cx;bub.y=cy;bub.r+=(farthestCorner()+SOFT)/8*1.15;bub.last=now;   // ~8 quick clicks to swallow the screen
+  drawBubble()}
+document.addEventListener('pointermove',e=>{if(bub&&e.pointerType!=='touch'){bub.x=e.clientX;bub.y=e.clientY}});  // the cursor is the centre of emanation
+function drawBubble(){const m=`radial-gradient(circle at ${bub.x}px ${bub.y}px, #000 ${Math.max(0,bub.r-SOFT)}px, transparent ${bub.r+SOFT}px)`;const b=$('#bubble');b.style.maskImage=m;b.style.webkitMaskImage=m}
+function farthestCorner(){return Math.max(...[[0,0],[innerWidth,0],[0,innerHeight],[innerWidth,innerHeight]].map(c=>Math.hypot(c[0]-bub.x,c[1]-bub.y)))}
+let lastT=0;
+function tickBubble(t){if(!bub)return;const dt=Math.min(.1,(t-(lastT||t))/1000);lastT=t;
+  if(bub.r-SOFT>=farthestCorner()){ // swallowed everything: becomes the norm
+    theme=nextTheme;applyTheme(document.documentElement,theme);$('#bubble').classList.remove('on');bub=null;nextTheme=randomTheme();promoteAudio();renderReveal();return}
+  bub.r-=dt*(30+bub.r*.28);   // decays from the moment you stop
+  setMix(Math.min(1,bub.r/farthestCorner()));
+  if(bub.r<=0){$('#bubble').classList.remove('on');bub=null;setMix(0);return}
+  drawBubble();requestAnimationFrame(tickBubble)}
+
+/* ---- each theme has a noise spectrum: white noise shaped by a highpass, a lowpass and a few resonant peaks ---- */
+function randomSpectrum(){const n=1+(Math.random()*3|0);const peaks=[];for(let i=0;i<n;i++)peaks.push({f:logu(60,6000),q:2+Math.random()*12,g:6+Math.random()*14});
+  const hp=Math.random()<.6?logu(30,500):0,lp=Math.random()<.7?logu(700,14000):0;
+  const name=(hp>200?'thin ':hp?'':'heavy ')+(lp&&lp<2000?'muffled ':lp?'':'bright ')+(n>2?'ringing':n>1?'hollow':'toned')+' noise';
+  return{name,hp,lp,peaks}}
+let actx=null,noise=null,master=null,chainA=null,chainB=null,mix=0;
+function ensureCtx(){if(actx)return actx;actx=new(window.AudioContext||window.webkitAudioContext)();
+  const len=actx.sampleRate*2,buf=actx.createBuffer(1,len,actx.sampleRate),d=buf.getChannelData(0);for(let i=0;i<len;i++)d[i]=Math.random()*2-1;
+  noise=actx.createBufferSource();noise.buffer=buf;noise.loop=true;master=actx.createGain();master.gain.value=0;master.connect(actx.destination);
+  chainA=buildChain(theme.spectrum,1);chainB=buildChain(nextTheme.spectrum,0);noise.start();return actx}
+function buildChain(sp,g){const filters=[];let node=noise;
+  if(sp.hp){const f=actx.createBiquadFilter();f.type='highpass';f.frequency.value=sp.hp;filters.push(f)}
+  if(sp.lp){const f=actx.createBiquadFilter();f.type='lowpass';f.frequency.value=sp.lp;filters.push(f)}
+  for(const p of sp.peaks){const f=actx.createBiquadFilter();f.type='peaking';f.frequency.value=p.f;f.Q.value=p.q;f.gain.value=p.g;filters.push(f)}
+  for(const f of filters){node.connect(f);node=f}const gain=actx.createGain();gain.gain.value=g;node.connect(gain);gain.connect(master);return{filters,gain}}
+function setMix(m){mix=m;if(!actx)return;const t=actx.currentTime;chainA.gain.gain.setTargetAtTime(1-m,t,.05);chainB.gain.gain.setTargetAtTime(m,t,.05)}
+function promoteAudio(){if(!actx)return;chainA.gain.disconnect();chainA.filters.forEach(f=>f.disconnect());chainA=chainB;chainB=buildChain(nextTheme.spectrum,0);setMix(0)}
+let soundOn=false;
+$('#sound').onclick=async()=>{if(!(window.AudioContext||window.webkitAudioContext)){$('#sound').textContent='no audio here';return}ensureCtx();if(actx.state==='suspended')await actx.resume();soundOn=!soundOn;
+  master.gain.setTargetAtTime(soundOn?.06:0,actx.currentTime,.2);$('#sound').textContent=soundOn?'sound on':'sound off';$('#sound').classList.toggle('on',soundOn)};
+
+/* ---- reveal: the current theme's font, palette and spectrum ---- */
+function response(sp,freqs){const out=new Float32Array(freqs.length).fill(1);if(!(window.AudioContext||window.webkitAudioContext))return out;if(!actx)ensureCtx();
+  const mk=(type,f,q,g)=>{const b=actx.createBiquadFilter();b.type=type;b.frequency.value=f;if(q)b.Q.value=q;if(g)b.gain.value=g;return b};
+  const fs=[];if(sp.hp)fs.push(mk('highpass',sp.hp));if(sp.lp)fs.push(mk('lowpass',sp.lp));for(const p of sp.peaks)fs.push(mk('peaking',p.f,p.q,p.g));
+  const mag=new Float32Array(freqs.length),ph=new Float32Array(freqs.length);for(const f of fs){f.getFrequencyResponse(freqs,mag,ph);for(let i=0;i<out.length;i++)out[i]*=mag[i]}return out}
+function renderReveal(){const r=$('#reveal');if(!r.classList.contains('on'))return;const t=theme;
+  r.innerHTML=`<h3>current theme</h3>
+   <div class="fontline">${t.font.split(',')[0].replace(/"/g,'')}</div>
+   <div class="sw"><i style="background:${t.bg}"></i><i style="background:${t.ink}"></i><i style="background:${t.acc}"></i><i style="background:${t.dim}"></i></div>
+   <div class="row"><span>ground</span><b>${t.bg}</b></div><div class="row"><span>ink</span><b>${t.ink}</b></div><div class="row"><span>signal</span><b>${t.acc}</b></div>
+   <div class="row" style="margin-top:8px"><span>spectrum</span><b>${t.spectrum.name}</b></div><canvas width="232" height="60"></canvas>`;
+  const cv=r.querySelector('canvas'),g=cv.getContext('2d');if(!g)return;const N=232,freqs=new Float32Array(N);for(let i=0;i<N;i++)freqs[i]=20*Math.pow(1000,i/(N-1));
+  const m=response(t.spectrum,freqs);g.clearRect(0,0,N,60);g.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--acc').trim()||t.acc;g.lineWidth=1;g.beginPath();
+  for(let i=0;i<N;i++){const db=20*Math.log10(Math.max(1e-4,m[i]));const y=60-((db+30)/50)*60;i?g.lineTo(i,y):g.moveTo(i,y)}g.stroke()}
+$('#theme').onclick=()=>{$('#reveal').classList.toggle('on');renderReveal()};
+
+/* ---- boot: no data lives in this file ---- */
+async function boot(){
+  let D={substack:[],lesswrong:[]};
+  if(window.__FEED__)D=window.__FEED__;
+  else try{const r=await fetch(CONFIG.feedUrl,{cache:'no-store'});if(!r.ok)throw 0;D=await r.json();if(D.errors)console.warn('feed partial',D.errors)}
+  catch{console.warn('no feed: data/feed.json not found')}
+  buildItems(D);buildField();renderL1();centreOn(CX,CY);
+  const m=location.hash.match(/^#(\w+)\/(\d+)$/);if(m&&ITEMS[m[1]]&&ITEMS[m[1]][+m[2]])showItem(m[1],+m[2]);
+}
+boot();
+</script>
+</body>
+</html>
