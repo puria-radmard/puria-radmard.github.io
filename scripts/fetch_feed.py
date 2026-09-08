@@ -4,7 +4,7 @@
 Standard library only, so the Action needs no pip step.
 Run locally with:  python3 scripts/fetch_feed.py
 """
-import json, os, re, sys, html, urllib.request, xml.etree.ElementTree as ET
+import json, os, re, sys, html, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 
@@ -20,10 +20,24 @@ UA = {  # Substack sits behind Cloudflare, which 403s anything that doesn't look
 SUBSTACK_ARCHIVE = os.environ.get("SUBSTACK_ARCHIVE", "https://puriaradmard.substack.com/api/v1/archive?sort=new&limit=50")
 
 
+try:  # Cloudflare fingerprints the TLS handshake; curl_cffi impersonates Chrome's. Optional: falls back to urllib.
+    from curl_cffi import requests as cffi_requests
+except ImportError:
+    cffi_requests = None
+
+
 def get(url, data=None, headers=None):
     h = dict(UA)
     if headers:
         h.update(headers)
+    if cffi_requests is not None:
+        if data is None:
+            r = cffi_requests.get(url, headers=h, impersonate="chrome", timeout=30)
+        else:
+            r = cffi_requests.post(url, data=data, headers=h, impersonate="chrome", timeout=30)
+        if r.status_code >= 400:
+            raise urllib.error.HTTPError(url, r.status_code, f"HTTP Error {r.status_code}", {}, None)
+        return r.text
     req = urllib.request.Request(url, data=data, headers=h)
     with urllib.request.urlopen(req, timeout=30) as r:
         return r.read().decode("utf-8")
