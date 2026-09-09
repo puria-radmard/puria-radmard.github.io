@@ -1,7 +1,26 @@
 {
-  "generated": "2026-09-08T23:03:05+00:00",
+  "generated": "2026-09-09T18:04:34+00:00",
   "sample": false,
-  "substack": [],
+  "substack": [
+    {
+      "title": "Will the decline in magic continue as scheduled?",
+      "subtitle": "Musings on some Wikipedia deep dives while waiting for my girlfriend to get ready on our weekend in Malta.",
+      "url": "https://puriaradmard.substack.com/p/will-the-decline-in-magic-continue",
+      "date": "2026-09-09"
+    },
+    {
+      "title": "I don’t want to be a baby at the end of time I want to be a monkey who just found a speaker",
+      "subtitle": "-",
+      "url": "https://puriaradmard.substack.com/p/i-dont-want-to-be-a-baby-at-the-end",
+      "date": "2026-02-11"
+    },
+    {
+      "title": "My Favourite Worst Nightmare: Autonomous AI Risks",
+      "subtitle": "TL;DR: My career decisions are often difficult to explain to people not in AI safety circles.",
+      "url": "https://puriaradmard.substack.com/p/my-favourite-worst-nightmare-autonomous",
+      "date": "2026-02-03"
+    }
+  ],
   "lesswrong": [
     {
       "title": "Why study proto-training gaming as an adversarial alignment failure mode?",
@@ -59,8 +78,5 @@
       "date": "2025-09-08",
       "karma": 33
     }
-  ],
-  "errors": {
-    "substack": "HTTPError: HTTP Error 522: HTTP Error 522"
-  }
+  ]
 }
