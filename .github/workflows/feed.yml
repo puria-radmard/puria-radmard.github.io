@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "0 6 * * 1"     # Mondays 06:00 UTC
   workflow_dispatch:         # "Run workflow" button in the Actions tab
+  push:
+    paths:
+      - "scripts/**"
+      - ".github/workflows/feed.yml"
 
 permissions:
   contents: write
@@ -24,5 +28,5 @@ jobs:
           git config user.email "feed-bot@users.noreply.github.com"
           git add data/feed.json
           git diff --cached --quiet || git commit -m "refresh feed $(date -u +%F)"
-          git pull --rebase --autostash origin main
-          git push
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
