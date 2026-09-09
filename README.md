@@ -9,7 +9,7 @@ Static site for GitHub Pages. One HTML file, one JSON feed, one weekly Action.
 4. Actions tab → "refresh feed" → Run workflow. It also runs every Monday.
 
 ## edit
-- Papers, email, links: `CONFIG` at the top of the `<script>` in `index.html`.
+- Papers, email, links: `CONFIG` in `js/config.js`.
 - Feed sources: constants at the top of `scripts/fetch_feed.py`.
 - Test locally against fixtures (no network): `./scripts/test_local.sh` — runs the real fetcher against `tests/fixtures/substack.xml` and a mock LessWrong GraphQL server, writes `data/feed.json`, and builds `preview.html` with that feed inlined. Fixture titles are prefixed `[fixture]`.
 - Serve: `python3 -m http.server` then open http://localhost:8000

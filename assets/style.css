@@ -1,0 +1,79 @@
+:root{--bg:#000;--ink:#fff;--acc:#00ff41;--dim:#7a7a7a;--rule:#2a2a2a;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--font:var(--mono)}
+*{box-sizing:border-box}
+:root{--fsz:13px}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:300 var(--fsz)/1.6 var(--font);overflow:hidden}
+::selection{background:var(--acc);color:#000}
+a{color:var(--acc);text-decoration:none;border-bottom:1px solid var(--acc)}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:left}
+:focus-visible{outline:1px solid var(--acc);outline-offset:2px}
+
+/* field */
+#stage{position:fixed;inset:0;cursor:grab;user-select:none;touch-action:none;overflow:hidden}
+#stage.dragging{cursor:grabbing}
+#field{position:absolute;left:0;top:0;width:2600px;height:1700px;transform-origin:0 0;will-change:transform}
+.node{position:absolute;padding:8px 10px;max-width:300px}
+.node .k{display:block;font-size:11px;color:var(--dim)}
+.node .t{display:block;font-weight:400;font-size:14px;line-height:1.35}
+.node .d{display:block;font-size:11px;color:var(--dim);margin-top:3px;max-width:36ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.node:hover .t,.node:focus-visible .t,.node.on .t{color:var(--acc)}
+.node.centre{color:var(--dim);cursor:default;font-size:12px}
+.node.name{color:var(--dim);font-size:11px;letter-spacing:.06em}
+.node.name:hover{color:var(--ink)}
+
+/* bubble: a second rendering of the field in another theme, clipped by a soft circle */
+#bubble{position:fixed;inset:0;z-index:10;pointer-events:none;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--fsz);display:none}
+#bubble.on{display:block}
+#bubble #field2{position:absolute;left:0;top:0;width:2600px;height:1700px;transform-origin:0 0}
+#bubble .node,#bubble .chrome,#bubble .chrome *{pointer-events:none}
+/* theme reveal */
+.reveal{position:fixed;right:16px;bottom:44px;z-index:5;width:260px;border:1px solid var(--ink);background:var(--bg);padding:14px;font-size:11px;line-height:16px;display:none;overflow:hidden}
+.reveal.on{display:block}
+.reveal h3{font-size:11px;font-weight:300;color:var(--dim);margin:0 0 8px;height:16px;line-height:16px;white-space:nowrap;overflow:hidden}
+.reveal .copytheme{position:absolute;top:14px;right:14px;font-size:11px;line-height:16px;color:var(--dim);white-space:nowrap}
+.reveal .copytheme:hover{color:var(--acc)}
+.reveal .sw{display:flex;gap:0;margin:6px 0 10px;border:1px solid var(--rule);height:20px}
+.reveal .sw i{flex:1;height:18px;display:block}
+.reveal .row{display:flex;justify-content:space-between;gap:8px;color:var(--dim);height:16px;line-height:16px;white-space:nowrap;overflow:hidden}
+.reveal .row span{flex:none}
+.reveal .row b{font-weight:400;color:var(--ink);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.reveal canvas{width:100%;height:60px;display:block;margin-top:8px;border:1px solid var(--rule)}
+.reveal .fontline{font-family:var(--font);font-size:var(--fsz);height:24px;line-height:24px;margin:8px 0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sound{position:fixed;right:16px;bottom:14px;z-index:5;font-size:11px;color:var(--ink);white-space:nowrap}
+.sound:hover,.sound.on{color:var(--acc)}
+/* panel: extends from the left in stages */
+#panel{position:fixed;left:0;top:0;bottom:0;display:flex;background:var(--bg);border-right:1px solid var(--ink);z-index:20;transform:translateX(-100%);transition:transform .2s steps(3)}
+#panel.open{transform:translateX(0)}
+.col{border-right:1px solid var(--rule);padding:22px 18px;overflow:auto;height:100%;display:none;flex:none}
+.col.on{display:block}
+#c1{width:180px}#c2{width:300px}#c3{width:400px;border-right:0}
+.col h2{font-size:11px;color:var(--dim);font-weight:300;margin:0 0 14px}
+.col ul{list-style:none;margin:0;padding:0}
+.col li button{display:block;width:100%;padding:6px 0;border-bottom:1px solid var(--rule)}
+.col li button:hover,.col li button.on{color:var(--acc)}
+.col li button small{display:block;color:var(--dim);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.col li button.on small{color:inherit}
+.col .empty{color:var(--dim);font-size:11px}
+#c3 h1{font-size:15px;font-weight:400;line-height:1.4;margin:0 0 4px}
+#c3 .meta{color:var(--dim);font-size:11px;margin:0 0 18px}
+#c3 p{margin:0 0 14px;max-width:52ch}
+#c3 .links{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px 16px}
+#close{position:absolute;right:-1px;top:0;transform:translateX(100%);padding:8px 12px;font-size:11px;border:1px solid var(--ink);border-left:0;background:var(--bg);color:var(--dim)}
+#close:hover{color:var(--acc)}
+#panel:not(.open) #close{display:none;visibility:hidden}
+
+/* corner controls */
+.corner{position:fixed;left:16px;bottom:14px;z-index:5;font-size:11px;color:var(--dim);display:flex;gap:14px;align-items:center}
+.corner button{color:var(--ink);padding:2px 0;white-space:nowrap}.corner button:hover{color:var(--acc)}
+/* clones inside the bubble: each element pinned to its original's screen box, so the click lands where you see it */
+#bubble .chrome{position:fixed;inset:0}
+#bubble .chrome .pin{position:fixed;margin:0;display:block}
+
+*{scrollbar-width:thin;scrollbar-color:var(--acc) var(--bg)}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--acc);border-radius:0}
+@media (max-width:760px){
+  #panel{right:0;border-right:0;display:block;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .col{width:100%!important;height:auto;overflow:visible;border-right:0;border-bottom:1px solid var(--rule)}
+  #close{transform:none;right:0;left:auto;top:0;border:0;border-bottom:1px solid var(--ink);border-left:1px solid var(--ink)}
+}

@@ -49,8 +49,9 @@ def strip_html(s, n=240):
     return s if len(s) <= n else s[: n - 1].rsplit(" ", 1)[0] + "…"
 
 
-# Substack refuses GitHub's IP ranges outright, so the last resort fetches the RSS through a public read-only
-# proxy that originates the request elsewhere. Third party, so it is tried only after the direct routes fail.
+# Substack refuses GitHub's IP ranges outright, so the fallbacks fetch the RSS through third-party services
+# that originate the request elsewhere. Tried only after the direct routes fail.
+SUBSTACK_RSS2JSON = os.environ.get("SUBSTACK_RSS2JSON", "https://api.rss2json.com/v1/api.json?rss_url=")
 SUBSTACK_PROXY = os.environ.get("SUBSTACK_PROXY", "https://api.allorigins.win/raw?url=")
 
 
@@ -58,6 +59,7 @@ def substack():
     routes = [
         ("rss", lambda: parse_rss(get(SUBSTACK_FEED))),
         ("archive api", substack_archive),
+        ("rss2json", substack_rss2json),
         ("rss via proxy", lambda: parse_rss(get(SUBSTACK_PROXY + urllib.parse.quote(SUBSTACK_FEED, safe="")))),
     ]
     last = None
@@ -83,6 +85,19 @@ def substack_archive():
         "url": p.get("canonical_url", ""),
         "date": (p.get("post_date") or "")[:10],
     } for p in posts if p.get("type", "newsletter") in ("newsletter", "podcast", "thread")]
+
+
+def substack_rss2json():
+    """rss2json.com fetches the RSS from its own servers, so it works where Substack blocks ours."""
+    d = json.loads(get(SUBSTACK_RSS2JSON + urllib.parse.quote(SUBSTACK_FEED, safe="")))
+    if d.get("status") != "ok":
+        raise RuntimeError(f"rss2json status={d.get('status')} {d.get('message', '')}")
+    return [{
+        "title": it.get("title", ""),
+        "subtitle": strip_html(it.get("description") or ""),
+        "url": it.get("link", ""),
+        "date": (it.get("pubDate") or "")[:10],
+    } for it in d.get("items", [])]
 
 
 def parse_rss(xml_text):

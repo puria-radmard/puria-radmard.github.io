@@ -11,6 +11,6 @@ SUBSTACK_FEED=http://127.0.0.1:8764/substack.xml LW_GRAPHQL=http://127.0.0.1:876
 python3 - <<'PY'
 import json
 s=open('index.html').read(); d=open('data/feed.json').read()
-open('preview.html','w').write(s.replace('<script>\n/* ===================== CONFIG','<script>window.__FEED__='+d+';</script>\n<script>\n/* ===================== CONFIG',1))
+open('preview.html','w').write(s.replace('<script src="js/config.js">','<script>window.__FEED__='+d+';</script>\n<script src="js/config.js">',1))
 print('wrote preview.html')
 PY
