@@ -1,10 +1,9 @@
 /* ---- panel: stage 1 index only, stage 2 section list, stage 3 item ---- */
 function openPanel(){panel.classList.add('open')}
-function closePanel(){ // close = go home: panel shut, island deselected, url reset, geography untouched
+function closePanel(){ // panel shut, island deselected, url reset; view stays where you left it
   panel.classList.remove('open');stageTo(1);current={sec:null,i:null};renderL1();
   field.querySelectorAll('.node.on').forEach(n=>n.classList.remove('on'));syncBubble();
-  try{history.replaceState(null,'',location.pathname+location.search)}catch{}
-  goHome()}
+  try{history.replaceState(null,'',location.pathname+location.search)}catch{}}
 function togglePanel(){if(panel.classList.contains('open'))closePanel();else{stageTo(1);openPanel()}}
 function stageTo(n){$('#c2').classList.toggle('on',n>=2);$('#c3').classList.toggle('on',n>=3)}
 $('#close').onclick=closePanel;$('#idx').onclick=togglePanel;
