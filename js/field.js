@@ -4,11 +4,11 @@ function gauss(){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();r
 const BEARING={substack:-0.6,lesswrong:-2.5,papers:2.5,contact:0.6};   // radians; screen y is down
 const R_MIN=230,R_MAX=760;
 const NODE_W=300;   // islands cap at this width; height depends on how far the title wraps
-const estH=it=>34+19*Math.ceil((it.t||"").length/33)+(it.d?18:0);   // padding + kicker + wrapped title + one-line blurb
+const estH=it=>36+19*Math.ceil((it.t||"").length/28)+(it.d?18:0);   // padding + kicker + wrapped title + one-line blurb; ~28 chars/line since greedy wrap loses partial words
 const GAP=14;
-const hits=(a,b)=>a[0]<b[0]+b[2]+GAP&&b[0]<a[0]+a[2]+GAP&&a[1]<b[1]+b[3]+GAP&&b[1]<a[1]+a[3]+GAP;
+const hits=(a,b,g=GAP)=>a[0]<b[0]+b[2]+g&&b[0]<a[0]+a[2]+g&&a[1]<b[1]+b[3]+g&&b[1]<a[1]+a[3]+g;
 function placeAll(){
-  const placed=[[CX-260,CY-10,300,56],[CX-260,CY+42,300,40],[CX-60,CY-70,120,36]]; // keep the centre lines and name clear
+  const placed=[[CX-260,CY-10,300,56],[CX-260,CY+58,300,36],[CX-60,CY-70,120,36]]; // keep the centre lines and name clear
   const dated=[];for(const sec of Object.keys(BEARING))for(const it of ITEMS[sec])if(it.date&&!isNaN(new Date(it.date)))dated.push(+new Date(it.date));
   const newest=dated.length?Math.max(...dated):Date.now(),oldest=dated.length?Math.min(...dated):newest-1;
   const span=Math.max(1,newest-oldest);
@@ -25,6 +25,12 @@ function placeAll(){
         box=[p[0],p[1],NODE_W,H];
         ok=!placed.some(q=>hits(box,q));
         if(tries%20===0)w*=1.3}
+      if(!ok){ // very dense: fall back to the free grid cell nearest the item's ideal spot, dropping the margin if even that fails
+        const ix=CX+Math.cos(BEARING[sec])*base,iy=CY+Math.sin(BEARING[sec])*base,cells=[];
+        for(let gx=40;gx<=FW-NODE_W-40;gx+=30)for(let gy=40;gy<=FH-H-40;gy+=30)cells.push([gx,gy,(gx+NODE_W/2-ix)**2+(gy+H/2-iy)**2]);
+        cells.sort((u,v)=>u[2]-v[2]);
+        grid:for(const g of [GAP,0])for(const c of cells){const cb=[c[0],c[1],NODE_W,H];
+          if(!placed.some(q=>hits(cb,q,g))){p=[c[0],c[1]];box=cb;break grid}}}
       placed.push(box);out[sec].push(p)}}
   return out}
 
@@ -42,7 +48,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 function buildField(){
   field.querySelectorAll('.node[data-i]:not(#nameNode)').forEach(n=>n.remove());
   $('#centre').style.left=(CX-260)+'px';$('#centre').style.top=(CY-10)+'px';
-  $('#metam').style.left=(CX-260)+'px';$('#metam').style.top=(CY+42)+'px';
+  $('#metam').style.left=(CX-260)+'px';$('#metam').style.top=(CY+58)+'px';
   $('#nameNode').style.left=(CX-60)+'px';$('#nameNode').style.top=(CY-70)+'px';
   const pos=placeAll();
   for(const sec in pos)pos[sec].forEach((p,i)=>{const it=ITEMS[sec][i];const b=document.createElement('button');b.className='node';b.dataset.sec=sec;b.dataset.i=i;b.style.left=p[0]+'px';b.style.top=p[1]+'px';
