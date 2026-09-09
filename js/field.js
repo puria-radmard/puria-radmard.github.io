@@ -8,7 +8,7 @@ const estH=it=>34+19*Math.ceil((it.t||"").length/33)+(it.d?18:0);   // padding +
 const GAP=14;
 const hits=(a,b)=>a[0]<b[0]+b[2]+GAP&&b[0]<a[0]+a[2]+GAP&&a[1]<b[1]+b[3]+GAP&&b[1]<a[1]+a[3]+GAP;
 function placeAll(){
-  const placed=[[CX-260,CY-10,300,56],[CX-60,CY-70,120,36]]; // keep the centre line and name clear
+  const placed=[[CX-260,CY-10,300,56],[CX-260,CY+42,300,40],[CX-60,CY-70,120,36]]; // keep the centre lines and name clear
   const dated=[];for(const sec of Object.keys(BEARING))for(const it of ITEMS[sec])if(it.date&&!isNaN(new Date(it.date)))dated.push(+new Date(it.date));
   const newest=dated.length?Math.max(...dated):Date.now(),oldest=dated.length?Math.min(...dated):newest-1;
   const span=Math.max(1,newest-oldest);
@@ -42,6 +42,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 function buildField(){
   field.querySelectorAll('.node[data-i]:not(#nameNode)').forEach(n=>n.remove());
   $('#centre').style.left=(CX-260)+'px';$('#centre').style.top=(CY-10)+'px';
+  $('#metam').style.left=(CX-260)+'px';$('#metam').style.top=(CY+42)+'px';
   $('#nameNode').style.left=(CX-60)+'px';$('#nameNode').style.top=(CY-70)+'px';
   const pos=placeAll();
   for(const sec in pos)pos[sec].forEach((p,i)=>{const it=ITEMS[sec][i];const b=document.createElement('button');b.className='node';b.dataset.sec=sec;b.dataset.i=i;b.style.left=p[0]+'px';b.style.top=p[1]+'px';
