@@ -3,7 +3,9 @@
    it decays when left alone. if it swallows the whole viewport it becomes the norm and a fresh theme is drawn.
    refresh resets to matrix. */
 const FONTS=[['"Cormorant Garamond",serif',1.15],['"Space Grotesk",sans-serif',1],['"Instrument Serif",serif',1.12],['"Courier Prime",monospace',1],
-  ['"VT323",monospace',1.3],['"Special Elite",monospace',1],['"Unbounded",sans-serif',.9],['"Syne Mono",monospace',1],['"EB Garamond",serif',1.15],['"Major Mono Display",monospace',.95],['"Redacted Script",cursive',1.1]];
+  ['"VT323",monospace',1.3],['"Special Elite",monospace',1],['"Unbounded",sans-serif',.9],['"Syne Mono",monospace',1],['"EB Garamond",serif',1.15],['"Major Mono Display",monospace',.95],
+  ['"Fraunces",serif',1.05],['"Playfair Display",serif',1.05],['"IM Fell English",serif',1.1],['"Zilla Slab",serif',1.05],
+  ['"JetBrains Mono",monospace',.95],['"Xanh Mono",monospace',1.05],['"Silkscreen",monospace',.9],['"DotGothic16",sans-serif',1.1]];
 const logu=(a,b)=>Math.exp(Math.log(a)+Math.random()*(Math.log(b)-Math.log(a)));
 function hsl(h,s,l){return `hsl(${h} ${s}% ${l}%)`}
 function lum(h,s,l){ // relative luminance from hsl via rgb

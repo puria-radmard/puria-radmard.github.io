@@ -16,7 +16,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .node .t{display:block;font-weight:400;font-size:14px;line-height:1.35}
 .node .d{display:block;font-size:11px;color:var(--dim);margin-top:3px;max-width:36ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .node:hover .t,.node:focus-visible .t,.node.on .t{color:var(--acc)}
-.node.centre{color:var(--dim);cursor:default;font-size:12px}
+.node.centre{color:var(--dim);cursor:inherit;font-size:12px}
 .node.name{color:var(--dim);font-size:11px;letter-spacing:.06em}
 .node.name:hover{color:var(--ink)}
 

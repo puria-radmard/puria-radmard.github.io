@@ -13,13 +13,13 @@ function goHome(){ // animate translation only; zoom stays
 const ptrs=new Map();
 stage.addEventListener('pointerdown',e=>{ptrs.set(e.pointerId,e);
   if(ptrs.size===2){stage.setPointerCapture(e.pointerId);const[a,b]=[...ptrs.values()];pinch={d:Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY),z};drag=null;return}
-  if(e.target.closest('.node'))return;stage.setPointerCapture(e.pointerId);drag={sx:e.clientX,sy:e.clientY,ox:x,oy:y};stage.classList.add('dragging')});
+  if(e.target.closest('.node:not(.centre)'))return;stage.setPointerCapture(e.pointerId);drag={sx:e.clientX,sy:e.clientY,ox:x,oy:y};stage.classList.add('dragging')});
 stage.addEventListener('pointermove',e=>{if(!ptrs.has(e.pointerId))return;ptrs.set(e.pointerId,e);
   if(pinch&&ptrs.size===2){const[a,b]=[...ptrs.values()];const d=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);zoomAt(pinch.z*d/pinch.d,(a.clientX+b.clientX)/2,(a.clientY+b.clientY)/2);return}
   if(!drag)return;x=drag.ox+e.clientX-drag.sx;y=drag.oy+e.clientY-drag.sy;place()});
 const up=e=>{ptrs.delete(e.pointerId);if(ptrs.size<2)pinch=null;
   const wasDrag=drag&&Math.hypot(e.clientX-drag.sx,e.clientY-drag.sy)>4;
-  if(!ptrs.size){if(drag&&!wasDrag&&!e.target.closest('.node'))bubbleClick(e.clientX,e.clientY);drag=null;stage.classList.remove('dragging')}};
+  if(!ptrs.size){if(drag&&!wasDrag&&!e.target.closest('.node:not(.centre)'))bubbleClick(e.clientX,e.clientY);drag=null;stage.classList.remove('dragging')}};
 stage.addEventListener('pointerup',up);stage.addEventListener('pointercancel',up);
 stage.addEventListener('wheel',e=>{e.preventDefault();
   if(e.ctrlKey||e.metaKey)zoomAt(z*Math.exp(-e.deltaY*.0025),e.clientX,e.clientY);
