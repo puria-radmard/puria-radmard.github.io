@@ -1,5 +1,5 @@
 /* ---- view: pan + zoom ---- */
-let x=0,y=0,z=1.5,drag=null,pinch=null,anim=null;   // start zoomed in so island text is legible
+let x=0,y=0,z=1.2,drag=null,pinch=null,anim=null;   // start zoomed in so island text is legible, but wide enough to frame every section
 const ZMIN=.35,ZMAX=2.5;
 function clampView(){const W=innerWidth,H=innerHeight;x=Math.min(0,Math.max(W-FW*z,x));y=Math.min(0,Math.max(H-FH*z,y))}
 function place(){clampView();const t=`translate(${x}px,${y}px) scale(${z})`;field.style.transform=t;$('#field2').style.transform=t}

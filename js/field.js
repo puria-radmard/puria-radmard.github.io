@@ -2,7 +2,7 @@
    angle ~ gaussian around each section's bearing. resample on collision, widening as it goes. ---- */
 function gauss(){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
 const BEARING={substack:-0.6,lesswrong:-2.5,papers:2.5,contact:0.6};   // radians; screen y is down
-const R_MIN=230,R_MAX=760;
+const R_MIN=200,R_MAX=560;   // age gradient stays inside the starting frame so no section falls off-screen on load
 const NODE_W=300;   // islands cap at this width; height depends on how far the title wraps
 const estH=it=>36+19*Math.ceil((it.t||"").length/28)+(it.d?18:0);   // padding + kicker + wrapped title + one-line blurb; ~28 chars/line since greedy wrap loses partial words
 const GAP=14;
