@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15T22:15:09+00:00",
+  "generated": "2026-09-21T12:13:51+00:00",
   "sample": false,
   "substack": [
     {
@@ -23,11 +23,18 @@
   ],
   "lesswrong": [
     {
+      "title": "Reducing the Resource Gap Between Lab and External Safety Researchers",
+      "subtitle": "How philanthropic organisations can help close the resource gap between frontier labs and independent AI safety research. This post draws on Geodesic Research's experience deploying philanthropic funding in support of a compute-heavy…",
+      "url": "https://www.lesswrong.com/posts/aCGx79eGafwDcXEgf/reducing-the-resource-gap-between-lab-and-external-safety",
+      "date": "2026-09-16",
+      "karma": 61
+    },
+    {
       "title": "Inoculation Midtraining with Learned Neologisms",
       "subtitle": "TL;DR In our new paper, we demonstrate that we can achieve selective generalisation of misalignment by midtraining[1] Nemotron 120B on synthetic documents describing how AIs can be misaligned in a special mode, indicated by a new special…",
       "url": "https://www.lesswrong.com/posts/o4Jmyn25TWm8jRAy8/inoculation-midtraining-with-learned-neologisms",
       "date": "2026-09-15",
-      "karma": 14
+      "karma": 81
     },
     {
       "title": "Why study proto-training gaming as an adversarial alignment failure mode?",
