@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T12:13:51+00:00",
+  "generated": "2026-09-28T13:09:46+00:00",
   "sample": false,
   "substack": [
     {
@@ -27,7 +27,7 @@
       "subtitle": "How philanthropic organisations can help close the resource gap between frontier labs and independent AI safety research. This post draws on Geodesic Research's experience deploying philanthropic funding in support of a compute-heavy…",
       "url": "https://www.lesswrong.com/posts/aCGx79eGafwDcXEgf/reducing-the-resource-gap-between-lab-and-external-safety",
       "date": "2026-09-16",
-      "karma": 61
+      "karma": 71
     },
     {
       "title": "Inoculation Midtraining with Learned Neologisms",
@@ -41,21 +41,21 @@
       "subtitle": "This is a dual post that lays out our current research project where we compare different pre-RL alignment methods and their ability to prevent models from ‘proto-training gaming,’ which we predict is selected for over the course of RL…",
       "url": "https://www.lesswrong.com/posts/5KHLQkW8M87FzbM5a/why-study-proto-training-gaming-as-an-adversarial-alignment",
       "date": "2026-07-08",
-      "karma": 55
+      "karma": 56
     },
     {
       "title": "Why study alignment interventions on pre-RL checkpoints?",
       "subtitle": "This is a dual post that lays out our current research project where we compare pre-RL-training methods on their ability to prevent models from ‘proto-training gaming,’ which we predict is selected for over the course of production RL…",
       "url": "https://www.lesswrong.com/posts/nhjkHsppEk98xxmPe/why-study-alignment-interventions-on-pre-rl-checkpoints",
       "date": "2026-07-08",
-      "karma": 66
+      "karma": 67
     },
     {
       "title": "Announcing Geodesic Research",
       "subtitle": "We're a Cambridge, UK-based AI safety organisation that’s asking: how can we build the most robust alignment initialisations for capable LLMs? We’re one of the few non-profit organisations positioned to answer this question empirically.…",
       "url": "https://www.lesswrong.com/posts/xBbYGer8w45kxkaWr/announcing-geodesic-research",
       "date": "2026-05-27",
-      "karma": 85
+      "karma": 88
     },
     {
       "title": "Learned Chain-of-Thought Obfuscation Generalises to Unseen Tasks",
