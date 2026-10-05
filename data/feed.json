@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T13:09:46+00:00",
+  "generated": "2026-10-05T13:52:31+00:00",
   "sample": false,
   "substack": [
     {
@@ -27,28 +27,28 @@
       "subtitle": "How philanthropic organisations can help close the resource gap between frontier labs and independent AI safety research. This post draws on Geodesic Research's experience deploying philanthropic funding in support of a compute-heavy…",
       "url": "https://www.lesswrong.com/posts/aCGx79eGafwDcXEgf/reducing-the-resource-gap-between-lab-and-external-safety",
       "date": "2026-09-16",
-      "karma": 71
+      "karma": 75
     },
     {
       "title": "Inoculation Midtraining with Learned Neologisms",
       "subtitle": "TL;DR In our new paper, we demonstrate that we can achieve selective generalisation of misalignment by midtraining[1] Nemotron 120B on synthetic documents describing how AIs can be misaligned in a special mode, indicated by a new special…",
       "url": "https://www.lesswrong.com/posts/o4Jmyn25TWm8jRAy8/inoculation-midtraining-with-learned-neologisms",
       "date": "2026-09-15",
-      "karma": 81
+      "karma": 82
     },
     {
       "title": "Why study proto-training gaming as an adversarial alignment failure mode?",
       "subtitle": "This is a dual post that lays out our current research project where we compare different pre-RL alignment methods and their ability to prevent models from ‘proto-training gaming,’ which we predict is selected for over the course of RL…",
       "url": "https://www.lesswrong.com/posts/5KHLQkW8M87FzbM5a/why-study-proto-training-gaming-as-an-adversarial-alignment",
       "date": "2026-07-08",
-      "karma": 56
+      "karma": 57
     },
     {
       "title": "Why study alignment interventions on pre-RL checkpoints?",
       "subtitle": "This is a dual post that lays out our current research project where we compare pre-RL-training methods on their ability to prevent models from ‘proto-training gaming,’ which we predict is selected for over the course of production RL…",
       "url": "https://www.lesswrong.com/posts/nhjkHsppEk98xxmPe/why-study-alignment-interventions-on-pre-rl-checkpoints",
       "date": "2026-07-08",
-      "karma": 67
+      "karma": 68
     },
     {
       "title": "Announcing Geodesic Research",
@@ -83,7 +83,7 @@
       "subtitle": "Background Deliberative alignment is a powerful post-training alignment technique that involves generating and training on re-contextualised supervised fine-tuning (SFT) datasets generated with a set of principles in context. The process…",
       "url": "https://www.lesswrong.com/posts/ddBHejnZwPrbfEyaj/generalisation-hacking-a-first-look-at-adversarial-2",
       "date": "2025-11-17",
-      "karma": 54
+      "karma": 55
     },
     {
       "title": "I Am Large, I Contain Multitudes: Persona Transmission via Contextual Inference in LLMs",
