@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05T13:52:31+00:00",
+  "generated": "2026-10-12T14:40:52+00:00",
   "sample": false,
   "substack": [
     {
@@ -55,7 +55,7 @@
       "subtitle": "We're a Cambridge, UK-based AI safety organisation that’s asking: how can we build the most robust alignment initialisations for capable LLMs? We’re one of the few non-profit organisations positioned to answer this question empirically.…",
       "url": "https://www.lesswrong.com/posts/xBbYGer8w45kxkaWr/announcing-geodesic-research",
       "date": "2026-05-27",
-      "karma": 88
+      "karma": 90
     },
     {
       "title": "Learned Chain-of-Thought Obfuscation Generalises to Unseen Tasks",
@@ -69,7 +69,7 @@
       "subtitle": "TL;DR LLMs pretrained on data about misaligned AIs themselves become less aligned. Luckily, pretraining LLMs with synthetic data about good AIs helps them become more aligned. These alignment priors persist through post-training,…",
       "url": "https://www.lesswrong.com/posts/TcfyGD2aKdZ7Rt3hk/alignment-pretraining-ai-discourse-causes-self-fulfilling",
       "date": "2025-12-21",
-      "karma": 207
+      "karma": 208
     },
     {
       "title": "Architectures for Increased Externalisation of Reasoning",
