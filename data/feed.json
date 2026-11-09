@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T14:58:29+00:00",
+  "generated": "2026-11-09T15:28:33+00:00",
   "sample": false,
   "substack": [
     {
@@ -83,7 +83,7 @@
       "subtitle": "Background Deliberative alignment is a powerful post-training alignment technique that involves generating and training on re-contextualised supervised fine-tuning (SFT) datasets generated with a set of principles in context. The process…",
       "url": "https://www.lesswrong.com/posts/ddBHejnZwPrbfEyaj/generalisation-hacking-a-first-look-at-adversarial-2",
       "date": "2025-11-17",
-      "karma": 55
+      "karma": 56
     },
     {
       "title": "I Am Large, I Contain Multitudes: Persona Transmission via Contextual Inference in LLMs",
