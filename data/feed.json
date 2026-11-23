@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T15:05:16+00:00",
+  "generated": "2026-11-23T17:35:09+00:00",
   "sample": false,
   "substack": [
     {
@@ -27,7 +27,7 @@
       "subtitle": "How philanthropic organisations can help close the resource gap between frontier labs and independent AI safety research. This post draws on Geodesic Research's experience deploying philanthropic funding in support of a compute-heavy…",
       "url": "https://www.lesswrong.com/posts/aCGx79eGafwDcXEgf/reducing-the-resource-gap-between-lab-and-external-safety",
       "date": "2026-09-16",
-      "karma": 76
+      "karma": 78
     },
     {
       "title": "Inoculation Midtraining with Learned Neologisms",
